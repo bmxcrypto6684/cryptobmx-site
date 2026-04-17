@@ -1,18 +1,27 @@
 async function atualizarPreco() {
   try {
-    const res = await fetch("/api/price");
+    const res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,brl&include_24hr_change=true");
     const data = await res.json();
 
-    if (!data.bitcoin || !data.bitcoin.usd) {
+    if (!data.bitcoin) {
       document.getElementById("btc-price").innerText = "Erro";
       return;
     }
 
-    document.getElementById("btc-price").innerText =
-      "BTC: $" + data.bitcoin.usd;
+    const precoUSD = data.bitcoin.usd;
+    const precoBRL = data.bitcoin.brl;
+    const variacao24h = data.bitcoin.usd_24h_change;
+
+    const variacaoTexto = variacao24h > 0 ? `(+${variacao24h.toFixed(2)}%)` : `(${variacao24h.toFixed(2)}%)`;
+
+    document.getElementById("btc-price").innerHTML = `
+      BTC: $${precoUSD.toLocaleString()} ${variacaoTexto}
+      <span style="color: ${variacao24h > 0 ? '#51cf66' : '#ff6b6b'}">(${precoBRL.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})})</span>
+    `;
 
   } catch (e) {
     console.log(e);
+    document.getElementById("btc-price").innerText = "Erro";
   }
 }
 
@@ -25,7 +34,7 @@ async function simularInvestimento() {
   }
 
   try {
-    const res = await fetch("/api/price");
+    const res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,brl&include_24hr_change=true");
     const data = await res.json();
 
     if (!data || !data.bitcoin || !data.bitcoin.usd) {
@@ -34,7 +43,6 @@ async function simularInvestimento() {
     }
 
     const preco = data.bitcoin.usd;
-
     const resultado = (valor / preco) * (preco * 1.1);
 
     document.getElementById("resultado-investimento").innerText =
@@ -42,22 +50,10 @@ async function simularInvestimento() {
 
   } catch (e) {
     console.log(e);
+    alert("Erro ao calcular investimento");
   }
 }
 
-  try {
-    const res = await fetch("/api/price");
-    const data = await res.json();
-
-    const preco = data.bitcoin.usd;
-    const resultado = (valor / preco) * (preco * 1.1);
-
-    document.getElementById("resultado-investimento").innerText =
-      "R$ " + resultado.toFixed(2);
-
-  } catch (e) {
-    console.log(e);
-  }
 
 
 let page = 1;
@@ -87,7 +83,7 @@ async function carregarMaisNoticias() {
     });
 
   } catch (e) {
-    console.log(e);
+  console.log(e);
   }
 }
 const container = document.getElementById("news-list");
@@ -109,6 +105,69 @@ function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
+// Função para inicializar gráfico TradingView
+function inicializarGrafico() {
+  new TradingView.widget({
+    "width": "100%",
+    "height": 500,
+    "symbol": "BITSTAMP:BTCUSD",
+    "interval": "1",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "1",
+    "locale": "pt_BR",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "allow_symbol_change": true,
+    "container_id": "tradingview_btc"
+  });
+}
+
+// Função para atualizar gráfico em tempo real
+function atualizarGrafico() {
+  const widget = document.getElementById("tradingview_btc");
+  if (widget) {
+    widget.innerHTML = "";
+    inicializarGrafico();
+  }
+}
+
+// Função para obter preço BTC atual
+async function obterPrecoBTC() {
+  try {
+    const res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,brl&include_24hr_change=true");
+    const data = await res.json();
+
+    if (!data.bitcoin) {
+      document.getElementById("btc-price").innerText = "Erro ao obter preço";
+      return;
+    }
+
+    const precoUSD = data.bitcoin.usd;
+    const precoBRL = data.bitcoin.brl;
+    const variacao24h = data.bitcoin.usd_24h_change;
+
+    const variacaoTexto = variacao24h > 0 ? `(+${variacao24h.toFixed(2)}%)` : `(${variacao24h.toFixed(2)}%)`;
+
+    document.getElementById("btc-price").innerHTML = `
+      BTC: $${precoUSD.toLocaleString()} ${variacaoTexto}
+      <span style="color: ${variacao24h > 0 ? '#51cf66' : '#ff6b6b'}">(${precoBRL.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})})</span>
+    `;
+
+  } catch (e) {
+    console.log(e);
+    document.getElementById("btc-price").innerText = "Erro ao obter preço";
+  }
+}
+
+// Inicialização do gráfico e preço
 document.addEventListener("DOMContentLoaded", () => {
-  atualizarPreco();
+  inicializarGrafico();
+  obterPrecoBTC();
+
+  // Atualizar preço a cada 60 segundos
+  setInterval(obterPrecoBTC, 60000);
+
+  // Atualizar gráfico a cada 5 minutos
+  setInterval(atualizarGrafico, 300000);
 });
