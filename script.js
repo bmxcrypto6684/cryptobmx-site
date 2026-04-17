@@ -1,7 +1,7 @@
 // ===== PREÇO BTC =====
 async function atualizarPreco() {
   try {
-    const res = await fetch("/api/price");
+    const res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd");
     const data = await res.json();
 
     if (!data || !data.bitcoin || !data.bitcoin.usd) {
@@ -28,24 +28,17 @@ async function simularInvestimento() {
   }
 
   try {
-    const res = await fetch("/api/price");
+    const res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd");
     const data = await res.json();
 
-    if (!data || !data.bitcoin || !data.bitcoin.usd) {
-      alert("Erro ao pegar preço");
-      return;
-    }
+    const precoBTC = data.bitcoin.usd;
+    const quantidadeBTC = valor / precoBTC;
 
-    const preco = data.bitcoin.usd;
+    document.getElementById("resultado").innerText =
+      `Você compraria ${quantidadeBTC.toFixed(6)} BTC`;
 
-    const qtd = valor / preco;
-    const resultado = qtd * (preco * 1.1);
-
-    document.getElementById("resultado-investimento").innerText =
-      "Resultado: R$ " + resultado.toFixed(2);
-
-  } catch (e) {
-    console.log(e);
+  } catch (erro) {
+    console.error("Erro na simulação:", erro);
   }
 }
 
@@ -88,13 +81,7 @@ function scrollToSection(id) {
     el.scrollIntoView({ behavior: "smooth" });
   }
 }
-let data;
 
-if (true) {
-  data = 10;
-}
-
-console.log(data); // ✅
 // ===== INIT =====
 function init() {
   atualizarPreco();
