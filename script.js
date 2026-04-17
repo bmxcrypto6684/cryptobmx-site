@@ -1,7 +1,6 @@
-// ===== NOTIFICAÇÕES =====
-let isNotificationSupported = false;
+// ===== NOTIFICAÇÕES ====
 let notificationPermission = 'default';
-
+scrollToSection
 // ===== FETCH PADRÃO =====
 async function fetchWithCache(url) {
   const response = await fetch(url);
@@ -245,3 +244,10 @@ async function initApp() {
 // START
 document.addEventListener('DOMContentLoaded', initApp);
 document.addEventListener('DOMContentLoaded', startPriceMonitoring);
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
