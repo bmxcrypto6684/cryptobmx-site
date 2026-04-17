@@ -1,4 +1,3 @@
-// ===== PREÇO BTC =====
 async function atualizarPreco() {
   try {
     const res = await fetch("/api/price");
@@ -14,11 +13,9 @@ async function atualizarPreco() {
 
   } catch (e) {
     console.log(e);
-    document.getElementById("btc-price").innerText = "Erro";
   }
 }
 
-// ===== SIMULAÇÃO =====
 async function simularInvestimento() {
   const valor = document.getElementById("valor-investido").value;
 
@@ -31,61 +28,38 @@ async function simularInvestimento() {
     const res = await fetch("/api/price");
     const data = await res.json();
 
-    if (!data.bitcoin || !data.bitcoin.usd) {
-      alert("Erro ao pegar preço");
-      return;
-    }
-
     const preco = data.bitcoin.usd;
-
-    const qtd = valor / preco;
-    const resultado = qtd * (preco * 1.1);
+    const resultado = (valor / preco) * (preco * 1.1);
 
     document.getElementById("resultado-investimento").innerText =
-      "Resultado: R$ " + resultado.toFixed(2);
+      "R$ " + resultado.toFixed(2);
 
   } catch (e) {
     console.log(e);
   }
 }
 
-// ===== NOTÍCIAS =====
-let currentPage = 1;
+let page = 1;
 
 async function carregarMaisNoticias() {
-  currentPage++;
+  page++;
 
-  try {
-    const res = await fetch(`/api/news?page=${currentPage}`);
-    const data = await res.json();
+  const res = await fetch(`/api/news?page=${page}`);
+  const data = await res.json();
 
-    const container = document.getElementById("news-list");
+  const container = document.getElementById("news-list");
 
-    data.articles.forEach(noticia => {
-      const div = document.createElement("div");
-      div.innerHTML = `
-        <h3>${noticia.title}</h3>
-        <p>${noticia.description || ""}</p>
-        <button onclick="window.open('${noticia.url}')">Ler</button>
-      `;
-      container.appendChild(div);
-    });
-
-  } catch (e) {
-    console.log(e);
-  }
+  data.articles.forEach(n => {
+    const div = document.createElement("div");
+    div.innerHTML = `<p>${n.title}</p>`;
+    container.appendChild(div);
+  });
 }
 
-// ===== SCROLL =====
 function scrollToSection(id) {
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// ===== INIT =====
-function init() {
+document.addEventListener("DOMContentLoaded", () => {
   atualizarPreco();
-  setInterval(atualizarPreco, 30000);
-}
-
-document.addEventListener("DOMContentLoaded", init);
+});
