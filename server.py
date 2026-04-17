@@ -1,94 +1,48 @@
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 import requests
 import json
-import datetime
-import time
-from urllib.parse import urlparse, parse_qs
-
-RATE_LIMIT = 60
-RATE_LIMIT_WINDOW = 60
-
-rate_limit_cache = {}
-start_time = time.time()
+import os
+import xml.etree.ElementTree as ET
 
 class Handler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
-        print(f"[{datetime.datetime.now()}] {self.client_address[0]} -> {self.path}")
-
         # ===== PREÇO BTC =====
         if self.path.startswith("/api/price"):
-            url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"
-            r = requests.get(url)
+            r = requests.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
 
             self.send_response(200)
             self.send_header("Content-type", "application/json")
-            self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
 
             self.wfile.write(r.content)
 
-        # ===== NOTÍCIAS =====
+        # ===== NOTÍCIAS (SEM API KEY) =====
         elif self.path.startswith("/api/news"):
-            query = parse_qs(urlparse(self.path).query)
+            url = "https://news.google.com/rss/search?q=bitcoin&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+            r = requests.get(url)
 
-            params = {
-                "q": query.get("q", ["bitcoin"])[0],
-                "language": query.get("language", ["pt"])[0],
-                "sortBy": query.get("sortBy", ["publishedAt"])[0],
-                "pageSize": query.get("pageSize", ["6"])[0],
-                "page": query.get("page", ["1"])[0],
-                "apiKey": "b4fc2cc379de4b7a974d59eefe8c6189"
-            }
+            root = ET.fromstring(r.content)
 
-            r = requests.get("https://newsapi.org/v2/everything", params=params)
-            data = r.json()
+            noticias = []
 
-            if "articles" not in data:
-                data["articles"] = []
+            for item in root.findall(".//item")[:6]:
+                noticias.append({
+                    "title": item.find("title").text,
+                    "link": item.find("link").text
+                })
 
-            self.send_response(200)
-            self.send_header("Content-type", "application/json")
-            self.send_header("Access-Control-Allow-Origin", "*")
-            self.end_headers()
-
-            self.wfile.write(json.dumps(data).encode())
-
-        # ===== HEALTH =====
-        elif self.path.startswith("/health"):
             self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
 
-            health = {
-                "status": "ok",
-                "uptime": time.time() - start_time
-            }
+            self.wfile.write(json.dumps({"articles": noticias}).encode())
 
-            self.wfile.write(json.dumps(health).encode())
-
-        # ===== ARQUIVOS =====
         else:
             super().do_GET()
 
-    # ===== FORMULÁRIO =====
-    def do_POST(self):
-        if self.path == "/api/contact":
-            content_length = int(self.headers['Content-Length'])
-            body = self.rfile.read(content_length)
+port = int(os.environ.get("PORT", 5000))
+server = HTTPServer(("0.0.0.0", port), Handler)
 
-            data = json.loads(body)
-            print("Mensagem recebida:", data)
-
-            self.send_response(200)
-            self.send_header("Content-type", "application/json")
-            self.send_header("Access-Control-Allow-Origin", "*")
-            self.end_headers()
-
-            response = {"status": "ok"}
-            self.wfile.write(json.dumps(response).encode())
-
-
-server = HTTPServer(("localhost", 5500), Handler)
-print("Servidor rodando em http://localhost:5500")
+print("Servidor rodando 🚀")
 server.serve_forever()

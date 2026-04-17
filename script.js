@@ -28,7 +28,13 @@ async function simularInvestimento() {
     const res = await fetch("/api/price");
     const data = await res.json();
 
+    if (!data || !data.bitcoin || !data.bitcoin.usd) {
+      alert("Erro ao pegar preço do BTC");
+      return;
+    }
+
     const preco = data.bitcoin.usd;
+
     const resultado = (valor / preco) * (preco * 1.1);
 
     document.getElementById("resultado-investimento").innerText =
@@ -39,6 +45,21 @@ async function simularInvestimento() {
   }
 }
 
+  try {
+    const res = await fetch("/api/price");
+    const data = await res.json();
+
+    const preco = data.bitcoin.usd;
+    const resultado = (valor / preco) * (preco * 1.1);
+
+    document.getElementById("resultado-investimento").innerText =
+      "R$ " + resultado.toFixed(2);
+
+  } catch (e) {
+    console.log(e);
+  }
+
+
 let page = 1;
 
 async function carregarMaisNoticias() {
@@ -48,10 +69,9 @@ async function carregarMaisNoticias() {
     const res = await fetch(`/api/news?page=${page}`);
     const data = await res.json();
 
-    console.log("Resposta da API:", data); // ajuda debug
-
-    if (!data.articles || !Array.isArray(data.articles)) {
+    if (!data || !data.articles || !Array.isArray(data.articles)) {
       alert("Erro ao carregar notícias");
+      console.log(data);
       return;
     }
 
@@ -59,7 +79,10 @@ async function carregarMaisNoticias() {
 
     data.articles.forEach(n => {
       const div = document.createElement("div");
-      div.innerHTML = `<p>${n.title}</p>`;
+      div.innerHTML = `
+        <p>${n.title}</p>
+        <button onclick="window.open('${n.link}')">Ler</button>
+      `;
       container.appendChild(div);
     });
 
@@ -67,6 +90,20 @@ async function carregarMaisNoticias() {
     console.log(e);
   }
 }
+const container = document.getElementById("news-list");
+
+data.articles.forEach(n => {
+  const div = document.createElement("div");
+  div.innerHTML = `
+    <p>${n.title}</p>
+    <button onclick="window.open('${n.link}')">Ler</button>
+  `;
+  container.appendChild(div);
+});
+    
+  console.log(e);
+
+
 
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
