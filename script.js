@@ -88,7 +88,13 @@ function scrollToSection(id) {
     el.scrollIntoView({ behavior: "smooth" });
   }
 }
+let data;
 
+if (true) {
+  data = 10;
+}
+
+console.log(data); // ✅
 // ===== INIT =====
 function init() {
   atualizarPreco();
