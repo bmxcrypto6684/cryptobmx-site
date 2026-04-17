@@ -1,31 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>BTC ANCP News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC ANCP News - Notícias e Preços do Bitcoin em Tempo Real</title>
+
+    <meta name="description"
+        content="Portal de notícias sobre Bitcoin e criptomoedas. Preços em tempo real, gráficos, análises e investimentos.">
+
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-    <h1>BTC ANCP News</h1>
+<header class="header">
+    <div class="logo">BTC ANCP News</div>
+
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#news">Notícias</a>
+        <a href="#market">Mercado</a>
+        <a href="#investments">Investimentos</a>
+        <a href="#contact">Contato</a>
+        <button id="theme-toggle">⚡</button>
+    </nav>
 </header>
 
-<h2 id="btc-price">Carregando...</h2>
+<main>
 
-<input type="number" id="valor-investido" placeholder="Valor em R$">
-<button onclick="simularInvestimento()">Simular</button>
-<p id="resultado-investimento"></p>
+<!-- HERO -->
+<section class="hero" id="home">
+    <h1>Bitcoin e Criptomoedas em Tempo Real</h1>
+    <p>Fique por dentro das últimas notícias e tendências.</p>
 
-<button onclick="scrollToSection('news')">Ir para notícias</button>
+    <h2 id="btc-price">Carregando preço...</h2>
 
-<section id="news">
-    <h2>Notícias</h2>
-    <div id="news-list"></div>
-    <button onclick="carregarMaisNoticias()">Carregar mais</button>
+    <button onclick="scrollToSection('news')">Ver Notícias</button>
 </section>
 
+<!-- GRÁFICO -->
+<section id="market">
+    <h2>Gráfico do Bitcoin</h2>
+    <div id="tradingview_btc"></div>
+</section>
+
+<!-- NOTÍCIAS -->
+<section id="news">
+    <h2>Últimas Notícias</h2>
+    <div id="news-list"></div>
+    <button onclick="carregarMaisNoticias()">Carregar Mais</button>
+</section>
+
+<!-- INVESTIMENTOS (AGORA CORRETO) -->
+<section id="investments">
+    <h2>Investimentos em Criptomoedas</h2>
+
+    <div class="invest-grid">
+
+        <div class="card">
+            <h3>📊 Simular Investimento</h3>
+            <input type="number" id="valor-investido" placeholder="Valor em R$">
+            <button onclick="simularInvestimento()">Simular</button>
+            <p id="resultado-investimento"></p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Dicas</h3>
+            <ul>
+                <li>Invista apenas o que pode perder</li>
+                <li>Evite emoção</li>
+                <li>Diversifique</li>
+                <li>Pense no longo prazo</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>💡 Estratégias</h3>
+            <ul>
+                <li>Buy and Hold</li>
+                <li>DCA</li>
+                <li>Trading</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contact">
+    <h2>Contato</h2>
+
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+        <textarea name="message" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+        <div id="form-message"></div>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 BTC ANCP News</p>
+</footer>
+
+<script src="https://s3.tradingview.com/tv.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
