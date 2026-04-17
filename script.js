@@ -44,16 +44,28 @@ let page = 1;
 async function carregarMaisNoticias() {
   page++;
 
-  const res = await fetch(`/api/news?page=${page}`);
-  const data = await res.json();
+  try {
+    const res = await fetch(`/api/news?page=${page}`);
+    const data = await res.json();
 
-  const container = document.getElementById("news-list");
+    console.log("Resposta da API:", data); // ajuda debug
 
-  data.articles.forEach(n => {
-    const div = document.createElement("div");
-    div.innerHTML = `<p>${n.title}</p>`;
-    container.appendChild(div);
-  });
+    if (!data.articles || !Array.isArray(data.articles)) {
+      alert("Erro ao carregar notícias");
+      return;
+    }
+
+    const container = document.getElementById("news-list");
+
+    data.articles.forEach(n => {
+      const div = document.createElement("div");
+      div.innerHTML = `<p>${n.title}</p>`;
+      container.appendChild(div);
+    });
+
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 function scrollToSection(id) {
