@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTC ANCP News - Notícias e Preços do Bitcoin em Tempo Real</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5373156487540566"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <meta name="description"
         content="Portal de notícias sobre Bitcoin e criptomoedas. Preços em tempo real, gráficos, análises e investimentos.">
 
@@ -16,132 +16,162 @@
 
 <body>
 
-<header class="header">
-    <div class="logo">BTC ANCP News</div>
+    <header class="header">
+        <div class="logo">BTC ANCP News</div>
 
-    <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#news">Notícias</a>
-        <a href="#market">Mercado</a>
-        <a href="#investments">Investimentos</a>
-        <a href="#contact">Contato</a>
-        <button id="theme-toggle">⚡</button>
-         <a href="privacy.html">Política de Privacidade</a>
-    </nav>
-</header>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#news">Notícias</a>
+            <a href="#market">Mercado</a>
+            <a href="#investments">Investimentos</a>
+            <a href="#contact">Contato</a>
+            <button id="theme-toggle">⚡</button>
+            <a href="privacy.html">Política de Privacidade</a>
+        </nav>
+    </header>
 
-<main>
-<section>
-  <h2>O que é Bitcoin?</h2>
-  <p>
-    O Bitcoin é uma criptomoeda descentralizada que permite transações digitais sem intermediários...
-  </p>
-</section>
-<!-- HERO -->
-<section class="hero" id="home">
-    <h1>Bitcoin e Criptomoedas em Tempo Real</h1>
-    <p>Fique por dentro das últimas notícias e tendências.</p>
+    <main>
+        <section>
+            <h2>O que é Bitcoin?</h2>
+            <p>
+                O Bitcoin é uma criptomoeda descentralizada que permite transações digitais sem intermediários...
+            </p>
+        </section>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <h1>Bitcoin e Criptomoedas em Tempo Real</h1>
+            <p>Fique por dentro das últimas notícias e tendências.</p>
+            <p>Para entender melhor o Bitcoin, veja este livro recomendado:</p>
+            <a href="https://amzn.to/3QJTVux" target="_blank">
+                👉 Ver na Amazon
+            </a>
+            <h2 id="btc-price">Carregando preço...</h2>
 
-    <h2 id="btc-price">Carregando preço...</h2>
+            <button onclick="scrollToSection('news')">Ver Notícias</button>
+        </section>
 
-    <button onclick="scrollToSection('news')">Ver Notícias</button>
-</section>
+        <!-- GRÁFICO -->
+        <section id="market">
+            <h2>Gráfico do Bitcoin</h2>
+            <div id="tradingview_btc"></div>
+        </section>
 
-<!-- GRÁFICO -->
-<section id="market">
-    <h2>Gráfico do Bitcoin</h2>
-    <div id="tradingview_btc"></div>
-</section>
+        <!-- NOTÍCIAS -->
+        <section id="news">
+            <h2>Últimas Notícias</h2>
+            <div id="news-list"></div>
+            <button onclick="carregarMaisNoticias()">Carregar Mais</button>
+        </section>
 
-<!-- NOTÍCIAS -->
-<section id="news">
-    <h2>Últimas Notícias</h2>
-    <div id="news-list"></div>
-    <button onclick="carregarMaisNoticias()">Carregar Mais</button>
-</section>
+        <div
+            style="border:1px solid #ddd; border-radius:10px; padding:15px; margin:20px 0; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
 
-<!-- INVESTIMENTOS -->
-<section id="investments">
-    <h2>Investimentos em Criptomoedas</h2>
+            <h3 style="font-size:18px; margin-bottom:10px;">
+                📘 Livro recomendado para investidores em criptomoedas
+            </h3>
 
-    <div class="invest-grid">
+            <p style="font-size:14px; color:#555;">
+                Ideal para quem quer entender melhor o mercado e tomar decisões mais inteligentes.
+            </p>
 
-        <div class="card">
-            <h3>📊 Simular Investimento</h3>
-            <input type="number" id="valor-investido" placeholder="Valor em R$">
-            <button onclick="simularInvestimento()">Simular</button>
-            <!-- ✅ CORRIGIDO -->
-            <p id="resultado"></p>
+            <a href="https://amzn.to/3QJTVux" target="_blank" style="
+    display:inline-block;
+    background:#ff9900;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:10px;
+  ">
+                🔥 Ver preço na Amazon
+            </a>
+
         </div>
 
-        <div class="card">
-            <h3>🚀 Dicas</h3>
-            <ul>
-                <li>Invista apenas o que pode perder</li>
-                <li>Evite emoção</li>
-                <li>Diversifique</li>
-                <li>Pense no longo prazo</li>
-            </ul>
-        </div>
+        <!-- INVESTIMENTOS -->
+        <section id="investments">
+            <h2>Investimentos em Criptomoedas</h2>
 
-        <div class="card">
-            <h3>💡 Estratégias</h3>
-            <ul>
-                <li>Buy and Hold</li>
-                <li>DCA</li>
-                <li>Trading</li>
-            </ul>
-        </div>
+            <div class="invest-grid">
 
-    </div>
-</section>
+                <div class="card">
+                    <h3>📊 Simular Investimento</h3>
+                    <input type="number" id="valor-investido" placeholder="Valor em R$">
+                    <button onclick="simularInvestimento()">Simular</button>
+                    <!-- ✅ CORRIGIDO -->
+                    <p id="resultado"></p>
+                </div>
 
-<!-- CONTATO -->
-<section id="contact">
-    <h2>Contato</h2>
+                <div class="card">
+                    <h3>🚀 Dicas</h3>
+                    <ul>
+                        <li>Invista apenas o que pode perder</li>
+                        <li>Evite emoção</li>
+                        <li>Diversifique</li>
+                        <li>Pense no longo prazo</li>
+                    </ul>
+                </div>
 
-    <form id="contact-form">
-        <input type="text" name="name" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu email" required>
-        <textarea name="message" placeholder="Mensagem" required></textarea>
-        <button type="submit">Enviar</button>
-        <div id="form-message"></div>
-    </form>
-</section>
+                <div class="card">
+                    <h3>💡 Estratégias</h3>
+                    <ul>
+                        <li>Buy and Hold</li>
+                        <li>DCA</li>
+                        <li>Trading</li>
+                    </ul>
+                </div>
 
-</main>
+            </div>
+        </section>
 
-<footer>
-    <p>© 2026 BTC ANCP News</p>
-</footer>
+        <!-- CONTATO -->
+        <section id="contact">
+            <h2>Contato</h2>
 
-<!-- TRADINGVIEW -->
-<script src="https://s3.tradingview.com/tv.js"></script>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu email" required>
+                <textarea name="message" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+                <div id="form-message"></div>
+            </form>
+        </section>
 
-<script>
-function carregarGrafico() {
-    if (typeof TradingView !== "undefined") {
-        new TradingView.widget({
-            container_id: "tradingview_btc",
-            width: "100%",
-            height: 400,
-            symbol: "BINANCE:BTCUSDT",
-            interval: "60",
-            timezone: "America/Sao_Paulo",
-            theme: "dark",
-            style: "1",
-            locale: "pt",
-            toolbar_bg: "#f1f3f6",
-            enable_publishing: false,
-            allow_symbol_change: true
-        });
-    }
-}
+    </main>
 
-document.addEventListener("DOMContentLoaded", carregarGrafico);
-</script>
+    <footer>
+        <p>© 2026 BTC ANCP News</p>
+    </footer>
 
-<script src="script.js"></script>
+    <!-- TRADINGVIEW -->
+    <script src="https://s3.tradingview.com/tv.js"></script>
+
+    <script>
+        function carregarGrafico() {
+            if (typeof TradingView !== "undefined") {
+                new TradingView.widget({
+                    container_id: "tradingview_btc",
+                    width: "100%",
+                    height: 400,
+                    symbol: "BINANCE:BTCUSDT",
+                    interval: "60",
+                    timezone: "America/Sao_Paulo",
+                    theme: "dark",
+                    style: "1",
+                    locale: "pt",
+                    toolbar_bg: "#f1f3f6",
+                    enable_publishing: false,
+                    allow_symbol_change: true
+                });
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", carregarGrafico);
+    </script>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
