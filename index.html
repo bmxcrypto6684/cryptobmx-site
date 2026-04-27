@@ -9,6 +9,10 @@
     <meta name="description"
         content="Portal de notícias sobre Bitcoin e criptomoedas. Preços em tempo real, gráficos, análises e investimentos.">
 
+    <!-- GOOGLE ADSENSE -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5373156487540566"
+        crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
     <style>
@@ -37,7 +41,6 @@
             padding: 50px;
         }
 
-        /* NOTÍCIAS LUMINOSAS */
         #news {
             background: #0f172a;
             padding: 20px;
@@ -54,19 +57,11 @@
             box-shadow: 0 0 10px rgba(0,255,200,0.2);
         }
 
-        /* COLUNA */
         .coluna-box textarea {
             width: 100%;
             height: 150px;
             border-radius: 8px;
             padding: 10px;
-            border: none;
-        }
-
-        .coluna-box button {
-            margin-top: 10px;
-            padding: 10px;
-            cursor: pointer;
         }
 
         #coluna-preview {
@@ -76,7 +71,6 @@
             border-radius: 10px;
         }
 
-        /* LIBERALISMO */
         .liberalismo-box {
             background: linear-gradient(135deg, #0ea5e9, #22c55e);
             padding: 20px;
@@ -106,11 +100,13 @@
 
     <main>
 
+        <!-- HERO -->
         <section class="hero" id="home">
             <h1>Bitcoin e Criptomoedas em Tempo Real</h1>
             <h2 id="btc-price">Carregando preço...</h2>
         </section>
 
+        <!-- GRÁFICO -->
         <section id="market">
             <h2>Gráfico do Bitcoin</h2>
             <div id="tradingview_btc"></div>
@@ -119,20 +115,31 @@
         <!-- NOTÍCIAS -->
         <section id="news">
             <h2>Últimas Notícias</h2>
-            <div id="news-list">
-                <div>Bitcoin sobe com adoção institucional</div>
-                <div>Mercado cripto volta a crescer em 2026</div>
-            </div>
+            <div id="news-list"></div>
+            <button onclick="carregarMaisNoticias()">Carregar Mais</button>
         </section>
 
-        <!-- SUA COLUNA -->
+        <!-- ADSENSE BLOCO -->
+        <div style="text-align:center; margin:20px 0;">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-5373156487540566"
+                data-ad-slot="SEU_SLOT_AQUI"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- COLUNA -->
         <section id="opiniao">
             <h2>📝 Sua Coluna</h2>
 
             <div class="coluna-box">
                 <textarea id="coluna-texto" placeholder="Escreva sua coluna..."></textarea>
                 <button onclick="salvarColuna()">Salvar</button>
-
                 <div id="coluna-preview"></div>
             </div>
         </section>
@@ -143,18 +150,28 @@
 
             <div class="liberalismo-box">
                 <p>
-                    O Bitcoin é uma moeda descentralizada que representa liberdade financeira,
-                    sem controle de governos ou bancos centrais.
+                    O Bitcoin representa liberdade financeira, descentralização e resistência ao controle estatal.
                 </p>
 
                 <ul>
                     <li>✔ Liberdade econômica</li>
-                    <li>✔ Resistência à censura</li>
                     <li>✔ Controle do próprio dinheiro</li>
                     <li>✔ Oferta limitada</li>
+                    <li>✔ Resistência à censura</li>
                 </ul>
             </div>
         </section>
+
+        <!-- AMAZON AFILIADO -->
+        <div style="border:1px solid #444; padding:15px; margin:20px; border-radius:10px; text-align:center;">
+            <h3>📘 Livro recomendado para investidores</h3>
+            <p>Aprenda estratégias reais do mercado de criptomoedas.</p>
+
+            <a href="https://amzn.to/3QJTVux" target="_blank"
+                style="background:#ff9900;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;">
+                🔥 Ver na Amazon
+            </a>
+        </div>
 
         <!-- CONTATO -->
         <section id="contact">
@@ -174,9 +191,10 @@
         <p>© 2026 BTC ANCP News</p>
     </footer>
 
-    <!-- SCRIPT -->
+    <!-- TRADINGVIEW -->
     <script src="https://s3.tradingview.com/tv.js"></script>
 
+    <!-- SCRIPT PRINCIPAL -->
     <script>
         function salvarColuna() {
             const texto = document.getElementById("coluna-texto").value;
@@ -191,22 +209,44 @@
             }
         }
 
+        let pagina = 1;
+
+        async function carregarNoticias() {
+            const url = `https://min-api.cryptocompare.com/data/v2/news/?lang=PT&page=${pagina}`;
+            const res = await fetch(url);
+            const data = await res.json();
+
+            const container = document.getElementById("news-list");
+
+            data.Data.forEach(n => {
+                const div = document.createElement("div");
+                div.innerHTML = `<h3>${n.title}</h3><p>${n.body.substring(0,100)}...</p>`;
+                container.appendChild(div);
+            });
+        }
+
+        function carregarMaisNoticias() {
+            pagina++;
+            carregarNoticias();
+        }
+
         document.addEventListener("DOMContentLoaded", function () {
             mostrarColuna();
+            carregarNoticias();
 
-            if (typeof TradingView !== "undefined") {
-                new TradingView.widget({
-                    container_id: "tradingview_btc",
-                    width: "100%",
-                    height: 400,
-                    symbol: "BINANCE:BTCUSDT",
-                    theme: "dark"
-                });
-            }
+            new TradingView.widget({
+                container_id: "tradingview_btc",
+                width: "100%",
+                height: 400,
+                symbol: "BINANCE:BTCUSDT",
+                theme: "dark"
+            });
         });
     </script>
-     
+
+    <!-- SCRIPT EXTERNO (caso use depois) -->
+    <script src="script.js"></script>
+
 </body>
 
 </html>
-         <script src="script.js"></script>
