@@ -1,64 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>BTC ANCP News</title>
 
-<meta name="description" content="Portal de Bitcoin e criptomoedas com notícias e análises.">
+<meta name="description" content="Portal de Bitcoin e criptomoedas com notícias, análises e simulador de investimento.">
+<meta name="keywords" content="bitcoin, criptomoedas, btc, notícias, mercado cripto, análise bitcoin">
+<meta name="author" content="BTC ANCP News">
 
 <!-- ADSENSE -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5373156487540566"
 crossorigin="anonymous"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
+*{box-sizing:border-box;}
+
+body{
     margin:0;
-    font-family:Poppins;
+    font-family:Poppins, sans-serif;
     background:#0b0f1a;
     color:#fff;
+    line-height:1.6;
 }
 
-header {
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:0 15px;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#020617;
+    padding:15px 0;
+    border-bottom:1px solid #111827;
+}
+
+.header-content{
     display:flex;
     justify-content:space-between;
-    padding:15px;
-    background:#020617;
+    align-items:center;
 }
 
-nav a {
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+nav a{
     color:#fff;
-    margin:0 10px;
     text-decoration:none;
+    font-size:14px;
+    padding:6px 10px;
+    border-radius:6px;
 }
 
-.section {
-    padding:20px;
+nav a:hover{
+    background:#111827;
 }
 
-.news-grid {
+.hero{
+    padding:40px 0;
+    text-align:left;
+}
+
+.hero h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#22c55e;
+    font-size:18px;
+}
+
+.section{
+    padding:30px 0;
+}
+
+.section h2{
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.news-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:15px;
 }
 
-.news-card {
+.news-card{
     background:#111827;
     padding:15px;
-    border-radius:10px;
+    border-radius:12px;
+    border:1px solid #1f2937;
 }
 
-.box {
+.news-card h3{
+    font-size:16px;
+}
+
+.box{
     background:#111827;
     padding:15px;
-    border-radius:10px;
+    border-radius:12px;
+    border:1px solid #1f2937;
 }
 
-input, textarea {
+input,textarea{
     width:100%;
     padding:10px;
     border:none;
@@ -66,19 +122,30 @@ input, textarea {
     margin-bottom:10px;
 }
 
-button {
+button{
     padding:10px 15px;
     border:none;
     background:#22c55e;
     color:#fff;
-    border-radius:6px;
+    border-radius:8px;
     cursor:pointer;
 }
 
-footer {
+button:hover{
+    background:#16a34a;
+}
+
+footer{
     text-align:center;
     padding:20px;
     border-top:1px solid #1f2937;
+    font-size:13px;
+    color:#9ca3af;
+}
+
+@media(max-width:600px){
+    .hero h1{font-size:22px;}
+    nav{justify-content:center;}
 }
 </style>
 
@@ -87,70 +154,60 @@ footer {
 <body>
 
 <header>
+<div class="container header-content">
     <div><b>BTC ANCP News</b></div>
-
     <nav>
         <a href="#news">Notícias</a>
         <a href="#market">BTC</a>
         <a href="#invest">Simulador</a>
         <a href="#coluna">Coluna</a>
-        <a href="termos.html">Termos</a>
+        <a href="#termos">Termos</a>
     </nav>
+</div>
 </header>
 
 <!-- HERO -->
-<section class="section">
-    <h1>Bitcoin e Criptomoedas</h1>
+<section class="hero container">
+    <h1>Bitcoin e Criptomoedas em tempo real</h1>
     <h2 id="btc-price">BTC carregando...</h2>
+    <p>Notícias, análises e ferramentas para acompanhar o mercado cripto com clareza e objetividade.</p>
 </section>
 
-<!-- NOTÍCIAS MANUAIS -->
-<section id="news" class="section">
-    <h2>📰 Notícias</h2>
+<!-- NOTÍCIAS -->
+<section id="news" class="section container">
+    <h2>📰 Últimas Notícias</h2>
 
     <div class="news-grid">
 
         <div class="news-card">
             <h3>Bitcoin em alta</h3>
-            <p>🟠 Bitcoin mantém força enquanto investidores aguardam próximos movimentos do mercado global
-
-O Bitcoin segue demonstrando resiliência mesmo após períodos recentes de volatilidade no mercado financeiro global. Analistas apontam que o ativo continua sendo impulsionado principalmente pelo aumento da participação institucional e pela percepção crescente de que o BTC pode atuar como uma reserva de valor alternativa em cenários econômicos instáveis.
-
-Nos últimos dias, o mercado tem reagido com cautela às expectativas sobre decisões de política monetária em grandes economias, especialmente nos Estados Unidos. Essas decisões influenciam diretamente ativos de risco, incluindo criptomoedas. Mesmo assim, o Bitcoin tem se mantido acima de suportes importantes, indicando que ainda existe forte interesse comprador.
-
-Especialistas destacam que o comportamento atual pode ser um período de consolidação antes de possíveis movimentos mais fortes, tanto de alta quanto de correção.</p>
+            <p>Bitcoin mantém força enquanto investidores aguardam próximos movimentos do mercado global. O ativo segue sustentado por demanda institucional e expectativa macroeconômica.</p>
         </div>
 
         <div class="news-card">
-            <h3>Adoção do Bitcoin cresce entre investidores de longo prazo e reduz oferta circulante no mercado</h3>
-            <p>Um dos movimentos mais relevantes no mercado de criptomoedas atualmente é o aumento significativo de investidores de longo prazo acumulando Bitcoin. Esse comportamento reduz a quantidade de BTC disponível para negociação imediata, o que historicamente pode influenciar na valorização do ativo.
-
-Dados de análise on-chain mostram que carteiras que mantêm Bitcoin por longos períodos continuam aumentando sua posição, indicando forte convicção no potencial do ativo no longo prazo. Esse tipo de comportamento costuma ser associado a ciclos de acumulação, onde investidores enxergam valor futuro acima do preço atual.
-
-Além disso, a escassez programada do Bitcoin, com limite máximo de 21 milhões de unidades, reforça ainda mais sua narrativa como ativo deflacionário.</p>
+            <h3>Adoção crescente</h3>
+            <p>Investidores de longo prazo continuam acumulando BTC, reduzindo a oferta circulante e reforçando a narrativa de escassez do ativo.</p>
         </div>
 
         <div class="news-card">
-            <h3>📊 Mercado de criptomoedas mostra recuperação gradual após fase de correção</h3>
-            <p>O mercado de criptomoedas apresenta sinais de recuperação após um período de correções que afetou principalmente altcoins e ativos de menor capitalização. O Bitcoin lidera novamente o movimento de recuperação, trazendo confiança de volta ao setor.
-
-Apesar da melhora, a volatilidade ainda permanece elevada, o que exige cautela por parte dos investidores. Analistas destacam que esse tipo de movimento é comum em fases de transição de mercado, onde o sentimento muda entre medo e otimismo.
-
-Alguns especialistas acreditam que o atual cenário pode representar uma fase de reorganização do mercado antes de uma nova tendência mais definida, enquanto outros reforçam a importância de gestão de risco nesse momento.</p>
+            <h3>Mercado em recuperação</h3>
+            <p>O mercado cripto mostra sinais de recuperação após correções recentes, com o Bitcoin liderando o movimento de retomada.</p>
         </div>
 
     </div>
 </section>
 
 <!-- GRÁFICO -->
-<section id="market" class="section">
-    <h2>📊 Bitcoin ao vivo</h2>
-    <div id="tradingview"></div>
+<section id="market" class="section container">
+    <h2>📊 Gráfico do Bitcoin</h2>
+    <div class="box">
+        <div id="tradingview"></div>
+    </div>
 </section>
 
 <!-- SIMULADOR -->
-<section id="invest" class="section">
-    <h2>📈 Simulador BTC</h2>
+<section id="invest" class="section container">
+    <h2>📈 Simulador de BTC</h2>
 
     <div class="box">
         <input type="number" id="valor" placeholder="Valor em R$">
@@ -159,64 +216,51 @@ Alguns especialistas acreditam que o atual cenário pode representar uma fase de
     </div>
 </section>
 
-<!-- COLUNA (SÓ VOCÊ EDITA AQUI) -->
-<section id="coluna" class="section">
+<!-- COLUNA -->
+<section id="coluna" class="section container">
     <h2>📝 Coluna do Editor</h2>
 
     <div class="box">
         <p>
-           🌍 Bitcoin continua sendo analisado como alternativa ao sistema financeiro tradicional
-
-O Bitcoin mantém sua posição como um dos principais ativos estudados como alternativa ao sistema financeiro tradicional. Sua natureza descentralizada e a ausência de controle por governos ou bancos centrais fazem com que ele seja frequentemente associado a conceitos de liberdade financeira e soberania individual.
-
-Em países com instabilidade econômica ou inflação elevada, o interesse pelo Bitcoin tende a aumentar, já que investidores buscam formas de proteger seu poder de compra. Essa tendência reforça o papel do BTC como uma possível reserva de valor global no futuro.
-
-Mesmo com críticas e desafios regulatórios, o Bitcoin continua ganhando espaço no debate econômico mundial. 
-           
+        O Bitcoin continua sendo estudado como alternativa ao sistema financeiro tradicional, especialmente em cenários de inflação e instabilidade econômica global.
         </p>
     </div>
 </section>
 
 <!-- TERMOS -->
-<section class="section">
-    <h2>📄 Termos e Condições</h2>
+<section id="termos" class="section container">
+    <h2>📄 Termos e Privacidade</h2>
 
     <div class="box">
-        <p>Este site é apenas informativo.</p>
-        <p>Não oferecemos aconselhamento financeiro.</p>
+        <p>Este site é apenas informativo e não constitui recomendação financeira.</p>
         <p>O usuário é responsável por suas decisões de investimento.</p>
+        <p>Este site pode exibir anúncios do Google AdSense.</p>
     </div>
 </section>
 
 <footer>
-    © 2026 BTC ANCP News
+    © 2026 BTC ANCP News - Todos os direitos reservados
 </footer>
 
-<!-- SCRIPT -->
 <script src="https://s3.tradingview.com/tv.js"></script>
 
 <script>
-
-// SIMULADOR
-function simular() {
+function simular(){
     let v = Number(document.getElementById("valor").value);
 
-    if (!v || v <= 0) {
+    if(!v || v<=0){
         document.getElementById("resultado").innerText = "Digite um valor válido";
         return;
     }
 
     let btc = v / 350000;
 
-    document.getElementById("resultado").innerText =
-        btc.toFixed(6) + " BTC";
+    document.getElementById("resultado").innerText = btc.toFixed(6)+" BTC";
 }
 
-// BTC + GRÁFICO
-window.onload = function () {
+window.onload = function(){
 
-    document.getElementById("btc-price").innerText =
-        "BTC/USD (ver gráfico abaixo)";
+    document.getElementById("btc-price").innerText = "BTC/USD (gráfico ao vivo abaixo)";
 
     new TradingView.widget({
         container_id: "tradingview",
@@ -226,7 +270,6 @@ window.onload = function () {
         theme: "dark"
     });
 };
-
 </script>
 
 </body>
