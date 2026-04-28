@@ -3,213 +3,253 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTC ANCP News - Portal de Notícias Cripto</title>
 
-<title>BTC ANCP News</title>
+<meta name="description" content="Portal profissional de Bitcoin e criptomoedas com notícias, análises, gráficos ao vivo e artigos completos.">
+<meta name="keywords" content="bitcoin, criptomoedas, btc, notícias, análise bitcoin, mercado cripto">
+<meta name="author" content="BTC ANCP News">
+
+<!-- SEO / SOCIAL -->
+<meta property="og:title" content="BTC ANCP News">
+<meta property="og:description" content="Notícias e análises sobre Bitcoin e criptomoedas">
+<meta property="og:type" content="website">
+
+<!-- ADSENSE -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5373156487540566"
+crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body{
-margin:0;
-font-family:Poppins,sans-serif;
-background:#0b0f1a;
-color:#fff;
+:root{
+  --bg:#0b0f1a;
+  --card:#111827;
+  --text:#fff;
+  --muted:#9ca3af;
+  --accent:#22c55e;
 }
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container{max-width:1100px;margin:auto;padding:15px;}
 
 header{
-padding:15px;
-background:#020617;
-display:flex;
-justify-content:space-between;
-align-items:center;
+  position:sticky;top:0;
+  background:#020617;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #1f2937;
+  z-index:10;
 }
 
-nav a{
-color:#fff;
-margin:0 10px;
-text-decoration:none;
-}
+nav a{color:#fff;margin:0 8px;text-decoration:none;font-size:14px;}
+nav a:hover{color:var(--accent);}
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:15px;
-}
-
-.hero{
-padding:20px;
-}
-
-#btc-price{
-color:#22c55e;
-}
+.hero{text-align:center;padding:30px;}
+#btc-price{color:var(--accent);font-size:18px;}
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:15px;
 }
 
 .card{
-background:#111827;
-padding:10px;
-border-radius:10px;
-cursor:pointer;
-transition:0.3s;
+  background:var(--card);
+  padding:12px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.3s;
 }
-
-.card:hover{
-transform:scale(1.03);
-}
-
-.card img{
-width:100%;
-height:150px;
-object-fit:cover;
-border-radius:10px;
-}
+.card:hover{transform:scale(1.03);}
+.card img{width:100%;height:150px;object-fit:cover;border-radius:10px;}
 
 .article{
-display:none;
-padding:20px;
-background:#111827;
-border-radius:10px;
+  display:none;
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
 }
 
 button{
-background:#22c55e;
-border:none;
-padding:10px;
-color:#fff;
-border-radius:8px;
-cursor:pointer;
-margin-top:10px;
+  background:var(--accent);
+  border:none;
+  padding:10px;
+  border-radius:8px;
+  color:#fff;
+  cursor:pointer;
 }
-</style>
 
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+  background:#0f172a;
+  color:#fff;
+}
+
+/* ARTICLE VIEW */
+#articleView{display:none;}
+
+.ad-slot{
+  margin:20px 0;
+  padding:15px;
+  border:1px dashed #333;
+  text-align:center;
+  color:#777;
+}
+
+footer{text-align:center;padding:20px;color:var(--muted);}
+</style>
 </head>
 
 <body>
 
 <header>
-<div><b>BTC ANCP News</b></div>
-<nav>
-<a href="#">Home</a>
-<a href="#news">Notícias</a>
-</nav>
+  <div><b>BTC ANCP News</b></div>
+  <nav>
+    <a href="#" onclick="goHome()">Home</a>
+    <a href="#news">Notícias</a>
+    <a href="#chart">Gráfico</a>
+    <a href="#coluna">Coluna</a>
+  </nav>
 </header>
 
-<div class="container hero">
-<h1>Bitcoin e Criptomoedas</h1>
-<h2 id="btc-price">Carregando BTC...</h2>
+<div class="hero container">
+  <h1>Portal de Bitcoin e Criptomoedas</h1>
+  <div id="btc-price">Carregando BTC...</div>
 </div>
 
-<!-- NOTÍCIAS -->
-<div class="container" id="news">
+<!-- HOME / NEWS -->
+<section id="homeView" class="container">
+
+<div class="ad-slot">Espaço para anúncio (AdSense)</div>
 
 <h2>📰 Notícias</h2>
 
-<div class="grid">
+<div class="grid" id="newsList"></div>
 
-<div class="card" onclick="openArticle(0)">
-<img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040">
-<h3>Bitcoin em alta</h3>
-<p>Clique para ler mais</p>
-</div>
+</section>
 
-<div class="card" onclick="openArticle(1)">
-<img src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c">
-<h3>Adoção institucional</h3>
-<p>Clique para ler mais</p>
-</div>
+<!-- ARTICLE VIEW -->
+<section id="articleView" class="container article">
+<button onclick="goHome()">⬅ Voltar</button>
+<h2 id="aTitle"></h2>
+<img id="aImg" style="width:100%;border-radius:10px;margin-top:10px;">
+<p id="aText"></p>
+</section>
 
-<div class="card" onclick="openArticle(2)">
-<img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307">
-<h3>Mercado cripto</h3>
-<p>Clique para ler mais</p>
-</div>
+<!-- CHART -->
+<section id="chart" class="container">
+<h2>📊 BTC ao vivo</h2>
+<div id="tradingview"></div>
+</section>
 
-</div>
-</div>
+<!-- COLUNA -->
+<section id="coluna" class="container">
+<h2>📝 Coluna do Editor</h2>
+<textarea id="colunaText"></textarea>
+<button onclick="saveColuna()">Salvar coluna</button>
+</section>
 
-<!-- ARTIGO -->
-<div class="container article" id="article">
+<div class="ad-slot container">Outro espaço para anúncio</div>
 
-<button onclick="closeArticle()">⬅ Voltar</button>
+<footer>© 2026 BTC ANCP News</footer>
 
-<h2 id="title"></h2>
-<img id="img" style="width:100%;border-radius:10px;margin-top:10px;">
-<p id="text"></p>
-
-</div>
-
-<!-- SIMULADOR -->
-<div class="container">
-<h2>📈 Simulador BTC</h2>
-
-<input id="valor" type="number" placeholder="Valor em R$">
-<button onclick="simular()">Simular</button>
-
-<p id="resultado"></p>
-</div>
+<script src="https://s3.tradingview.com/tv.js"></script>
 
 <script>
 
-// BTC preço
+// BTC PRICE
 async function btc(){
-try{
-let res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd");
-let data = await res.json();
-document.getElementById("btc-price").innerText = "BTC: $" + data.bitcoin.usd;
-}catch(e){
-document.getElementById("btc-price").innerText = "Erro BTC";
-}
+  try{
+    let r = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd");
+    let d = await r.json();
+    document.getElementById("btc-price").innerText = "BTC: $"+d.bitcoin.usd;
+  }catch(e){
+    document.getElementById("btc-price").innerText="Erro BTC";
+  }
 }
 btc();
 
-// simulador
-function simular(){
-let v = document.getElementById("valor").value;
-if(!v){alert("Digite valor");return;}
-
-fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
-.then(r=>r.json())
-.then(d=>{
-let btc = v / d.bitcoin.usd;
-document.getElementById("resultado").innerText = btc.toFixed(6)+" BTC";
-});
-}
-
-// notícias
+// NEWS DATA
 const news = [
 {
-title:"Bitcoin em alta",
-img:"https://images.unsplash.com/photo-1621761191319-c6fb62004040",
-text:"Bitcoin continua em alta com forte interesse institucional e aumento da demanda global."
-},
+id:1,title:"Bitcoin rompe resistência",img:"https://images.unsplash.com/photo-1621761191319-c6fb62004040",text:"Bitcoin continua em alta com forte volume institucional e tendência positiva no mercado global."},
 {
-title:"Adoção institucional cresce",
-img:"https://images.unsplash.com/photo-1640340434855-6084b1f4901c",
-text:"Grandes empresas estão comprando Bitcoin e reduzindo a oferta circulante no mercado."
-},
+id:2,title:"Adoção institucional cresce",img:"https://images.unsplash.com/photo-1640340434855-6084b1f4901c",text:"Grandes empresas seguem acumulando BTC como reserva de valor digital."},
 {
-title:"Mercado cripto se recupera",
-img:"https://images.unsplash.com/photo-1621504450181-5d356f61d307",
-text:"O mercado cripto mostra sinais de recuperação após períodos de queda."
-}
+id:3,title:"Mercado cripto se recupera",img:"https://images.unsplash.com/photo-1621504450181-5d356f61d307",text:"Após correções, o mercado mostra sinais de retomada de alta."}
 ];
 
-function openArticle(i){
-document.getElementById("news").style.display="none";
-document.getElementById("article").style.display="block";
+// RENDER NEWS
+function render(){
+  let box=document.getElementById("newsList");
+  box.innerHTML="";
+  news.forEach(n=>{
+    box.innerHTML+=`
+    <div class='card' onclick='openArticle(${n.id})'>
+      <img src='${n.img}'>
+      <h3>${n.title}</h3>
+    </div>`;
+  });
+}
+render();
 
-document.getElementById("title").innerText = news[i].title;
-document.getElementById("img").src = news[i].img;
-document.getElementById("text").innerText = news[i].text;
+// OPEN ARTICLE (SEO STYLE)
+function openArticle(id){
+  let n = news.find(x=>x.id==id);
+
+  document.getElementById("homeView").style.display="none";
+  document.getElementById("articleView").style.display="block";
+
+  document.getElementById("aTitle").innerText=n.title;
+  document.getElementById("aImg").src=n.img;
+  document.getElementById("aText").innerText=n.text;
+
+  history.pushState({id},"","?post="+id);
 }
 
-function closeArticle(){
-document.getElementById("news").style.display="block";
-document.getElementById("article").style.display="none";
+function goHome(){
+  document.getElementById("homeView").style.display="block";
+  document.getElementById("articleView").style.display="none";
+  history.pushState({"home":true},"","/");
 }
+
+// COLUNA SAVE
+function saveColuna(){
+  localStorage.setItem("coluna",document.getElementById("colunaText").value);
+  alert("Salvo!");
+}
+
+// INIT
+window.onload=function(){
+
+  document.getElementById("colunaText").value = localStorage.getItem("coluna") || "Escreva sua análise de mercado aqui...";
+
+  new TradingView.widget({
+    container_id:"tradingview",
+    width:"100%",
+    height:400,
+    symbol:"BINANCE:BTCUSDT",
+    theme:"dark"
+  });
+
+  // deep link support
+  const urlParams = new URLSearchParams(window.location.search);
+  const post = urlParams.get("post");
+  if(post){ openArticle(parseInt(post)); }
+};
 
 </script>
 
