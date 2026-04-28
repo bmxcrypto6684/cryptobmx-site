@@ -3,190 +3,212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BTC ANCP News - Portal Profissional</title>
 
-<meta name="description" content="Portal profissional de Bitcoin e criptomoedas com notícias completas, análises e artigos com imagens e detalhes.">
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5373156487540566"
-crossorigin="anonymous"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>BTC ANCP News</title>
 
 <style>
-*{box-sizing:border-box;}
-
 body{
-    margin:0;
-    font-family:Poppins,sans-serif;
-    background:#0b0f1a;
-    color:#fff;
+margin:0;
+font-family:Poppins,sans-serif;
+background:#0b0f1a;
+color:#fff;
 }
 
-.container{max-width:1100px;margin:auto;padding:15px;}
-
 header{
-    position:sticky;top:0;
-    background:#020617;
-    padding:15px;
-    border-bottom:1px solid #111827;
-    z-index:10;
+padding:15px;
+background:#020617;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 nav a{
-    color:#fff;
-    margin:0 8px;
-    text-decoration:none;
-    font-size:14px;
+color:#fff;
+margin:0 10px;
+text-decoration:none;
 }
 
-nav a:hover{color:#22c55e;}
+.container{
+max-width:1100px;
+margin:auto;
+padding:15px;
+}
 
-.hero{padding:20px;}
-.hero h1{font-size:26px;}
-.hero h2{color:#22c55e;}
+.hero{
+padding:20px;
+}
+
+#btc-price{
+color:#22c55e;
+}
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
 }
 
 .card{
-    background:#111827;
-    border-radius:12px;
-    overflow:hidden;
-    cursor:pointer;
-    transition:0.3s;
+background:#111827;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
 }
 
-.card:hover{transform:scale(1.03);}
+.card:hover{
+transform:scale(1.03);
+}
 
 .card img{
-    width:100%;
-    height:160px;
-    object-fit:cover;
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:10px;
 }
-
-.card-content{padding:10px;}
 
 .article{
-    display:none;
-    padding:20px;
-    background:#111827;
-    border-radius:12px;
-}
-
-.article img{
-    width:100%;border-radius:10px;margin-bottom:10px;
+display:none;
+padding:20px;
+background:#111827;
+border-radius:10px;
 }
 
 button{
-    padding:10px;
-    background:#22c55e;
-    border:none;
-    color:#fff;
-    border-radius:8px;
-    cursor:pointer;
+background:#22c55e;
+border:none;
+padding:10px;
+color:#fff;
+border-radius:8px;
+cursor:pointer;
+margin-top:10px;
 }
-
 </style>
+
 </head>
 
 <body>
 
 <header>
-<div class="container">
-<b>BTC ANCP News</b>
+<div><b>BTC ANCP News</b></div>
 <nav>
-<a href="#home">Home</a>
+<a href="#">Home</a>
 <a href="#news">Notícias</a>
-<a href="#article">Artigo</a>
 </nav>
-</div>
 </header>
 
-<section class="hero container" id="home">
+<div class="container hero">
 <h1>Bitcoin e Criptomoedas</h1>
-<h2 id="btc-price">Carregando...</h2>
-</section>
+<h2 id="btc-price">Carregando BTC...</h2>
+</div>
 
-<!-- NOTICIAS -->
-<section class="container" id="news">
+<!-- NOTÍCIAS -->
+<div class="container" id="news">
+
 <h2>📰 Notícias</h2>
 
 <div class="grid">
 
 <div class="card" onclick="openArticle(0)">
 <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040">
-<div class="card-content">
-<h3>Bitcoin em alta no mercado</h3>
-<p>Veja análise completa da movimentação do BTC.</p>
-</div>
+<h3>Bitcoin em alta</h3>
+<p>Clique para ler mais</p>
 </div>
 
 <div class="card" onclick="openArticle(1)">
 <img src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c">
-<div class="card-content">
-<h3>Adoção institucional cresce</h3>
-<p>Grandes empresas estão comprando Bitcoin.</p>
-</div>
+<h3>Adoção institucional</h3>
+<p>Clique para ler mais</p>
 </div>
 
 <div class="card" onclick="openArticle(2)">
 <img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307">
-<div class="card-content">
-<h3>Mercado cripto se recupera</h3>
-<p>O mercado mostra sinais de alta novamente.</p>
-</div>
+<h3>Mercado cripto</h3>
+<p>Clique para ler mais</p>
 </div>
 
 </div>
-</section>
+</div>
 
 <!-- ARTIGO -->
-<section class="container article" id="article">
-<button onclick="closeArticle()">Voltar</button>
+<div class="container article" id="article">
+
+<button onclick="closeArticle()">⬅ Voltar</button>
+
 <h2 id="title"></h2>
-<img id="img">
+<img id="img" style="width:100%;border-radius:10px;margin-top:10px;">
 <p id="text"></p>
-</section>
+
+</div>
+
+<!-- SIMULADOR -->
+<div class="container">
+<h2>📈 Simulador BTC</h2>
+
+<input id="valor" type="number" placeholder="Valor em R$">
+<button onclick="simular()">Simular</button>
+
+<p id="resultado"></p>
+</div>
 
 <script>
 
-const articles=[
+// BTC preço
+async function btc(){
+try{
+let res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd");
+let data = await res.json();
+document.getElementById("btc-price").innerText = "BTC: $" + data.bitcoin.usd;
+}catch(e){
+document.getElementById("btc-price").innerText = "Erro BTC";
+}
+}
+btc();
+
+// simulador
+function simular(){
+let v = document.getElementById("valor").value;
+if(!v){alert("Digite valor");return;}
+
+fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+.then(r=>r.json())
+.then(d=>{
+let btc = v / d.bitcoin.usd;
+document.getElementById("resultado").innerText = btc.toFixed(6)+" BTC";
+});
+}
+
+// notícias
+const news = [
 {
-title:"Bitcoin em alta no mercado",
+title:"Bitcoin em alta",
 img:"https://images.unsplash.com/photo-1621761191319-c6fb62004040",
-text:"O Bitcoin continua em forte movimentação no mercado global com grande interesse de investidores institucionais e varejo. Analistas indicam possível continuidade de tendência de alta dependendo do cenário macroeconômico."
+text:"Bitcoin continua em alta com forte interesse institucional e aumento da demanda global."
 },
 {
 title:"Adoção institucional cresce",
 img:"https://images.unsplash.com/photo-1640340434855-6084b1f4901c",
-text:"Grandes empresas e fundos estão aumentando exposição ao Bitcoin, reduzindo oferta circulante e fortalecendo o ativo como reserva de valor digital."
+text:"Grandes empresas estão comprando Bitcoin e reduzindo a oferta circulante no mercado."
 },
 {
 title:"Mercado cripto se recupera",
 img:"https://images.unsplash.com/photo-1621504450181-5d356f61d307",
-text:"Após correções recentes, o mercado de criptomoedas mostra sinais de recuperação liderado pelo Bitcoin e principais altcoins."
+text:"O mercado cripto mostra sinais de recuperação após períodos de queda."
 }
 ];
 
 function openArticle(i){
-    document.getElementById("news").style.display="none";
-    document.getElementById("article").style.display="block";
+document.getElementById("news").style.display="none";
+document.getElementById("article").style.display="block";
 
-    document.getElementById("title").innerText=articles[i].title;
-    document.getElementById("img").src=articles[i].img;
-    document.getElementById("text").innerText=articles[i].text;
+document.getElementById("title").innerText = news[i].title;
+document.getElementById("img").src = news[i].img;
+document.getElementById("text").innerText = news[i].text;
 }
 
 function closeArticle(){
-    document.getElementById("news").style.display="block";
-    document.getElementById("article").style.display="none";
-}
-
-window.onload=function(){
-    document.getElementById("btc-price").innerText="BTC ao vivo";
+document.getElementById("news").style.display="block";
+document.getElementById("article").style.display="none";
 }
 
 </script>
