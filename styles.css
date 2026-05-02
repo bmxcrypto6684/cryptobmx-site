@@ -1266,7 +1266,7 @@ ul { list-style: none; }
 }
 .footer__grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
   gap: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--color-border);
