@@ -961,6 +961,7 @@ function createLiveNewsCard(item) {
 }
 
 function timeAgo(timestamp) {
+  if (!timestamp) return 'recentemente';
   var now = Math.floor(Date.now() / 1000);
   var diff = now - timestamp;
   if (diff < 60) return 'agora';
