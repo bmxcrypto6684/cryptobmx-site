@@ -566,53 +566,76 @@ function submitComment(articleId) {
 }
 
 // ============================================================
-// 7. BITCOIN PRICE SIMULATOR
+// 7. BITCOIN PRICE — API REAL (CoinGecko)
 // ============================================================
+let btcPriceData = { usd: 0, brl: 0 };
 let btcPriceHistory = [];
 let btcInterval = null;
 let btcSecondsSinceUpdate = 0;
 let btcTimerInterval = null;
+let previousBtcPrice = 0;
+
+function fetchBtcPrice() {
+  const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,brl';
+  return fetch(url)
+    .then(res => {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(data => {
+      if (!data || !data.bitcoin) throw new Error('Resposta inválida');
+      previousBtcPrice = btcPriceData.usd || data.bitcoin.usd;
+      btcPriceData = { usd: data.bitcoin.usd, brl: data.bitcoin.brl };
+      btcPriceHistory.push(btcPriceData.usd);
+      if (btcPriceHistory.length > 50) btcPriceHistory.shift();
+      btcSecondsSinceUpdate = 0;
+      updateBtcDisplay();
+      drawBtcChart();
+      updateSimulatorPrices();
+    })
+    .catch(err => {
+      console.warn('Erro ao buscar preço BTC:', err.message);
+      if (btcPriceHistory.length === 0) {
+        const fb = 150000 + Math.random() * 15000;
+        btcPriceData = { usd: fb, brl: fb * 5.1 };
+        btcPriceHistory.push(fb);
+        updateBtcDisplay();
+        drawBtcChart();
+        updateSimulatorPrices();
+      }
+    });
+}
 
 function initBtcWidget() {
-  // Generate initial price data
-  let price = 145000 + Math.random() * 15000;
-  for (let i = 0; i < 30; i++) {
-    price += (Math.random() - 0.48) * 2000;
-    btcPriceHistory.push(Math.round(price * 100) / 100);
-  }
-  updateBtcDisplay();
-  drawBtcChart();
-
-  // Update price every 5 seconds
-  btcInterval = setInterval(() => {
-    const lastPrice = btcPriceHistory[btcPriceHistory.length - 1];
-    const change = (Math.random() - 0.48) * 800;
-    const newPrice = Math.round((lastPrice + change) * 100) / 100;
-    btcPriceHistory.push(newPrice);
-    if (btcPriceHistory.length > 50) btcPriceHistory.shift();
-    btcSecondsSinceUpdate = 0;
-    updateBtcDisplay();
-    drawBtcChart();
-  }, 5000);
-
-  // Timer counter every 1 second
+  document.getElementById('btcPrice').textContent = '$ ---';
+  document.getElementById('btcPriceBrl').textContent = 'R$ ---';
+  fetchBtcPrice();
+  btcInterval = setInterval(fetchBtcPrice, 10000);
   btcTimerInterval = setInterval(() => {
     btcSecondsSinceUpdate++;
-    document.getElementById('btcUpdateTime').textContent = btcSecondsSinceUpdate;
+    const el = document.getElementById('btcUpdateTime');
+    if (el) el.textContent = btcSecondsSinceUpdate;
   }, 1000);
 }
 
 function updateBtcDisplay() {
-  const price = btcPriceHistory[btcPriceHistory.length - 1];
-  const prevPrice = btcPriceHistory.length > 1 ? btcPriceHistory[btcPriceHistory.length - 2] : price;
-  const change = ((price - prevPrice) / prevPrice) * 100;
-  const changeFormatted = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
-  const isUp = change >= 0;
+  const priceUSD = btcPriceData.usd;
+  const priceBRL = btcPriceData.brl;
+  if (!priceUSD) return;
 
-  document.getElementById('btcPrice').textContent = '$' + price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  const changeEl = document.getElementById('btcChange');
-  changeEl.textContent = `Hoje: ${changeFormatted}`;
-  changeEl.className = `btc-widget__change ${isUp ? 'up' : 'down'}`;
+  document.getElementById('btcPrice').textContent =
+    '$' + priceUSD.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  document.getElementById('btcPriceBrl').textContent =
+    'R$ ' + priceBRL.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  if (previousBtcPrice && previousBtcPrice !== priceUSD) {
+    const change = ((priceUSD - previousBtcPrice) / previousBtcPrice) * 100;
+    const changeFormatted = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+    const isUp = change >= 0;
+    const changeEl = document.getElementById('btcChange');
+    changeEl.textContent = 'Hoje: ' + changeFormatted;
+    changeEl.className = 'btc-widget__change ' + (isUp ? 'up' : 'down');
+  }
   document.getElementById('btcUpdateTime').textContent = '0';
 }
 
@@ -722,6 +745,9 @@ function init() {
   // BTC Widget
   initBtcWidget();
 
+  // BTC Simulator
+  initSimulator();
+
   // Search: desktop
   document.getElementById('searchToggle').addEventListener('click', () => {
     const box = document.getElementById('searchBox');
@@ -801,6 +827,66 @@ function init() {
 function closeMobileMenu() {
   document.getElementById('navToggle').classList.remove('open');
   document.getElementById('navMenu').classList.remove('open');
+}
+
+// ============================================================
+// 10. SIMULADOR DE COMPRA DE BITCOIN
+// ============================================================
+function initSimulator() {
+  const input = document.getElementById('simInvestBRL');
+  if (!input) return;
+
+  input.addEventListener('input', function () {
+    // Allow only digits and comma
+    let raw = this.value.replace(/[^\d,]/g, '');
+    const parts = raw.split(',');
+    if (parts.length > 2) {
+      raw = parts[0] + ',' + parts.slice(1).join('');
+    }
+    // Limit to 2 decimal places
+    if (raw.includes(',')) {
+      const [, dec] = raw.split(',');
+      if (dec.length > 2) raw = parts[0] + ',' + dec.slice(0, 2);
+    }
+    this.value = raw;
+    updateSimulatorOutput();
+  });
+
+  // Also update on blur (format nicely)
+  input.addEventListener('blur', function () {
+    const val = parseFloat(this.value.replace(',', '.')) || 0;
+    if (val > 0) {
+      this.value = val.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+    updateSimulatorOutput();
+  });
+}
+
+function updateSimulatorOutput() {
+  const input = document.getElementById('simInvestBRL');
+  const resultEl = document.getElementById('simBtcAmount');
+  if (!input || !resultEl) return;
+
+  const brlValue = parseFloat(input.value.replace(',', '.')) || 0;
+
+  if (brlValue > 0 && btcPriceData.brl > 0) {
+    const btcAmount = brlValue / btcPriceData.brl;
+    resultEl.textContent = btcAmount.toFixed(8);
+  } else {
+    resultEl.textContent = '0,00000000';
+  }
+}
+
+function updateSimulatorPrices() {
+  const usdEl = document.getElementById('simUsdPrice');
+  const brlEl = document.getElementById('simBrlPrice');
+  if (usdEl && btcPriceData.usd) {
+    usdEl.textContent = '$' + btcPriceData.usd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  if (brlEl && btcPriceData.brl) {
+    brlEl.textContent = 'R$ ' + btcPriceData.brl.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  updateSimulatorOutput();
 }
 
 // Start

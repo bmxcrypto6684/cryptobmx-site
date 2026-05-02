@@ -107,6 +107,48 @@
         </div>
       </section>
 
+      <!-- BTC Simulator -->
+      <section class="section simulator-section" id="simulator">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title"><i class="fab fa-bitcoin"></i> Simulador de Compra de Bitcoin</h2>
+          </div>
+          <div class="simulator">
+            <div class="simulator__rates">
+              <div class="simulator__rate simulator__rate--usd">
+                <span class="simulator__rate-label">BTC / USD</span>
+                <span class="simulator__rate-value" id="simUsdPrice">$ ---</span>
+              </div>
+              <div class="simulator__rate simulator__rate--brl">
+                <span class="simulator__rate-label">BTC / BRL</span>
+                <span class="simulator__rate-value" id="simBrlPrice">R$ ---</span>
+              </div>
+            </div>
+            <div class="simulator__card">
+              <div class="simulator__form">
+                <label for="simInvestBRL">Quanto você quer investir?</label>
+                <div class="simulator__input-group">
+                  <span class="simulator__currency">R$</span>
+                  <input type="text" id="simInvestBRL" placeholder="0,00" inputmode="decimal" />
+                </div>
+              </div>
+              <div class="simulator__divider"></div>
+              <div class="simulator__result">
+                <span class="simulator__result-label">Você compraria aproximadamente</span>
+                <div class="simulator__result-btc">
+                  <span class="simulator__result-value" id="simBtcAmount">0,00000000</span>
+                  <span class="simulator__result-unit">BTC</span>
+                </div>
+              </div>
+              <p class="simulator__notice">
+                <i class="fas fa-info-circle"></i>
+                Simulação baseada no preço atual em tempo real. Sem valor real de compra.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Featured Articles + Sidebar -->
       <section class="section featured-section">
         <div class="container">
@@ -124,9 +166,12 @@
               <div class="sidebar__card btc-widget" id="btcWidget">
                 <div class="btc-widget__header">
                   <i class="fab fa-bitcoin"></i>
-                  <span>BTC / USD</span>
+                  <span>BTC</span>
                 </div>
-                <div class="btc-widget__price" id="btcPrice">$ --</div>
+                <div class="btc-widget__prices">
+                  <div class="btc-widget__price" id="btcPrice">$ --</div>
+                  <div class="btc-widget__price btc-widget__price--brl" id="btcPriceBrl">R$ --</div>
+                </div>
                 <div class="btc-widget__change" id="btcChange">--</div>
                 <div class="btc-widget__chart" id="btcChart">
                   <canvas id="btcChartCanvas" width="280" height="80"></canvas>
