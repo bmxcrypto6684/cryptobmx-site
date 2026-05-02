@@ -9,8 +9,8 @@
 const ARTICLES = [
   {
     id: 1,
-    title: 'Bitcoin ultrapassa US$ 150 mil: o que está impulsionando o novo recorde histórico?',
-    excerpt: 'Análise aprofundada dos fatores que levaram o Bitcoin a atingir um novo recorde absoluto, incluindo adoção institucional, ETFs e cenário macroeconômico global.',
+    title: 'Bitcoin atinge novo recorde histórico: o que está impulsionando a alta?',
+    excerpt: 'Análise aprofundada dos fatores que levaram o Bitcoin a renovar seu recorde absoluto, incluindo adoção institucional, ETFs e cenário macroeconômico global.',
     category: 'bitcoin',
     categoryLabel: 'Bitcoin',
     image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+ATH',
@@ -19,7 +19,7 @@ const ARTICLES = [
     readTime: '6 min',
     featured: true,
     body: `
-      <p>O Bitcoin atingiu um novo marco histórico nesta semana, ultrapassando a barreira dos US$ 150 mil pela primeira vez. O movimento de alta, que vinha se acumulando desde o início do ano, foi catalisado por uma confluência de fatores que merecem análise cuidadosa.</p>
+      <p>O Bitcoin atingiu um novo marco histórico nesta semana, renovando seu recorde absoluto de preço. O movimento de alta, que vinha se acumulando desde o início do ano, foi catalisado por uma confluência de fatores que merecem análise cuidadosa.</p>
 
       <h3>Adoção institucional em ritmo acelerado</h3>
       <p>Grandes gestoras de ativos globais continuam aumentando suas alocações em Bitcoin. Após o lançamento bem-sucedido dos ETFs à vista nos Estados Unidos, o fluxo de capital institucional atingiu novos patamares. Dados recentes mostram que mais de US$ 40 bilhões em fluxo líquido entraram nos produtos de Bitcoin no último trimestre.</p>
@@ -257,7 +257,7 @@ const CATEGORIES = [
 
 // Trending topics
 const TRENDING = [
-  'BTC acima de US$ 150 mil',
+  'BTC em novo recorde histórico',
   'Halving 2024',
   'Lightning Network',
   'ETF de Bitcoin',
@@ -580,16 +580,16 @@ let btcTimerInterval = null;
 let previousBtcPrice = 0;
 
 function fetchBtcPrice() {
-  const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,brl';
+  const url = 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC&tsyms=USD,BRL';
   return fetch(url)
     .then(res => {
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.json();
     })
     .then(data => {
-      if (!data || !data.bitcoin) throw new Error('Resposta inválida');
-      previousBtcPrice = btcPriceData.usd || data.bitcoin.usd;
-      btcPriceData = { usd: data.bitcoin.usd, brl: data.bitcoin.brl };
+      if (!data || !data.BTC) throw new Error('Resposta inválida');
+      previousBtcPrice = btcPriceData.usd || data.BTC.USD;
+      btcPriceData = { usd: data.BTC.USD, brl: data.BTC.BRL };
       btcPriceHistory.push(btcPriceData.usd);
       if (btcPriceHistory.length > 50) btcPriceHistory.shift();
       btcSecondsSinceUpdate = 0;
@@ -600,7 +600,7 @@ function fetchBtcPrice() {
     .catch(err => {
       console.warn('Erro ao buscar preço BTC:', err.message);
       if (btcPriceHistory.length === 0) {
-        const fb = 150000 + Math.random() * 15000;
+        const fb = 75000 + Math.random() * 10000;
         btcPriceData = { usd: fb, brl: fb * 5.1 };
         btcPriceHistory.push(fb);
         updateBtcDisplay();
