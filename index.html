@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BTC Ancap News - O portal definitivo sobre Bitcoin, economia libertária e liberdade financeira." />
+  <title>BTC Ancap News — Bitcoin, Liberdade Econômica & Cripto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__brand" onclick="navigate('home')">
+        <span class="navbar__icon"><i class="fas fa-bolt"></i></span>
+        <span class="navbar__logo-text">BTC Ancap News</span>
+      </a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar__menu" id="navMenu">
+        <a href="#home" class="navbar__link active" data-page="home" onclick="navigate('home')">Home</a>
+        <a href="#news" class="navbar__link" data-page="news" onclick="navigate('news')">Notícias</a>
+        <a href="#about" class="navbar__link" data-page="about" onclick="navigate('about')">Sobre</a>
+        <a href="#contact" class="navbar__link" data-page="contact" onclick="navigate('contact')">Contato</a>
+      </nav>
+
+      <div class="navbar__search" id="searchWidget">
+        <button class="navbar__search-toggle" id="searchToggle" aria-label="Abrir busca">
+          <i class="fas fa-search"></i>
+        </button>
+        <div class="navbar__search-box" id="searchBox">
+          <input type="text" id="searchInput" placeholder="Buscar notícias..." />
+          <button id="searchSubmit" aria-label="Buscar"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search overlay (mobile) -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="container search-overlay__inner">
+        <input type="text" id="searchInputMobile" placeholder="O que você procura?" autofocus />
+        <button id="searchSubmitMobile" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        <button class="search-overlay__close" id="searchOverlayClose" aria-label="Fechar busca">&times;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== SEARCH RESULTS MODAL ===== -->
+  <div class="search-results-modal" id="searchResultsModal">
+    <div class="search-results-modal__backdrop" onclick="closeSearchResults()"></div>
+    <div class="search-results-modal__content">
+      <div class="search-results-modal__header">
+        <h3>Resultados da busca</h3>
+        <button onclick="closeSearchResults()" aria-label="Fechar">&times;</button>
+      </div>
+      <div class="search-results-modal__body" id="searchResultsBody">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="mainContent">
+
+    <!-- ===== HOME PAGE ===== -->
+    <section id="page-home" class="page active-page">
+      <!-- Hero Banner -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__grid">
+            <a class="hero__featured" id="heroFeatured" onclick="openArticle(event)">
+              <div class="hero__featured-img" id="heroFeaturedImg">
+                <img src="" alt="" />
+              </div>
+              <div class="hero__featured-overlay"></div>
+              <div class="hero__featured-body">
+                <span class="hero__badge" id="heroFeaturedCategory"></span>
+                <h2 id="heroFeaturedTitle"></h2>
+                <p id="heroFeaturedExcerpt"></p>
+                <span class="hero__meta" id="heroFeaturedMeta"></span>
+              </div>
+            </a>
+            <div class="hero__side" id="heroSide">
+              <!-- populated by JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest News -->
+      <section class="section latest">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title"><i class="fas fa-newspaper"></i> Últimas Notícias</h2>
+            <a href="#news" class="section__more" onclick="navigate('news')">Ver todas <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="card-grid" id="latestGrid">
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Articles + Sidebar -->
+      <section class="section featured-section">
+        <div class="container">
+          <div class="content-with-sidebar">
+            <div class="content-main">
+              <div class="section__header">
+                <h2 class="section__title"><i class="fas fa-star"></i> Artigos em Destaque</h2>
+              </div>
+              <div class="featured-list" id="featuredList">
+                <!-- populated by JS -->
+              </div>
+            </div>
+            <aside class="sidebar" id="homeSidebar">
+              <!-- BTC Widget -->
+              <div class="sidebar__card btc-widget" id="btcWidget">
+                <div class="btc-widget__header">
+                  <i class="fab fa-bitcoin"></i>
+                  <span>BTC / USD</span>
+                </div>
+                <div class="btc-widget__price" id="btcPrice">$ --</div>
+                <div class="btc-widget__change" id="btcChange">--</div>
+                <div class="btc-widget__chart" id="btcChart">
+                  <canvas id="btcChartCanvas" width="280" height="80"></canvas>
+                </div>
+                <div class="btc-widget__meta">
+                  <span>Atualizado há <span id="btcUpdateTime">0</span>s</span>
+                </div>
+              </div>
+
+              <!-- Categories -->
+              <div class="sidebar__card">
+                <h3 class="sidebar__title">Categorias</h3>
+                <ul class="sidebar__cats" id="sidebarCats">
+                  <!-- populated by JS -->
+                </ul>
+              </div>
+
+              <!-- Trending -->
+              <div class="sidebar__card">
+                <h3 class="sidebar__title">Em Alta</h3>
+                <ul class="sidebar__trending" id="sidebarTrending">
+                  <!-- populated by JS -->
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===== NEWS PAGE ===== -->
+    <section id="page-news" class="page">
+      <section class="page-banner">
+        <div class="container">
+          <h1><i class="fas fa-newspaper"></i> Todas as Notícias</h1>
+          <p>Fique por dentro do universo Bitcoin, criptomoedas e liberdade econômica.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="news__filters" id="newsFilters">
+            <!-- populated by JS -->
+          </div>
+          <div class="card-grid card-grid--list" id="newsGrid">
+            <!-- populated by JS -->
+          </div>
+          <div class="news__pagination" id="newsPagination">
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===== ARTICLE PAGE ===== -->
+    <section id="page-article" class="page">
+      <article class="article" id="articleContent">
+        <!-- populated entirely by JS -->
+      </article>
+    </section>
+
+    <!-- ===== ABOUT PAGE ===== -->
+    <section id="page-about" class="page">
+      <section class="page-banner">
+        <div class="container">
+          <h1><i class="fas fa-info-circle"></i> Sobre o BTC Ancap News</h1>
+          <p>Conheça nossa missão, visão e propósito.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container about">
+          <div class="about__hero">
+            <div class="about__icon"><i class="fas fa-bolt"></i></div>
+            <h2>BTC Ancap News</h2>
+            <p class="about__tagline">O portal de notícias sobre Bitcoin, liberdade econômica e a filosofia ancap.</p>
+          </div>
+
+          <div class="about__grid">
+            <div class="about__card">
+              <i class="fas fa-bullseye"></i>
+              <h3>Nossa Missão</h3>
+              <p>Informar e educar sobre o potencial do Bitcoin e das criptomoedas como ferramentas de liberdade financeira, promovendo o pensamento crítico sobre economia, Estado e liberdade individual.</p>
+            </div>
+            <div class="about__card">
+              <i class="fas fa-eye"></i>
+              <h3>Nossa Visão</h3>
+              <p>Ser a principal referência em língua portuguesa para conteúdo de qualidade sobre Bitcoin, anarcocapitalismo e soberania financeira, ajudando a construir uma sociedade mais livre e próspera.</p>
+            </div>
+            <div class="about__card">
+              <i class="fas fa-heart"></i>
+              <h3>Nossos Valores</h3>
+              <ul>
+                <li><strong>Liberdade:</strong> Defesa intransigente da liberdade individual</li>
+                <li><strong>Propriedade Privada:</strong> Respeito ao direito de propriedade</li>
+                <li><strong>Descentralização:</strong> Poder distribuído, sem controle central</li>
+                <li><strong>Paz:</strong> Conflito resolvido por mercado e não por coerção</li>
+                <li><strong>Veracidade:</strong> Compromisso com fatos e precisão</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about__manifesto">
+            <h3>Por que BTC Ancap News?</h3>
+            <p>
+              Vivemos um momento histórico. O Bitcoin surge como a primeira moeda verdadeiramente descentralizada da humanidade —
+              dinheiro sem Estado, sem fronteiras, sem censura. Paralelamente, as ideias de liberdade econômica e
+              anarcocapitalismo ganham relevância prática num mundo de inflação, vigilância e crises fiscais.
+            </p>
+            <p>
+              O <strong>BTC Ancap News</strong> nasce da convicção de que informação de qualidade é a base de uma sociedade livre.
+              Reunimos notícias, análises e artigos sobre Bitcoin, criptomoedas, economia austríaca, filosofia libertária e
+              todos os temas que convergem para um futuro com mais liberdade.
+            </p>
+            <p>
+              Acreditamos que o mercado, a cooperação voluntária e a propriedade privada são os alicerces de uma
+              civilização próspera. Junte-se a nós nessa jornada.
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===== CONTACT PAGE ===== -->
+    <section id="page-contact" class="page">
+      <section class="page-banner">
+        <div class="container">
+          <h1><i class="fas fa-envelope"></i> Contato</h1>
+          <p>Tem algo a dizer? Mande sua mensagem.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact">
+          <div class="contact__grid">
+            <div class="contact__info">
+              <h3>Entre em contato</h3>
+              <p>Quer sugerir uma pauta, enviar um artigo, reportar um erro ou simplesmente trocar uma ideia?
+              Estamos abertos ao diálogo.</p>
+              <ul class="contact__list">
+                <li><i class="fas fa-envelope"></i> contato@btcancapnews.com</li>
+                <li><i class="fab fa-twitter"></i> @btcancapnews</li>
+                <li><i class="fab fa-telegram"></i> t.me/btcancapnews</li>
+              </ul>
+            </div>
+            <form class="contact__form" id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Nome</label>
+                <input type="text" id="contactName" placeholder="Seu nome" required />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" placeholder="seu@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="contactSubject">Assunto</label>
+                <input type="text" id="contactSubject" placeholder="Assunto" />
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Mensagem</label>
+                <textarea id="contactMessage" rows="5" placeholder="Sua mensagem..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">
+                <i class="fas fa-paper-plane"></i> Enviar Mensagem
+              </button>
+              <p class="contact__feedback" id="contactFeedback"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo"><i class="fas fa-bolt"></i> BTC Ancap News</div>
+          <p>O portal de notícias sobre Bitcoin, liberdade econômica e a filosofia ancap.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Navegação</h4>
+          <a href="#home" onclick="navigate('home')">Home</a>
+          <a href="#news" onclick="navigate('news')">Notícias</a>
+          <a href="#about" onclick="navigate('about')">Sobre</a>
+          <a href="#contact" onclick="navigate('contact')">Contato</a>
+        </div>
+        <div class="footer__col">
+          <h4>Categorias</h4>
+          <a href="#news" onclick="navigate('news', 'bitcoin')">Bitcoin</a>
+          <a href="#news" onclick="navigate('news', 'economia')">Economia</a>
+          <a href="#news" onclick="navigate('news', 'ancap')">Ancap</a>
+          <a href="#news" onclick="navigate('news', 'cripto')">Cripto</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contato</h4>
+          <a href="#contact" onclick="navigate('contact')">Fale Conosco</a>
+          <a href="#about" onclick="navigate('about')">Sobre Nós</a>
+          <p class="footer__copyright">&copy; 2026 BTC Ancap News. Todos os direitos reservados.</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>Feito com <i class="fas fa-heart" style="color:var(--color-gold);"></i> pela liberdade.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
