@@ -275,6 +275,10 @@ const HERO_SIDE = FEATURED_ARTICLES.slice(1, 4);
 // Articles per page (news listing)
 const ARTICLES_PER_PAGE = 5;
 
+// Live news (from CryptoCompare API)
+let liveNewsData = [];
+let liveNewsLoaded = false;
+
 // ============================================================
 // 2. NAVEGAÇÃO SPA
 // ============================================================
@@ -748,6 +752,9 @@ function init() {
   // BTC Simulator
   initSimulator();
 
+  // Live News
+  initLiveNews();
+
   // Search: desktop
   document.getElementById('searchToggle').addEventListener('click', () => {
     const box = document.getElementById('searchBox');
@@ -887,6 +894,81 @@ function updateSimulatorPrices() {
     brlEl.textContent = 'R$ ' + btcPriceData.brl.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
   updateSimulatorOutput();
+}
+
+// ============================================================
+// 11. NOTÍCIAS AO VIVO — CryptoCompare API
+// ============================================================
+function initLiveNews() {
+  fetchLiveNews();
+  setInterval(fetchLiveNews, 300000); // 5 min
+}
+
+function fetchLiveNews() {
+  const url = 'https://min-api.cryptocompare.com/data/v2/news/?lang=EN&extraParams=BTCAncapNews';
+  fetch(url)
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      if (!data.Data || !data.Data.length) throw new Error('No news data');
+      liveNewsData = data.Data.slice(0, 30);
+      liveNewsLoaded = true;
+      renderLiveNewsOnHome();
+    })
+    .catch(function (err) {
+      console.warn('Erro ao buscar notícias:', err.message);
+    });
+}
+
+function renderLiveNewsOnHome() {
+  var grid = document.getElementById('latestGrid');
+  if (!grid || !liveNewsData.length) return;
+  grid.innerHTML = '';
+  var top6 = liveNewsData.slice(0, 6);
+  for (var i = 0; i < top6.length; i++) {
+    grid.appendChild(createLiveNewsCard(top6[i]));
+  }
+  var badge = document.getElementById('liveBadge');
+  if (badge) badge.style.display = 'inline-flex';
+}
+
+function createLiveNewsCard(item) {
+  var card = document.createElement('div');
+  card.className = 'news-card news-card--live';
+  var title = item.title || 'Sem título';
+  var body = item.body || '';
+  var excerpt = body.length > 120 ? body.substring(0, 120) + '...' : body;
+  var img = item.imageurl || 'https://placehold.co/800x400/1a2231/8899aa?text=News';
+  var source = item.source || 'Crypto';
+  var timeStr = timeAgo(item.published_on);
+  card.innerHTML =
+    '<img class="news-card__img" src="' + img + '" alt="' + title.replace(/"/g, '&quot;') + '" loading="lazy" onerror="this.src=\'https://placehold.co/800x400/1a2231/8899aa?text=News\'" />' +
+    '<div class="news-card__body">' +
+      '<span class="news-card__cat news-card__cat--live"><i class="fas fa-globe"></i> ' + source + '</span>' +
+      '<h3 class="news-card__title">' + title + '</h3>' +
+      '<p class="news-card__excerpt">' + excerpt + '</p>' +
+      '<div class="news-card__meta">' +
+        '<span><i class="far fa-clock"></i> ' + timeStr + '</span>' +
+        '<span><i class="fas fa-external-link-alt"></i> ' + source + '</span>' +
+      '</div>' +
+    '</div>';
+  card.addEventListener('click', function () {
+    if (item.url) window.open(item.url, '_blank', 'noopener,noreferrer');
+  });
+  return card;
+}
+
+function timeAgo(timestamp) {
+  var now = Math.floor(Date.now() / 1000);
+  var diff = now - timestamp;
+  if (diff < 60) return 'agora';
+  if (diff < 3600) return Math.floor(diff / 60) + 'min atrás';
+  if (diff < 86400) return Math.floor(diff / 3600) + 'h atrás';
+  var days = Math.floor(diff / 86400);
+  if (days === 1) return 'ontem';
+  return days + 'd atrás';
 }
 
 // Start

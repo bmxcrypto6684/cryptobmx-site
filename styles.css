@@ -536,6 +536,31 @@ ul { list-style: none; }
 .section__title i {
   color: var(--color-accent);
 }
+.live-badge {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  background: #dc2626;
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  animation: pulse-badge 2s ease-in-out infinite;
+  position: relative;
+  top: -1px;
+}
+.live-badge i {
+  font-size: 0.4rem;
+  color: #fff;
+}
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
 .section__more {
   font-size: 0.85rem;
   font-weight: 500;
@@ -628,6 +653,26 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* Live news cards */
+.news-card--live {
+  cursor: pointer;
+}
+.news-card--live:hover {
+  border-color: var(--color-accent);
+}
+.news-card--live .news-card__cat--live {
+  background: rgba(247, 147, 26, 0.1);
+  color: var(--color-accent);
+  border: 1px solid rgba(247, 147, 26, 0.2);
+}
+.news-card--live .news-card__cat--live i {
+  font-size: 0.65rem;
+  margin-right: 4px;
+}
+.news-card--live .news-card__meta span:last-child {
+  color: var(--color-accent);
 }
 
 /* List layout card */
