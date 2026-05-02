@@ -9,7 +9,7 @@
 const ARTICLES = [
   {
     id: 1,
-    title: 'Bitcoin atinge novo recorde histórico: o que está impulsionando a alta?',
+    title: 'Bitcoin volta ou patamar dos 79mil: o que está impulsionando a alta?',
     excerpt: 'Análise aprofundada dos fatores que levaram o Bitcoin a renovar seu recorde absoluto, incluindo adoção institucional, ETFs e cenário macroeconômico global.',
     category: 'bitcoin',
     categoryLabel: 'Bitcoin',
@@ -946,13 +946,13 @@ function createLiveNewsCard(item) {
   card.innerHTML =
     '<img class="news-card__img" src="' + img + '" alt="' + title.replace(/"/g, '&quot;') + '" loading="lazy" onerror="this.src=\'https://placehold.co/800x400/1a2231/8899aa?text=News\'" />' +
     '<div class="news-card__body">' +
-      '<span class="news-card__cat news-card__cat--live"><i class="fas fa-globe"></i> ' + source + '</span>' +
-      '<h3 class="news-card__title">' + title + '</h3>' +
-      '<p class="news-card__excerpt">' + excerpt + '</p>' +
-      '<div class="news-card__meta">' +
-        '<span><i class="far fa-clock"></i> ' + timeStr + '</span>' +
-        '<span><i class="fas fa-external-link-alt"></i> ' + source + '</span>' +
-      '</div>' +
+    '<span class="news-card__cat news-card__cat--live"><i class="fas fa-globe"></i> ' + source + '</span>' +
+    '<h3 class="news-card__title">' + title + '</h3>' +
+    '<p class="news-card__excerpt">' + excerpt + '</p>' +
+    '<div class="news-card__meta">' +
+    '<span><i class="far fa-clock"></i> ' + timeStr + '</span>' +
+    '<span><i class="fas fa-external-link-alt"></i> ' + source + '</span>' +
+    '</div>' +
     '</div>';
   card.addEventListener('click', function () {
     if (item.url) window.open(item.url, '_blank', 'noopener,noreferrer');
