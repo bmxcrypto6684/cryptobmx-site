@@ -24,7 +24,7 @@ const ARTICLES = [
       <h3>Adoção institucional em ritmo acelerado</h3>
       <p>Grandes gestoras de ativos globais continuam aumentando suas alocações em Bitcoin. Após o lançamento bem-sucedido dos ETFs à vista nos Estados Unidos, o fluxo de capital institucional atingiu novos patamares. Dados recentes mostram que mais de US$ 40 bilhões em fluxo líquido entraram nos produtos de Bitcoin no último trimestre.</p>
 
-      <blockquote>Estamos testemunhando a maior transferência de riqueza da história, saindo de ativos fiduciários para dinheiro digital descentralizado. — Relatório季度 da Storm Capital</blockquote>
+      <blockquote>Estamos testemunhando a maior transferência de riqueza da história, saindo de ativos fiduciários para dinheiro digital descentralizado. — Relatório Trimestral da Storm Capital</blockquote>
 
       <h3>Cenário macroeconômico favorável</h3>
       <p>O ambiente macroeconômico global também tem jogado a favor do Bitcoin. Com bancos centrais ao redor do mundo expandindo suas bases monetárias em resposta a desacelerações econômicas, investidores buscam ativos escassos e descentralizados como proteção contra a inflação e a desvalorização monetária.</p>
@@ -205,8 +205,8 @@ const ARTICLES = [
   },
   {
     id: 9,
-    title: 'Análise técnica: suporte de US$ 100 mil pode ser testado antes da próxima perna de alta',
-    excerpt: 'Analistas apontam que um recuo para testar o suporte dos US$ 100 mil seria saudável antes da continuidade do movimento altista.',
+    title: 'Análise técnica: resistência de US$ 100 mil pode ser testada antes da próxima perna de alta',
+    excerpt: 'Analistas apontam que um recuo para testar a resistência dos US$ 100 mil seria saudável antes da continuidade do movimento altista.',
     category: 'cripto',
     categoryLabel: 'Cripto',
     image: 'https://placehold.co/800x400/7c3aed/ffffff?text=An%C3%A1lise+T%C3%A9cnica',
@@ -215,9 +215,9 @@ const ARTICLES = [
     readTime: '4 min',
     featured: false,
     body: `
-      <p>O mercado de criptomoedas entra em uma fase de consolidação após o forte rali recente. Analistas técnicos apontam que um teste ao suporte dos US$ 100 mil para o Bitcoin seria um movimento saudável antes do próximo avanço.</p>
+      <p>O mercado de criptomoedas entra em uma fase de consolidação após o forte rali recente. Analistas técnicos apontam que um teste à resistência dos US$ 100 mil para o Bitcoin seria um movimento saudável antes do próximo avanço.</p>
 
-      <p>O indicador RDI (Relative Directional Index) mostra divergência de baixa no curto prazo, sugerindo que o mercado precisa de um período de resfriamento. No entanto, as médias móveis de 50 e 200 dias continuam em tendência fortemente altista.</p>
+      <p>O indicador RSI (Relative Strength Index) mostra divergência de baixa no curto prazo, sugerindo que o mercado precisa de um período de resfriamento. No entanto, as médias móveis de 50 e 200 dias continuam em tendência fortemente altista.</p>
     `,
     comments: []
   },
