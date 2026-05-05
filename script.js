@@ -244,6 +244,71 @@ const ARTICLES = [
       { author: 'Clara M.', date: '21 abr 2026', text: 'Excelente artigo! A função social é usada como justificativa para todo tipo de abuso estatal.' },
     ]
   },
+  {
+    id: 11,
+    title: 'Bitcoin é acumulado por holders de longo prazo e testa US$ 81 mil',
+    excerpt: 'Dados on-chain revelam que investidores de longo prazo adicionaram 330 mil BTC às carteiras, sinalizando confiança no mercado apesar da volatilidade.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+Acumula%C3%A7%C3%A3o',
+    author: 'Redação BTC Ancap News',
+    date: '5 mai 2026',
+    readTime: '5 min',
+    featured: false,
+    body: `
+      <p>O Bitcoin atingiu a marca de US$ 81 mil impulsionado por um movimento expressivo de acumulação por parte de detentores de longo prazo (LTHs). Dados on-chain mostram que esses investidores adicionaram cerca de 330 mil BTC às suas posições, um dos maiores acréscimos mensais do ano.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>O movimento ocorre em um momento em que o mercado cripto busca direção após meses de consolidação entre US$ 70 mil e US$ 85 mil. A acumulação por LTHs é historicamente vista como um sinal otimista, pois esses investidores tendem a manter suas posições independentemente das flutuações de curto prazo.</p>
+
+      <blockquote>Detentores de longo prazo estão comprando Bitcoin como se não houvesse amanhã. Esse comportamento precedeu todas as grandes altas do ciclo. — Análise on-chain semanal</blockquote>
+
+      <h3>Contexto e impacto no mercado</h3>
+      <p>O acúmulo reduziu a oferta circulante de Bitcoin nas exchanges, criando um choque de oferta que pode impulsionar o preço para cima. Analistas técnicos apontam que se o BTC conseguir se sustentar acima dos US$ 81 mil, o próximo alvo pode ser a região dos US$ 95 mil.</p>
+
+      <p>A taxa de financiamento futura permanece estável, sugerindo que o movimento de alta é orgânico e não alavancado em excesso — um sinal saudável para a continuidade do rali.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>Caso o movimento de acumulação continue, o mercado pode enfrentar um aperto de oferta significativo, especialmente com o efeito contínuo do halving de 2024 reduzindo a emissão diária de novos Bitcoins. Combinado com a demanda institucional crescente via ETFs, o cenário é favorável para uma valorização sustentada.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>A acumulação por LTHs é um dos indicadores mais confiáveis do mercado. Historicamente, períodos de forte acumulação precederam as maiores altas do Bitcoin. O cenário atual combina oferta reduzida pós-halving com demanda institucional crescente — a receita clássica para uma potencial nova perna de alta. Recomenda-se atenção à região de US$ 95 mil como próximo grande teste.</p>
+    `,
+    comments: []
+  },
+  {
+    id: 12,
+    title: 'Telegram se torna o maior validador da TON e Toncoin dispara 33%',
+    excerpt: 'Pavel Durov anuncia que o Telegram assumirá papel central na validação da rede TON, elevando o token em mais de 30% em horas.',
+    category: 'cripto',
+    categoryLabel: 'Cripto',
+    image: 'https://placehold.co/800x400/0088cc/ffffff?text=Telegram+TON',
+    author: 'Redação BTC Ancap News',
+    date: '5 mai 2026',
+    readTime: '6 min',
+    featured: false,
+    body: `
+      <p>Pavel Durov, fundador do Telegram, anunciou que a plataforma de mensagens se tornará o maior validador da rede TON (The Open Network). A decisão representa um aprofundamento significativo da integração entre o Telegram e o ecossistema TON, que já vinha crescendo com recursos como carteira integrada e pagamentos via criptomoedas.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>O TON sempre manteve uma relação simbiótica com o Telegram, embora formalmente fossem entidades separadas. Com este movimento, o Telegram deixa claro que vê a blockchain TON como uma infraestrutura estratégica para o futuro da plataforma, especialmente em áreas como pagamentos, mini-apps descentralizados e verificação de identidade.</p>
+
+      <blockquote>Estamos apenas arranhando a superfície do que é possível quando uma plataforma com centenas de milhões de usuários encontra uma blockchain eficiente e escalável. — Pavel Durov</blockquote>
+
+      <h3>Contexto</h3>
+      <p>O Telegram já havia integrado recursos cripto nos últimos anos, incluindo carteira custodiada, negociação de criptomoedas e suporte a mini-apps baseados em TON. A decisão de se tornar validador eleva o envolvimento a um novo patamar, dando ao Telegram influência direta sobre a governança e segurança da rede.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>O token Toncoin reagiu imediatamente ao anúncio, registrando alta de 33,8% nas horas seguintes. O movimento elevou significativamente a capitalização de mercado do ativo, atraindo a atenção de investidores institucionais que antes mantinham distância do projeto.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>A validação direta pelo Telegram pode trazer maior estabilidade e segurança à rede TON, além de abrir caminho para novos recursos integrados ao mensageiro. Com mais de 900 milhões de usuários ativos, o Telegram tem potencial para levar adoção cripto a uma escala sem precedentes.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>A decisão do Telegram marca um momento importante para a adoção em massa de criptomoedas. Ter centenas de milhões de usuários com acesso potencial a serviços financeiros descentralizados dentro de um mensageiro que já usam diariamente elimina uma das maiores barreiras de entrada no mercado cripto: a complexidade técnica. O TON se posiciona como uma das blockchains mais promissoras para aplicações reais no curto prazo.</p>
+    `,
+    comments: []
+  },
 ];
 
 // Categories with article counts
@@ -258,13 +323,13 @@ const CATEGORIES = [
 // Trending topics
 const TRENDING = [
   'BTC em novo recorde histórico',
+  'Acumulação de BTC por holders',
+  'Telegram validador da TON',
+  'ETF de Bitcoin',
   'Halving 2024',
   'Lightning Network',
-  'ETF de Bitcoin',
   'Inflação na Argentina',
   'Escola Austríaca',
-  'Zonas Francas',
-  'Propriedade Privada',
 ];
 
 // Hero banner articles indexes
