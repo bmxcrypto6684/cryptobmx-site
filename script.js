@@ -132,7 +132,7 @@ const ARTICLES = [
     author: 'Rafael Torres',
     date: '26 abr 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>A busca pela inflação zero sempre foi vista como utopia pelos economistas tradicionais. Porém, com o amadurecimento do Bitcoin e o crescente questionamento dos bancos centrais, o debate volta com força.</p>
 
@@ -154,7 +154,7 @@ const ARTICLES = [
     author: 'Gabriela Costa',
     date: '25 abr 2026',
     readTime: '4 min',
-    featured: false,
+    featured: true,
     body: `
       <p>A Lightning Network, a camada de pagamentos instantâneos do Bitcoin, atingiu a marca histórica de 100 milhões de transações mensais. O marco consolida a rede como uma infraestrutura financeira global viável e eficiente.</p>
 
@@ -172,7 +172,7 @@ const ARTICLES = [
     author: 'Lucas Mendes',
     date: '24 abr 2026',
     readTime: '9 min',
-    featured: false,
+    featured: true,
     body: `
       <p>A Escola Austríaca de Economia é uma das tradições intelectuais mais influentes no pensamento libertário e anarcocapitalista. Seus fundamentos remontam a Carl Menger, Eugen von Böhm-Bawerk e, posteriormente, Ludwig von Mises e Friedrich Hayek.</p>
 
@@ -193,7 +193,7 @@ const ARTICLES = [
     author: 'Rafael Torres',
     date: '23 abr 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>As remessas internacionais sempre foram um negócio lucrativo para empresas tradicionais como Western Union e MoneyGram, que cobram taxas que podem chegar a 10% ou mais do valor enviado. Para trabalhadores imigrantes que enviam dinheiro para suas famílias, isso representa uma perda bilionária anual.</p>
 
@@ -213,7 +213,7 @@ const ARTICLES = [
     author: 'Gabriela Costa',
     date: '22 abr 2026',
     readTime: '4 min',
-    featured: false,
+    featured: true,
     body: `
       <p>O mercado de criptomoedas entra em uma fase de consolidação após o forte rali recente. Analistas técnicos apontam que um teste à resistência dos US$ 100 mil para o Bitcoin seria um movimento saudável antes do próximo avanço.</p>
 
@@ -231,7 +231,7 @@ const ARTICLES = [
     author: 'Lucas Mendes',
     date: '21 abr 2026',
     readTime: '10 min',
-    featured: false,
+    featured: true,
     body: `
       <p>O direito de propriedade é um dos pilares fundamentais da civilização. Filósofos como John Locke, Murray Rothbard e Hans-Hermann Hoppe construíram argumentos robustos sobre a centralidade da propriedade privada para a liberdade individual.</p>
 
@@ -254,7 +254,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '5 mai 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>O Bitcoin atingiu a marca de US$ 81 mil impulsionado por um movimento expressivo de acumulação por parte de detentores de longo prazo (LTHs). Dados on-chain mostram que esses investidores adicionaram cerca de 330 mil BTC às suas posições, um dos maiores acréscimos mensais do ano.</p>
 
@@ -286,7 +286,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '5 mai 2026',
     readTime: '6 min',
-    featured: false,
+    featured: true,
     body: `
       <p>Pavel Durov, fundador do Telegram, anunciou que a plataforma de mensagens se tornará o maior validador da rede TON (The Open Network). A decisão representa um aprofundamento significativo da integração entre o Telegram e o ecossistema TON, que já vinha crescendo com recursos como carteira integrada e pagamentos via criptomoedas.</p>
 
@@ -319,7 +319,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '5 mai 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>Os produtos de investimento em criptomoedas (ETPs) registraram a quinta semana consecutiva de influxos líquidos positivos, totalizando US$ 4,02 bilhões no período. O dado reforça a tendência de adoção institucional contínua, mesmo em meio à volatilidade de curto prazo.</p>
 
@@ -350,7 +350,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '5 mai 2026',
     readTime: '6 min',
-    featured: false,
+    featured: true,
     body: `
       <p>O Bitcoin enfrentou nova onda de volatilidade nesta semana, oscilando em torno dos US$ 80 mil em meio a tensões geopolíticas envolvendo o Irã e seus efeitos sobre os mercados globais. A criptomoeda chegou a recuar, mas se recuperou rapidamente, demonstrando resiliência.</p>
 
@@ -383,7 +383,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '5 mai 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>A lucratividade da mineração de Bitcoin voltou a patamares atrativos com o preço do BTC acima dos US$ 80 mil, estimulando novos investimentos em infraestrutura e equipamentos. O movimento marca uma recuperação significativa após o período de ajuste pós-halving.</p>
 
@@ -414,7 +414,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '5 mai 2026',
     readTime: '6 min',
-    featured: false,
+    featured: true,
     body: `
       <p>O Bitcoin atingiu US$ 81.261 nesta segunda-feira (5 de maio de 2026), registrando alta de 2,9% nas últimas 24 horas. O movimento, no entanto, vem acompanhado de um fenômeno incomum: as taxas de funding dos contratos perpétuos de Bitcoin permanecem negativas há 66 dias consecutivos — a sequência mais longa da década.</p>
 
@@ -451,7 +451,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '5 mai 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>A Coinbase anunciou nesta segunda-feira (5 de maio de 2026) a demissão de 14% de sua força de trabalho. O CEO Brian Armstrong comunicou a decisão em e-mail interno publicado também em sua conta no X, citando o mercado baixista de criptomoedas e a transformação impulsionada por inteligência artificial como motivos principais.</p>
 
@@ -488,7 +488,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '5 mai 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>O Toncoin (TON) disparou 36% nas últimas 24 horas, negociando a US$ 1,86, após Pavel Durov anunciar que o Telegram assumirá o controle operacional da The Open Network (TON), substituindo a TON Foundation. A notícia gerou euforia no mercado, mas analistas alertam para possível realização de lucros no curto prazo.</p>
 
@@ -525,7 +525,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '4 mai 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>A Western Union, gigante global de remessas com mais de US$ 50 bilhões em receita anual, deu um passo histórico no mercado de criptomoedas ao lançar sua própria stablecoin, a USDPT, na blockchain Solana. A stablecoin é emitida pelo Anchorage Digital Bank N.A., banco de ativos digitais regulado nos Estados Unidos.</p>
 
@@ -562,7 +562,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '4 mai 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>A Strive, Inc., empresa liderada pelo CEO Matt Cole, anunciou que ultrapassou a marca de 15.000 Bitcoins em sua tesouraria corporativa. A empresa realizou uma compra adicional de 444 BTC por US$ 33,9 milhões, consolidando sua posição como uma das maiores detentoras corporativas de Bitcoin do mundo.</p>
 
@@ -599,7 +599,7 @@ const ARTICLES = [
     author: 'Redação BTC Ancap News',
     date: '4 mai 2026',
     readTime: '5 min',
-    featured: false,
+    featured: true,
     body: `
       <p>A Depository Trust & Clearing Corporation (DTCC), a câmara de compensação central que processa trilhões de dólares em transações de valores mobiliários nos Estados Unidos, está se preparando para lançar um serviço de negociação de títulos tokenizados em blockchain. O serviço tem o apoio de gigantes como BlackRock e Goldman Sachs, com pilotos programados para julho e lançamento completo previsto para outubro de 2026.</p>
 
