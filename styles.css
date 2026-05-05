@@ -843,6 +843,33 @@ ul { list-style: none; }
   from { transform: translateX(0); }
   to { transform: translateX(4px); }
 }
+
+/* Write for BTC card */
+.sidebar__card--write {
+  border-color: rgba(0, 200, 83, 0.15);
+  background: linear-gradient(135deg, rgba(0,200,83,0.04), transparent);
+}
+.sidebar__write-text {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+.sidebar__write-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+.sidebar__write-btn:hover {
+  text-decoration: none;
+}
+
 .sidebar__cats {
   display: flex;
   flex-direction: column;
