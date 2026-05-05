@@ -1,9 +1,6 @@
-/* ============================================================
-   BTC Ancap News — Estilos Principais
-   Tema escuro com detalhes em dourado e laranja (Bitcoin)
-   ============================================================ */
+/* BTC Ancap News — Tema escuro dourado/laranja */
 
-/* ----- CSS Custom Properties ----- */
+/* CSS Custom Properties */
 :root {
   --color-bg: #0b0e14;
   --color-bg-alt: #11161f;
@@ -47,7 +44,7 @@
   --transition: 0.25s ease;
 }
 
-/* ----- Reset & Base ----- */
+/* Reset & Base */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -91,7 +88,7 @@ ul { list-style: none; }
   padding: 0 20px;
 }
 
-/* ----- Navbar ----- */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -314,7 +311,7 @@ ul { list-style: none; }
   padding: 0 8px;
 }
 
-/* ----- Search Results Modal ----- */
+/* Search Results Modal */
 .search-results-modal {
   display: none;
   position: fixed;
@@ -393,7 +390,7 @@ ul { list-style: none; }
   padding: 30px 0;
 }
 
-/* ----- Hero ----- */
+/* Hero */
 .hero {
   padding: 30px 0 20px;
 }
@@ -514,7 +511,7 @@ ul { list-style: none; }
   color: var(--color-text-muted);
 }
 
-/* ----- Sections ----- */
+/* Sections */
 .section {
   padding: 40px 0;
 }
@@ -536,31 +533,6 @@ ul { list-style: none; }
 .section__title i {
   color: var(--color-accent);
 }
-.live-badge {
-  display: none;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: #fff;
-  background: #dc2626;
-  padding: 3px 8px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  vertical-align: middle;
-  animation: pulse-badge 2s ease-in-out infinite;
-  position: relative;
-  top: -1px;
-}
-.live-badge i {
-  font-size: 0.4rem;
-  color: #fff;
-}
-@keyframes pulse-badge {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
-}
 .section__more {
   font-size: 0.85rem;
   font-weight: 500;
@@ -577,7 +549,7 @@ ul { list-style: none; }
   transform: translateX(3px);
 }
 
-/* ----- Card Grid ----- */
+/* Card Grid */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -587,7 +559,7 @@ ul { list-style: none; }
   grid-template-columns: 1fr;
 }
 
-/* ----- News Card ----- */
+/* News Card */
 .news-card {
   background: var(--color-bg-card);
   border-radius: var(--radius-md);
@@ -655,26 +627,6 @@ ul { list-style: none; }
   gap: 12px;
 }
 
-/* Live news cards */
-.news-card--live {
-  cursor: pointer;
-}
-.news-card--live:hover {
-  border-color: var(--color-accent);
-}
-.news-card--live .news-card__cat--live {
-  background: rgba(247, 147, 26, 0.1);
-  color: var(--color-accent);
-  border: 1px solid rgba(247, 147, 26, 0.2);
-}
-.news-card--live .news-card__cat--live i {
-  font-size: 0.65rem;
-  margin-right: 4px;
-}
-.news-card--live .news-card__meta span:last-child {
-  color: var(--color-accent);
-}
-
 /* List layout card */
 .card-grid--list .news-card {
   display: flex;
@@ -694,7 +646,7 @@ ul { list-style: none; }
   font-size: 1.15rem;
 }
 
-/* ----- Featured (list on home) ----- */
+/* Featured (list on home) */
 .featured-list {
   display: flex;
   flex-direction: column;
@@ -745,14 +697,14 @@ ul { list-style: none; }
   margin-top: 6px;
 }
 
-/* ----- Content with Sidebar ----- */
+/* Content with Sidebar */
 .content-with-sidebar {
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 30px;
 }
 
-/* ----- Sidebar ----- */
+/* Sidebar */
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -829,7 +781,7 @@ ul { list-style: none; }
   margin-right: 8px;
 }
 
-/* ----- Bitcoin Widget ----- */
+/* Bitcoin Widget */
 .btc-widget__header {
   display: flex;
   align-items: center;
@@ -880,7 +832,7 @@ ul { list-style: none; }
   color: var(--color-text-dim);
 }
 
-/* ----- BTC Simulator ----- */
+/* BTC Simulator */
 .simulator-section {
   scroll-margin-top: var(--navbar-height);
 }
@@ -1049,7 +1001,7 @@ ul { list-style: none; }
   }
 }
 
-/* ----- News Page ----- */
+/* News Page */
 .page-banner {
   padding: 40px 0 30px;
   background: linear-gradient(135deg, var(--color-bg-alt) 0%, #0f1924 100%);
@@ -1118,7 +1070,7 @@ ul { list-style: none; }
   color: #000;
 }
 
-/* ----- Article Page ----- */
+/* Article Page */
 .article {
   max-width: 780px;
   margin: 0 auto;
@@ -1296,7 +1248,7 @@ ul { list-style: none; }
   min-height: 80px;
 }
 
-/* ----- About ----- */
+/* About */
 .about__hero {
   text-align: center;
   padding: 20px 0 40px;
@@ -1379,7 +1331,7 @@ ul { list-style: none; }
 }
 .about__manifesto p:last-child { margin-bottom: 0; }
 
-/* ----- Contact ----- */
+/* Contact */
 .contact__grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -1458,7 +1410,7 @@ ul { list-style: none; }
 .contact__feedback.success { color: var(--color-green); }
 .contact__feedback.error { color: var(--color-red); }
 
-/* ----- Button ----- */
+/* Button */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1482,7 +1434,7 @@ ul { list-style: none; }
   box-shadow: 0 4px 15px rgba(247, 147, 26, 0.3);
 }
 
-/* ----- Footer ----- */
+/* Footer */
 .footer {
   background: var(--color-bg-alt);
   border-top: 1px solid var(--color-border);
@@ -1564,7 +1516,7 @@ ul { list-style: none; }
   font-size: 0.8rem;
 }
 
-/* ----- Scroll to Top ----- */
+/* Scroll to Top */
 .scroll-top {
   position: fixed;
   bottom: 30px;
@@ -1594,7 +1546,7 @@ ul { list-style: none; }
   transform: translateY(-3px);
 }
 
-/* ----- Page transitions ----- */
+/* Page transitions */
 .page {
   display: none;
   animation: fadeIn 0.35s ease;
@@ -1603,7 +1555,7 @@ ul { list-style: none; }
   display: block;
 }
 
-/* ----- Animations ----- */
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1624,15 +1576,7 @@ ul { list-style: none; }
   animation: pulse 1.2s ease infinite;
 }
 
-/* ----- Backdrop blur utility ----- */
-.backdrop-blur {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* Responsive */
 
 @media (max-width: 1024px) {
   .hero__grid {
@@ -1749,7 +1693,7 @@ ul { list-style: none; }
   .page-banner h1 { font-size: 1.4rem; }
 }
 
-/* ----- Smooth hover on interactive ----- */
+/* Smooth hover on interactive */
 .news-card, .featured-item, .hero__side-item, .hero__featured {
   cursor: pointer;
 }

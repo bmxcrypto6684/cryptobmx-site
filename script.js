@@ -1,11 +1,6 @@
-/* ============================================================
-   BTC Ancap News — Script Principal
-   Navegação SPA, dados, busca, simulador BTC, comentários
-   ============================================================ */
+/* BTC Ancap News — SPA, dados, busca, simulador BTC, comentários */
 
-// ============================================================
-// 1. DADOS — Artigos e notícias simuladas
-// ============================================================
+// 1. DADOS — Artigos
 const ARTICLES = [
   {
     id: 1,
@@ -659,9 +654,7 @@ const ARTICLES_PER_PAGE = 5;
 
 // Live news (desativado: site usa apenas conteúdo original)
 
-// ============================================================
 // 2. NAVEGAÇÃO SPA
-// ============================================================
 let currentPage = 'home';
 let currentCategory = 'all';
 let currentPageNum = 1;
@@ -726,9 +719,7 @@ function openArticle(event, articleId) {
   closeMobileMenu();
 }
 
-// ============================================================
-// 3. RENDERIZAÇÃO — HOME
-// ============================================================
+// 3. RENDER — HOME
 function renderHome() {
   // Hero main
   document.getElementById('heroFeaturedTitle').textContent = HERO_MAIN.title;
@@ -743,7 +734,7 @@ function renderHome() {
   const heroSide = document.getElementById('heroSide');
   heroSide.innerHTML = HERO_SIDE.map(a => `
     <div class="hero__side-item" data-article-id="${a.id}" onclick="openArticle(event)">
-      <img class="hero__side-img" src="${a.image}" alt="${a.title}" loading="lazy" />
+      <img class="hero__side-img" src="${a.image}" alt="${a.title}" loading="lazy" width="90" height="70" />
       <div class="hero__side-body">
         <h4>${a.title}</h4>
         <span>${a.date} · ${a.readTime}</span>
@@ -761,7 +752,7 @@ function renderHome() {
   const featuredList = document.getElementById('featuredList');
   featuredList.innerHTML = FEATURED_ARTICLES.slice(1).map(a => `
     <div class="featured-item" data-article-id="${a.id}" onclick="openArticle(event)">
-      <img class="featured-item__img" src="${a.image}" alt="${a.title}" loading="lazy" />
+      <img class="featured-item__img" src="${a.image}" alt="${a.title}" loading="lazy" width="280" height="200" />
       <div class="featured-item__body">
         <h4>${a.title}</h4>
         <p>${a.excerpt}</p>
@@ -788,7 +779,7 @@ function renderHome() {
 function createNewsCard(article) {
   return `
     <div class="news-card" data-article-id="${article.id}" onclick="openArticle(event)">
-      <img class="news-card__img" src="${article.image}" alt="${article.title}" loading="lazy" />
+      <img class="news-card__img" src="${article.image}" alt="${article.title}" loading="lazy" width="400" height="190" />
       <div class="news-card__body">
         <span class="news-card__cat">${article.categoryLabel}</span>
         <h3 class="news-card__title">${article.title}</h3>
@@ -803,9 +794,7 @@ function createNewsCard(article) {
   `;
 }
 
-// ============================================================
-// 4. RENDERIZAÇÃO — NEWS (listagem completa)
-// ============================================================
+// 4. RENDER — NEWS
 function renderNewsPage() {
   // Filters
   const filtersContainer = document.getElementById('newsFilters');
@@ -869,9 +858,7 @@ function renderNewsPage() {
   });
 }
 
-// ============================================================
-// 5. RENDERIZAÇÃO — ARTIGO
-// ============================================================
+// 5. RENDER — ARTIGO
 function renderArticle(article) {
   const container = document.getElementById('articleContent');
 
@@ -884,7 +871,7 @@ function renderArticle(article) {
         <span><i class="far fa-calendar"></i> ${article.date}</span>
         <span><i class="far fa-clock"></i> ${article.readTime} de leitura</span>
       </div>
-      <img class="article__img" src="${article.image}" alt="${article.title}" />
+      <img class="article__img" src="${article.image}" alt="${article.title}" width="780" height="420" />
 
       <div class="article__body">
         ${article.body}
@@ -923,9 +910,7 @@ function renderArticle(article) {
   `;
 }
 
-// ============================================================
-// 6. COMENTÁRIOS (simulado)
-// ============================================================
+// 6. COMENTÁRIOS
 function submitComment(articleId) {
   const nameInput = document.getElementById('commentName');
   const textInput = document.getElementById('commentText');
@@ -949,9 +934,7 @@ function submitComment(articleId) {
   renderArticle(article);
 }
 
-// ============================================================
-// 7. BITCOIN PRICE — API REAL (CoinGecko)
-// ============================================================
+// 7. BITCOIN PRICE (CoinGecko)
 let btcPriceData = { usd: 0, brl: 0 };
 let btcPriceHistory = [];
 let btcInterval = null;
@@ -978,7 +961,7 @@ function fetchBtcPrice() {
       updateSimulatorPrices();
     })
     .catch(err => {
-      console.warn('Erro ao buscar preço BTC:', err.message);
+      // fallback silencioso para fallback price
       if (btcPriceHistory.length === 0) {
         const fb = 75000 + Math.random() * 10000;
         btcPriceData = { usd: fb, brl: fb * 5.1 };
@@ -1083,9 +1066,7 @@ function drawBtcChart() {
   ctx.stroke();
 }
 
-// ============================================================
 // 8. BUSCA
-// ============================================================
 function performSearch(query) {
   if (!query.trim()) return;
   const q = query.toLowerCase().trim();
@@ -1120,9 +1101,7 @@ function closeSearchResults() {
   document.getElementById('searchResultsModal').classList.remove('open');
 }
 
-// ============================================================
 // 9. EVENT LISTENERS & INIT
-// ============================================================
 function init() {
   renderHome();
 
@@ -1201,13 +1180,12 @@ function init() {
     }, 5000);
   });
 
-  // Charts on resize
+  // Charts on resize (debounced)
   let resizeTimer;
   window.addEventListener('resize', () => {
+    if (currentPage !== 'home') return;
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      if (currentPage === 'home') drawBtcChart();
-    }, 200);
+    resizeTimer = setTimeout(drawBtcChart, 250);
   });
 }
 
@@ -1216,9 +1194,7 @@ function closeMobileMenu() {
   document.getElementById('navMenu').classList.remove('open');
 }
 
-// ============================================================
-// 10. SIMULADOR DE COMPRA DE BITCOIN
-// ============================================================
+// 10. SIMULADOR BTC
 function initSimulator() {
   const input = document.getElementById('simInvestBRL');
   if (!input) return;
@@ -1276,9 +1252,7 @@ function updateSimulatorPrices() {
   updateSimulatorOutput();
 }
 
-// ============================================================
-// 11. NOTÍCIAS AO VIVO — (desativado: site usa apenas conteúdo original)
-// ============================================================
+// 11. NOTÍCIAS AO VIVO — desativado
 
 // Start
 document.addEventListener('DOMContentLoaded', init);
