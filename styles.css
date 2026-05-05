@@ -844,10 +844,10 @@ ul { list-style: none; }
   to { transform: translateX(4px); }
 }
 
-/* Write for BTC card */
-.sidebar__card--write {
-  border-color: rgba(0, 200, 83, 0.15);
-  background: linear-gradient(135deg, rgba(0,200,83,0.04), transparent);
+/* Bitcoin Whitepaper card */
+.sidebar__card--whitepaper {
+  border-color: rgba(247, 147, 26, 0.2);
+  background: linear-gradient(135deg, rgba(247,147,26,0.06), transparent);
 }
 .sidebar__write-text {
   color: var(--color-text-muted);
