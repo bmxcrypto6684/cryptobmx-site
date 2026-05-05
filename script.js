@@ -678,6 +678,9 @@ function navigate(page, category) {
   // Scroll to top
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
+  // Re-run staggered animations on page transition
+  setTimeout(initStaggeredAnimations, 100);
+
   // Category filter for news page
   if (page === 'news') {
     if (category) currentCategory = category;
@@ -985,14 +988,30 @@ function initBtcWidget() {
   }, 1000);
 }
 
+function animatePriceChange(element, newValue) {
+  const oldValue = parseFloat(element.dataset.prevValue) || 0;
+  if (oldValue === newValue) return;
+  const isUp = newValue > oldValue;
+  element.style.transition = 'color 0.3s ease';
+  element.style.color = isUp ? 'var(--color-green)' : 'var(--color-red)';
+  setTimeout(() => { element.style.color = ''; }, 600);
+  element.dataset.prevValue = newValue;
+}
+
 function updateBtcDisplay() {
   const priceUSD = btcPriceData.usd;
   const priceBRL = btcPriceData.brl;
   if (!priceUSD) return;
 
-  document.getElementById('btcPrice').textContent =
+  const priceEl = document.getElementById('btcPrice');
+  const brlEl = document.getElementById('btcPriceBrl');
+
+  animatePriceChange(priceEl, priceUSD);
+  animatePriceChange(brlEl, priceBRL);
+
+  priceEl.textContent =
     '$' + priceUSD.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  document.getElementById('btcPriceBrl').textContent =
+  brlEl.textContent =
     'R$ ' + priceBRL.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   if (previousBtcPrice && previousBtcPrice !== priceUSD) {
@@ -1101,7 +1120,38 @@ function closeSearchResults() {
   document.getElementById('searchResultsModal').classList.remove('open');
 }
 
-// 9. EVENT LISTENERS & INIT
+// 9. STAGGERED FADE-IN + IMAGE FALLBACK
+function initStaggeredAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.dataset.delay || (i * 0.06);
+        entry.target.style.animationDelay = `${delay}s`;
+        entry.target.classList.add('animate-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.news-card, .featured-item, .hero__side-item, .about__card').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(15px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    el.dataset.delay = (i * 0.06).toString();
+    observer.observe(el);
+  });
+}
+
+function initImageFallbacks() {
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+      this.classList.add('error-fallback');
+      this.src = '';
+    });
+  });
+}
+
+// 10. EVENT LISTENERS & INIT
 function init() {
   renderHome();
 
@@ -1110,6 +1160,17 @@ function init() {
 
   // BTC Simulator
   initSimulator();
+
+  // Staggered animations
+  initStaggeredAnimations();
+
+  // Image fallbacks
+  initImageFallbacks();
+
+  // Inject animation visibility class
+  const styleAnim = document.createElement('style');
+  styleAnim.textContent = '.animate-visible { opacity: 1 !important; transform: translateY(0) !important; }';
+  document.head.appendChild(styleAnim);
 
   // Live News — usa artigos do próprio BTC Ancap News
   // initLiveNews removido: o site exibe apenas conteúdo original
@@ -1170,14 +1231,27 @@ function init() {
   document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const feedback = document.getElementById('contactFeedback');
-    feedback.textContent = '✅ Mensagem enviada com sucesso! Entraremos em contato em breve.';
-    feedback.className = 'contact__feedback show success';
-    document.getElementById('contactForm').reset();
+    const submitBtn = document.getElementById('contactSubmitBtn');
+    const btnText = submitBtn.querySelector('.btn__text');
+    const btnLoader = submitBtn.querySelector('.btn__loader');
 
-    // Reset after 5s
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoader.style.display = 'inline';
+
     setTimeout(() => {
-      feedback.className = 'contact__feedback';
-    }, 5000);
+      submitBtn.disabled = false;
+      btnText.style.display = 'inline';
+      btnLoader.style.display = 'none';
+
+      feedback.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+      feedback.className = 'contact__feedback show success';
+      document.getElementById('contactForm').reset();
+
+      setTimeout(() => {
+        feedback.className = 'contact__feedback';
+      }, 5000);
+    }, 1200);
   });
 
   // Charts on resize (debounced)
@@ -1243,8 +1317,18 @@ function updateSimulatorOutput() {
 function updateSimulatorPrices() {
   const usdEl = document.getElementById('simUsdPrice');
   const brlEl = document.getElementById('simBrlPrice');
+
+  // Flash effect on price update
+  [usdEl, brlEl].forEach(el => {
+    if (el) {
+      el.style.transition = 'opacity 0.15s ease';
+      el.style.opacity = '0.5';
+      setTimeout(() => { el.style.opacity = '1'; }, 150);
+    }
+  });
+
   if (usdEl && btcPriceData.usd) {
-    usdEl.textContent = '$' + btcPriceData.usd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    usdEl.textContent = '$ ' + btcPriceData.usd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
   if (brlEl && btcPriceData.brl) {
     brlEl.textContent = 'R$ ' + btcPriceData.brl.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });

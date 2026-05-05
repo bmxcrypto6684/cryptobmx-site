@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="BTC Ancap News - O portal definitivo sobre Bitcoin, economia libertária e liberdade financeira." />
+  <meta name="theme-color" content="#0b0e14" />
   <title>BTC Ancap News — Bitcoin, Liberdade Econômica & Cripto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -105,7 +106,7 @@
             <h2 class="section__title"><i class="fas fa-newspaper"></i> Últimas Notícias</h2>
             <a href="#news" class="section__more" onclick="navigate('news')">Ver todas <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="card-grid" id="latestGrid">
+          <div class="card-grid" id="latestGrid" data-animate="stagger">
             <!-- populated by JS -->
           </div>
         </div>
@@ -139,7 +140,7 @@
               <div class="simulator__divider"></div>
               <div class="simulator__result">
                 <span class="simulator__result-label">Você compraria aproximadamente</span>
-                <div class="simulator__result-btc">
+                <div class="simulator__result-btc" aria-live="polite" aria-atomic="true">
                   <span class="simulator__result-value" id="simBtcAmount">0,00000000</span>
                   <span class="simulator__result-unit">BTC</span>
                 </div>
@@ -249,7 +250,7 @@
       <section class="section">
         <div class="container about">
           <div class="about__hero">
-            <div class="about__icon"><i class="fas fa-bolt"></i></div>
+            <div class="about__icon"><div class="about__icon-ring"><i class="fas fa-bolt"></i></div></div>
             <h2>BTC Ancap News</h2>
             <p class="about__tagline">O portal de notícias sobre Bitcoin, liberdade econômica e a filosofia ancap.</p>
           </div>
@@ -324,22 +325,23 @@
             <form class="contact__form" id="contactForm">
               <div class="form-group">
                 <label for="contactName">Nome</label>
-                <input type="text" id="contactName" placeholder="Seu nome" required />
+                <input type="text" id="contactName" placeholder="Seu nome" required autocomplete="name" />
               </div>
               <div class="form-group">
                 <label for="contactEmail">Email</label>
-                <input type="email" id="contactEmail" placeholder="seu@email.com" required />
+                <input type="email" id="contactEmail" placeholder="seu@email.com" required autocomplete="email" />
               </div>
               <div class="form-group">
                 <label for="contactSubject">Assunto</label>
-                <input type="text" id="contactSubject" placeholder="Assunto" />
+                <input type="text" id="contactSubject" placeholder="Assunto" autocomplete="subject" />
               </div>
               <div class="form-group">
                 <label for="contactMessage">Mensagem</label>
                 <textarea id="contactMessage" rows="5" placeholder="Sua mensagem..." required></textarea>
               </div>
-              <button type="submit" class="btn btn--primary">
-                <i class="fas fa-paper-plane"></i> Enviar Mensagem
+              <button type="submit" class="btn btn--gradient" id="contactSubmitBtn">
+                <span class="btn__text"><i class="fas fa-paper-plane"></i> Enviar Mensagem</span>
+                <span class="btn__loader" style="display:none"><i class="fas fa-spinner fa-spin"></i> Enviando...</span>
               </button>
               <p class="contact__feedback" id="contactFeedback"></p>
             </form>
