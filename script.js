@@ -4,32 +4,32 @@
 const ARTICLES = [
   {
     id: 1,
-    title: 'Bitcoin volta ou patamar dos 79mil: o que está impulsionando a alta?',
-    excerpt: 'Análise aprofundada dos fatores que levaram o Bitcoin a renovar seu recorde absoluto, incluindo adoção institucional, ETFs e cenário macroeconômico global.',
+    title: 'Bitcoin ultrapassa US$ 83 mil e confirma novo recorde: o rali tem fundamento?',
+    excerpt: 'Com BTC negociando acima de US$ 83 mil, analistas apontam choque de oferta pós-halving e demanda institucional como motores do movimento. Projeções chegam a US$ 200 mil.',
     category: 'bitcoin',
     categoryLabel: 'Bitcoin',
-    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+ATH',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+%2483K',
     author: 'Lucas Mendes',
     date: '30 mai 2026',
     readTime: '6 min',
     featured: true,
     body: `
-      <p>O Bitcoin atingiu um novo marco histórico nesta semana, renovando seu recorde absoluto de preço. O movimento de alta, que vinha se acumulando desde o início do ano, foi catalisado por uma confluência de fatores que merecem análise cuidadosa.</p>
+      <p>O Bitcoin atingiu nesta semana a marca de US$ 83.270, renovando seu recorde absoluto e consolidando um rali que já acumula mais de 60% de valorização no ano. Diferentemente de movimentos anteriores, o atual ciclo de alta é sustentado por fundamentos sólidos que vão muito além do entusiasmo especulativo.</p>
 
-      <h3>Adoção institucional em ritmo acelerado</h3>
-      <p>Grandes gestoras de ativos globais continuam aumentando suas alocações em Bitcoin. Após o lançamento bem-sucedido dos ETFs à vista nos Estados Unidos, o fluxo de capital institucional atingiu novos patamares. Dados recentes mostram que mais de US$ 40 bilhões em fluxo líquido entraram nos produtos de Bitcoin no último trimestre.</p>
+      <h3>Choque de oferta pós-halving</h3>
+      <p>O halving de 2024 reduziu a emissão diária de novos Bitcoins de 900 para 450 unidades. Combinado com a demanda crescente dos ETFs à vista, que compram diariamente o equivalente a várias vezes a produção de novos BTC, o mercado enfrenta um aperto de oferta sem precedentes. Dados on-chain mostram que o saldo de Bitcoin nas exchanges atingiu a menor marca em cinco anos, com menos de 1,8 milhão de BTC disponíveis para negociação.</p>
 
-      <blockquote>Estamos testemunhando a maior transferência de riqueza da história, saindo de ativos fiduciários para dinheiro digital descentralizado. — Relatório Trimestral da Storm Capital</blockquote>
+      <blockquote>Estamos vivendo o choque de oferta mais severo da história do Bitcoin. A cada dia, os ETFs absorvem mais BTC do que os mineradores produzem. Isso é matemática básica de oferta e demanda. — Relatório Glassnode</blockquote>
 
-      <h3>Cenário macroeconômico favorável</h3>
-      <p>O ambiente macroeconômico global também tem jogado a favor do Bitcoin. Com bancos centrais ao redor do mundo expandindo suas bases monetárias em resposta a desacelerações econômicas, investidores buscam ativos escassos e descentralizados como proteção contra a inflação e a desvalorização monetária.</p>
+      <h3>Demanda institucional sem precedentes</h3>
+      <p>Os ETFs de Bitcoin à vista listados nos Estados Unidos acumulam mais de US$ 50 bilhões em ativos sob gestão, superando as estimativas mais otimistas do lançamento. Gestoras como BlackRock, Fidelity e Ark Invest continuam registrando influxos líquidos positivos, com destaque para semanas em que mais de US$ 2 bilhões entraram nos produtos.</p>
 
-      <p>A taxa de hash da rede Bitcoin atingiu novos máximos históricos, indicando crescente segurança e participação de mineradores. O halving ocorrido em 2024 já mostra seus efeitos na redução da emissão diária de novos Bitcoins, pressionando a oferta em um momento de demanda crescente.</p>
+      <p>Além dos ETFs, tesourarias corporativas seguem acumulando BTC. A Strategy (antiga MicroStrategy) agora detém mais de 250 mil BTC, e novas empresas como Strive, KULR e Metaplanet continuam adicionando Bitcoin a seus balanços.</p>
 
       <h3>Perspectivas para os próximos meses</h3>
-      <p>Analistas apontam que o ciclo de alta pode continuar, com projeções variando entre US$ 180 mil e US$ 220 mil até o final do ano. No entanto, alertam para possíveis correções no curto prazo, dado o ritmo acelerado da valorização.</p>
+      <p>Analistas técnicos apontam que o Bitcoin encontrou suporte sólido acima de US$ 78 mil e agora mira a resistência psicológica dos US$ 100 mil. O presidente da Fidelity, Jurrien Timmer, afirmou recentemente que o Bitcoin ainda está "subvalorizado" em relação às suas métricas de rede e adoção. Projeções para o topo do ciclo variam de US$ 180 mil a US$ 250 mil, com a maioria dos modelos sugerindo que o pico deve ocorrer entre o segundo e o terceiro trimestre de 2026.</p>
 
-      <p>O que permanece incontestável é a tendência de longo prazo: o Bitcoin segue se consolidando como a classe de ativo com melhor performance da última década, recompensando aqueles que entendem seu valor como dinheiro sólido e descentralizado.</p>
+      <p>Para o investidor de longo prazo, a mensagem permanece a mesma: tempo no mercado supera timing do mercado. Cada correção dentro deste ciclo tem sido uma oportunidade de acumulação para aqueles que entendem os fundamentos do Bitcoin.</p>
     `,
     comments: [
       { author: 'Carlos S.', date: '30 mai 2026', text: 'Eu avisei! Desde 2020 que venho dizendo que Bitcoin chegaria a 6 dígitos. HODL!' },
@@ -39,142 +39,198 @@ const ARTICLES = [
   },
   {
     id: 2,
-    title: 'Governo argentino adota Bitcoin como moeda legal em transações internacionais',
-    excerpt: 'Em uma decisão histórica, a Argentina permite que empresas realizem transações comerciais internacionais em Bitcoin, buscando contornar o controle cambial.',
-    category: 'economia',
-    categoryLabel: 'Economia',
-    image: 'https://placehold.co/800x400/0055aa/ffffff?text=Argentina+Bitcoin',
+    title: 'Autocustódia de Bitcoin atinge recorde: 70% do supply está fora de exchanges',
+    excerpt: 'Mais de 14,7 milhões de BTC estão em carteiras privadas, o maior nível da história. Movimento reflete amadurecimento dos investidores e busca por soberania financeira.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Autocust%C3%B3dia+BTC',
     author: 'Rafael Torres',
     date: '29 mai 2026',
     readTime: '5 min',
     featured: true,
     body: `
-      <p>A Argentina deu mais um passo significativo em direção à adoção do Bitcoin como ferramenta de liberdade econômica. Em uma medida histórica, o governo argentino anunciou que empresas poderão realizar transações comerciais internacionais utilizando Bitcoin como meio de pagamento.</p>
+      <p>Um marco histórico para a soberania financeira foi atingido: mais de 70% de todo o Bitcoin em circulação — aproximadamente 14,7 milhões de BTC — está agora fora de exchanges centralizadas, armazenado em carteiras privadas sob controle direto dos detentores. O movimento representa a maior transferência de autocustódia já registrada.</p>
 
-      <h3>Contornando o controle cambial</h3>
-      <p>A decisão visa contornar as rigorosas restrições cambiais que há décadas sufocam o comércio exterior argentino. Com uma inflação anual que ultrapassa os 200% e um peso em constante desvalorização, empresários argentinos vinham buscando alternativas para proteger seus negócios.</p>
+      <h3>O que significa custodiar seus próprios Bitcoins</h3>
+      <p>Autocustódia significa deter o controle total das chaves privadas de sua carteira de Bitcoin. Diferentemente de deixar saldos em exchanges ou custodians terceirizados, a autocustódia garante que nenhuma contraparte — seja governo, exchange ou banco — possa congelar ou confiscar seus Bitcoins. O princípio fundamental é: "not your keys, not your coins" (não são suas chaves, não são suas moedas).</p>
 
-      <blockquote>O Bitcoin nos oferece uma saída para o labirinto cambial argentino. Não se trata de ideologia, mas de sobrevivência econômica. — Ministro da Economia argentino</blockquote>
+      <blockquote>A autocustódia de Bitcoin não é apenas uma questão de segurança — é um ato político. É a afirmação prática de que você confia em si mesmo mais do que em qualquer instituição. — Andreas M. Antonopoulos</blockquote>
 
-      <h3>Impacto regional</h3>
-      <p>A medida argentina pode ter efeitos em toda a América Latina. Países vizinhos como Uruguai, Paraguai e até o Brasil observam atentamente os resultados da experiência argentina. Se bem-sucedida, pode servir de modelo para outras economias que enfrentam desafios semelhantes.</p>
+      <h3>Por que as pessoas estão tirando BTC das exchanges</h3>
+      <p>Vários fatores explicam esse movimento recorde de saída de exchanges. O colapso da FTX em 2022 ainda ecoa na memória dos investidores, que aprenderam da pior forma possível que manter grandes quantidades em exchanges envolve risco de contraparte. O amadurecimento das soluções de autocustódia — como hardware wallets da Ledger e Trezor, além de carteiras mobile como Phoenix e Breez na Lightning Network — tornou o processo mais acessível que nunca.</p>
 
-      <p>El Salvador, que adotou o Bitcoin como moeda legal em 2021, já demonstrou os benefícios potenciais, incluindo turismo, remessas e inclusão financeira. A Argentina, no entanto, é a maior economia a dar esse passo até hoje.</p>
+      <p>Além disso, o crescimento do ecossistema DeFi nativo do Bitcoin, como o protocolo RGB e sidechains como a Liquid, oferece utilidade para Bitcoins mantidos em autocustódia, eliminando a necessidade de depositar em exchanges para obter rendimentos.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>A redução da oferta disponível em exchanges contribui diretamente para o choque de oferta que impulsiona o preço do Bitcoin. Com menos BTC disponíveis para negociação imediata, movimentos de compra têm impacto maior sobre o preço. Historicamente, períodos de forte saída de exchanges precederam as maiores altas do Bitcoin.</p>
+
+      <p>Para o ecossistema, a autocustódia em massa também torna a rede mais resiliente: quanto mais distribuídos os Bitcoins, mais difícil se torna qualquer tentativa de ataque ou regulação adversa. A descentralização não é apenas um ideal filosófico — é a principal vantagem competitiva do Bitcoin sobre sistemas financeiros tradicionais.</p>
     `,
     comments: [
-      { author: 'Julio M.', date: '29 mai 2026', text: 'Argentina mostrando o caminho para a América Latina. Brasil precisa prestar atenção.' },
+      { author: 'Julio M.', date: '29 mai 2026', text: 'Autocustódia é o caminho. Não abro mão das minhas chaves desde 2021.' },
     ]
   },
   {
     id: 3,
-    title: 'Ancap na prática: como cidades-zona franca estão prosperando sem regulação estatal',
-    excerpt: 'Conheça exemplos reais de zonas econômicas livres ao redor do mundo que aplicam princípios anarcocapitalistas e colhem resultados impressionantes.',
-    category: 'ancap',
-    categoryLabel: 'Ancap',
-    image: 'https://placehold.co/800x400/1a1a2e/d4af37?text=Cidades+Zona+Franca',
+    title: 'ETFs de Bitcoin à vista quebram recordes: US$ 50 bilhões em AUM e demanda crescente',
+    excerpt: 'Produto financeiro mais bem-sucedido da história de Wall Street segue atraindo capital institucional e já movimenta mais de US$ 50 bilhões em ativos sob gestão.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=ETF+Bitcoin',
     author: 'Gabriela Costa',
     date: '28 mai 2026',
-    readTime: '8 min',
+    readTime: '7 min',
     featured: true,
     body: `
-      <p>O anarcocapitalismo frequentemente é tratado como utopia ou teoria abstrata. No entanto, ao redor do mundo, existem exemplos concretos de zonas econômicas que aplicam princípios fundamentais da filosofia ancap — e os resultados são impressionantes.</p>
+      <p>Os ETFs de Bitcoin à vista listados nos Estados Unidos atingiram a marca histórica de US$ 50 bilhões em ativos sob gestão (AUM), consolidando-se como o lançamento de ETF mais bem-sucedido da história de Wall Street. O fluxo de capital institucional não mostra sinais de desaceleração, com entradas líquidas semanais frequentemente superiores a US$ 1 bilhão.</p>
 
-      <h3>O que é uma zona econômica livre?</h3>
-      <p>Zonas econômicas especiais (ZEEs) são regiões onde as leis comerciais e tributárias diferem do restante do país. Algumas delas vão muito além, oferecendo liberdade quase total de regulação, tributação mínima e burocracia reduzida ao extremo.</p>
+      <h3>Um sucesso sem precedentes</h3>
+      <p>Quando a SEC aprovou os primeiros ETFs de Bitcoin à vista em janeiro de 2024, as projeções mais otimistas estimavam entre US$ 5 bilhões e US$ 10 bilhões no primeiro ano. O resultado real superou todas as expectativas por uma margem esmagadora. Em pouco mais de dois anos, os ETFs de Bitcoin acumulam mais de US$ 50 bilhões — um recorde absoluto que supera até mesmo o lendário QQQ (ETF do Nasdaq) em velocidade de adoção.</p>
 
-      <blockquote>Onde há liberdade econômica, há prosperidade. Não é coincidência que as regiões mais livres do mundo são também as mais ricas. — Economista da Escola Austríaca</blockquote>
+      <blockquote>Nunca vimos nada parecido em 30 anos de mercado financeiro. A demanda reprimida por exposição a Bitcoin era imensa, e os ETFs foram a chave que destrancou esse fluxo. — Analista de ETFs da Bloomberg</blockquote>
 
-      <h3>Exemplos reais</h3>
-      <p>Hong Kong, antes de sua integração mais profunda com a China, era o exemplo clássico de prosperidade baseada em baixa tributação e liberdade comercial. Dubai também figura como um laboratório de liberdade econômica, com suas zonas francas que atraem talentos e capital do mundo inteiro.</p>
+      <h3>Quem está comprando</h3>
+      <p>O perfil dos compradores é variado: desde gestoras multibilionárias como BlackRock e Fidelity até consultores financeiros independentes e investidores de varejo. Dados de participações institucionais revelam que fundos de pensão, dotação de universidades e seguradoras estão entre os detentores, sugerindo que o Bitcoin está sendo integrado a alocações estratégicas de longo prazo.</p>
 
-      <p>Mais recentemente, projetos como Próspera, em Honduras, e zonas de livre comércio em países como Paraguai mostram que o modelo continua sendo testado e aperfeiçoado.</p>
+      <p>O ETF da BlackRock (IBIT) lidera o mercado com mais de US$ 18 bilhões em AUM, seguido pelo FBTC da Fidelity com US$ 12 bilhões. A competição entre os emissores tem reduzido as taxas de administração para tão baixo quanto 0,12% ao ano — comparável a ETFs de índice tradicionais.</p>
+
+      <h3>Impacto no mercado de Bitcoin</h3>
+      <p>A existência dos ETFs criou um canal de demanda estrutural que o mercado de Bitcoin nunca havia experimentado. Diferentemente de ciclos anteriores, onde a demanda era puxada por especulação varejista, os ETFs representam capital paciente e institucional. Analistas estimam que os ETFs já absorveram o equivalente a mais de 85% de toda a emissão de novos Bitcoins desde o halving de 2024, exacerbando o choque de oferta.</p>
+
+      <p>Para o investidor brasileiro, existem alternativas como o ETF BITH11 da Hashdex, listado na B3, e fundos de índice internacionais acessíveis através de contas em corretoras globais. A tendência é de que a oferta de produtos regulados continue se expandindo, tornando o Bitcoin cada vez mais acessível ao investidor tradicional.</p>
     `,
     comments: [
-      { author: 'Tiago N.', date: '28 mai 2026', text: 'Excelente artigo! Liberdade econômica funciona onde quer que seja testada.' },
-      { author: 'Marina F.', date: '28 mai 2026', text: 'Próspera é fascinante. Espero que mais projetos assim surjam.' },
+      { author: 'Tiago N.', date: '28 mai 2026', text: 'ETF foi a porta de entrada para minha família. Agora todo mundo quer Bitcoin.' },
+      { author: 'Marina F.', date: '28 mai 2026', text: 'BlackRock comprando Bitcoin é algo que ninguém previa há 5 anos.' },
     ]
   },
   {
     id: 4,
-    title: 'Ethereum 3.0 promete escalabilidade infinita: o que muda para o ecossistema cripto?',
-    excerpt: 'A próxima grande atualização do Ethereum promete resolver o trilema da escalabilidade com soluções inovadoras de sharding e rollups.',
-    category: 'cripto',
-    categoryLabel: 'Cripto',
-    image: 'https://placehold.co/800x400/8b5cf6/ffffff?text=Ethereum+3.0',
+    title: 'Bitcoin mining com energia renovável atinge 60% da matriz energética global',
+    excerpt: 'Levantamento revela que a mineração de Bitcoin utiliza proporção de energia limpa superior a países como Alemanha e Reino Unido, silenciando críticas ambientais.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Green+Mining',
     author: 'Lucas Mendes',
     date: '27 mai 2026',
-    readTime: '7 min',
+    readTime: '6 min',
     featured: true,
     body: `
-      <p>O Ethereum, a segunda maior criptomoeda do mundo, está prestes a receber sua maior atualização desde a The Merge. Batizada de Ethereum 3.0, a nova versão promete resolver o chamado "trilema da escalabilidade" — a busca por segurança, descentralização e escalabilidade simultaneamente.</p>
+      <p>Um novo levantamento do Bitcoin Mining Council revela que a mineração de Bitcoin utiliza 60% de energia renovável em sua matriz global — superando países como Alemanha (52%), Reino Unido (42%) e Estados Unidos (22%) em proporção de fontes limpas. O dado enterra de vez o argumento de que o Bitcoin é um "vilão ambiental".</p>
 
-      <h3>O que é o trilema?</h3>
-      <p>Cunhado por Vitalik Buterin, o trilema da escalabilidade afirma que blockchains enfrentam um trade-off fundamental entre três propriedades: segurança, descentralização e escalabilidade. Melhorar uma delas geralmente significa sacrificar outra.</p>
+      <h3>Como a mineração se tornou verde</h3>
+      <p>A narrativa de que o Bitcoin consome "energia demais" sempre ignorou um fato crucial: mineradores são incentivados economicamente a buscar a energia mais barata disponível, que é frequentemente a energia renovável excedente. Hidrelétricas na China, energia geotérmica na Islândia, solar no Texas e gás natural queimado (flare gas) em campos de petróleo são fontes que, sem a mineração de Bitcoin, seriam simplesmente desperdiçadas.</p>
 
-      <p>A Ethereum 3.0 propõe uma abordagem inovadora combinando sharding dinâmico e rollups de camada 2 avançados.</p>
+      <blockquote>Bitcoin é o comprador de último recurso para energia excedente. Mineradores podem se instalar em qualquer lugar do mundo e absorver energia que, de outra forma, seria descartada. Isso transforma a mineração em um complemento perfeito para redes de energia renovável. — Bitcoin Mining Council</blockquote>
+
+      <h3>Inovações na matriz energética mineradora</h3>
+      <p>O avanço da mineração renovável é impulsionado por diversas inovações. Nos Estados Unidos, mineradoras fecharam acordos com usinas solares e eólicas no Texas para absorver excedentes de produção durante picos de geração. Na Escandinávia, a energia hidrelétrica abundante é usada para alimentar data centers de mineração. Na África, startups estão testando mineração móvel em contêineres que se conectam a fontes de energia renovável em regiões off-grid.</p>
+
+      <p>A mais recente inovação é o uso de mineração para estabilizar a rede elétrica. Empresas como a MARA Holdings operam como "consumidores flexíveis": quando a demanda de energia da rede aumenta, elas desligam seus equipamentos voluntariamente, liberando energia para uso residencial e comercial. Esse serviço de resposta à demanda é remunerado pelas operadoras, criando uma nova fonte de receita para mineradoras.</p>
+
+      <h3>Contexto e impacto</h3>
+      <p>O argumento ambiental contra o Bitcoin sempre foi falho por ignorar a diferença entre consumo de energia e impacto ambiental. O sistema financeiro tradicional — com seus bancos, agências, caixas eletrônicos, data centers e transporte de valores — consome uma quantidade massiva de energia. A grande diferença é que o Bitcoin pode usar energia remota e renovável que de outra forma seria desperdiçada. Com 60% da matriz já renovável e crescendo, a mineração de Bitcoin está no caminho para se tornar a indústria mais verde do planeta.</p>
     `,
     comments: [
-      { author: 'Vitor E.', date: '27 mai 2026', text: 'Se realmente entregarem escalabilidade infinita, o Ethereum pode superar o Bitcoin em uso.' },
+      { author: 'Vitor E.', date: '27 mai 2026', text: 'Sempre defendi que Bitcoin não é vilão ambiental. Os números provam isso.' },
     ]
   },
   {
     id: 5,
-    title: 'Inflação zero: o sonho impossível ou o futuro do dinheiro sólido?',
-    excerpt: 'Especialistas debatem se a inflação zero é um objetivo alcançável ou se políticas monetárias expansionistas são inerentes ao sistema estatal.',
-    category: 'economia',
-    categoryLabel: 'Economia',
-    image: 'https://placehold.co/800x400/2d3748/ffffff?text=Infla%C3%A7%C3%A3o+Zero',
+    title: 'Bitcoin como proteção patrimonial: por que investidores estão migrando do ouro para o BTC',
+    excerpt: 'Com valorização superior a 500% nos últimos 5 anos, o Bitcoin supera o ouro como reserva de valor e atrai cada vez mais investidores em busca de proteção patrimonial.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=BTC+vs+Ouro',
     author: 'Rafael Torres',
     date: '26 mai 2026',
-    readTime: '5 min',
+    readTime: '6 min',
     featured: true,
     body: `
-      <p>A busca pela inflação zero sempre foi vista como utopia pelos economistas tradicionais. Porém, com o amadurecimento do Bitcoin e o crescente questionamento dos bancos centrais, o debate volta com força.</p>
+      <p>O Bitcoin está consolidando sua posição como a principal reserva de valor da era digital, atraindo investidores que tradicionalmente alocavam capital em ouro e outros metais preciosos. Com uma valorização superior a 500% nos últimos cinco anos e uma capitalização de mercado que já ultrapassa US$ 1,6 trilhão, o BTC se estabelece como alternativa superior ao metal amarelo em múltiplos aspectos.</p>
 
-      <p>O Bitcoin, com sua oferta rigidamente limitada a 21 milhões de unidades, representa o primeiro experimento em larga escala de dinheiro com inflação zero (na verdade, deflacionário por natureza). E os resultados são eloquentes.</p>
+      <h3>Bitcoin vs Ouro: uma comparação objetiva</h3>
+      <p>O ouro é valorizado há milênios por suas propriedades físicas: escasso, durável, divisível e portátil. O Bitcoin possui exatamente as mesmas propriedades — mas em formato digital superior. Enquanto o ouro precisa ser extraído, fundido, transportado e armazenado em cofres com custos significativos, o Bitcoin pode ser enviado para qualquer lugar do mundo em minutos com taxas ínfimas.</p>
 
-      <blockquote>Bitcoin não é apenas dinheiro sólido. É um padrão de medida que expõe a podridão de todos os sistemas fiduciários. — Saifedean Ammous</blockquote>
+      <p>Mais importante: a escassez do Bitcoin é absoluta e matematicamente verificável — 21 milhões, nem um a mais. O ouro, por outro lado, continua sendo minerado a taxas crescentes, com estimativas de que a oferta global aumenta de 1% a 2% ao ano. Não há garantia de que novas jazidas ou tecnologias de mineração não tornem o ouro mais abundante no futuro.</p>
 
-      <p>Países que adotaram políticas de "dinheiro fácil" por décadas agora enfrentam crises de inflação que corroem o poder de compra dos cidadãos mais pobres de forma desproporcional.</p>
+      <blockquote>Bitcoin é ouro digital. Ele possui todas as qualidades do ouro como dinheiro, mas em um formato superior para o século XXI. É escasso, portátil, divisível e verificável — sem as limitações físicas do metal. — Saifedean Ammous, autor de "The Bitcoin Standard"</blockquote>
+
+      <h3>O movimento de migração</h3>
+      <p>Grandes gestoras de ativos estão liderando a migração. A BlackRock, maior gestora do mundo com mais de US$ 10 trilhões em ativos, recomenda alocações de 1% a 3% em Bitcoin em portfólios multiativos. Fundos de pensão noruegueses, canadenses e americanos já expõem seus cotistas ao BTC através de ETFs e produtos estruturados.</p>
+
+      <p>No Brasil, o movimento segue a mesma tendência. Fundos multimercado passaram a incluir exposição indireta a Bitcoin via ETFs estrangeiros, e assessores de investimento recomendam cada vez mais a diversificação com criptomoedas. A gestora Hashdex oferece produtos regulados que permitem exposição ao Bitcoin com segurança e conformidade.</p>
+
+      <h3>Perspectivas para o mercado</h3>
+      <p>Com o aumento da adoção institucional e a redução da oferta disponível pós-halving, a tendência é de que o Bitcoin continue ganhando participação no mercado de reserva de valor. Se o BTC atingir uma capitalização equivalente ao mercado de ouro (cerca de US$ 13 trilhões), cada Bitcoin valeria aproximadamente US$ 620 mil. Mesmo cenários mais conservadores projetam pelo menos US$ 200 mil a US$ 250 mil até o topo do ciclo atual.</p>
     `,
     comments: []
   },
   {
     id: 6,
-    title: 'Lightning Network atinge 100 milhões de transações mensais pela primeira vez',
-    excerpt: 'A camada de pagamentos do Bitcoin atinge um novo recorde de capacidade e transações, consolidando-se como o sistema financeiro mais eficiente do mundo.',
+    title: 'O halving do Bitcoin completa dois anos: os efeitos da escassez programada no preço e na rede',
+    excerpt: 'Dois anos após o halving de 2024, a redução da emissão de novos BTC já mostra impacto concreto no mercado. Oferta reduzida e demanda crescente criam cenário único.',
     category: 'bitcoin',
     categoryLabel: 'Bitcoin',
-    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Lightning+Network',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Halving+BTC',
     author: 'Gabriela Costa',
     date: '25 mai 2026',
-    readTime: '4 min',
+    readTime: '5 min',
     featured: true,
     body: `
-      <p>A Lightning Network, a camada de pagamentos instantâneos do Bitcoin, atingiu a marca histórica de 100 milhões de transações mensais. O marco consolida a rede como uma infraestrutura financeira global viável e eficiente.</p>
+      <p>Em maio de 2026, o halving do Bitcoin de 2024 completa dois anos — tempo suficiente para avaliar seus efeitos concretos no mercado. O evento, que reduziu a emissão diária de novos Bitcoins de 900 para 450 unidades, é o mecanismo central que torna o Bitcoin o ativo com a política monetária mais previsível e rígida já criada.</p>
 
-      <p>Com taxas médias inferiores a US$ 0,01 e liquidação instantânea, a Lightning Network já processa mais transações que sistemas tradicionais como Visa e Mastercard em diversas regiões do mundo.</p>
+      <h3>O que é o halving e por que importa</h3>
+      <p>A cada 210 mil blocos minerados (aproximadamente quatro anos), a recompensa dos mineradores é cortada pela metade. Esse processo continuará até que todos os 21 milhões de Bitcoins tenham sido emitidos, por volta do ano 2140. Diferentemente de qualquer moeda fiduciária, a política monetária do Bitcoin é imutável e independente de decisões políticas ou econômicas.</p>
+
+      <p>Historicamente, cada halving foi seguido por um rali de alta significativo. Doze meses após o halving de 2012, o Bitcoin subiu 8.000%. Após o halving de 2016, a alta foi de 2.800%. Em 2020, o rali pós-halving atingiu 600%. O padrão é claro: oferta reduzida + demanda crescente = valorização.</p>
+
+      <blockquote>Halvings são o lembrete mais poderoso da diferença fundamental entre Bitcoin e dinheiro estatal. Enquanto bancos centrais podem imprimir trilhões indefinidamente, o Bitcoin corta sua própria emissão pela metade a cada quatro anos, sem pedir permissão a ninguém. — Análise BTC Ancap News</blockquote>
+
+      <h3>O cenário atual pós-halving</h3>
+      <p>Dois anos após o halving de 2024, o Bitcoin negocia acima de US$ 80 mil, representando uma valorização de mais de 150% desde o evento. A taxa de hash da rede atingiu máximos históricos, indicando que mineradores eficientes não apenas sobreviveram ao choque de receita, como estão prosperando.</p>
+
+      <p>O choque de oferta criado pelo halving foi amplificado pela demanda dos ETFs de Bitcoin à vista, que absorvem diariamente uma quantidade de BTC superior à nova emissão. Analistas estimam que, mantida a demanda atual, o desequilíbrio entre oferta e demanda se tornará ainda mais severo nos próximos meses, potencialmente impulsionando o preço a novos patamares.</p>
+
+      <h3>O futuro da emissão</h3>
+      <p>O próximo halving está previsto para 2028, quando a recompensa dos mineradores cairá para 225 BTC por bloco. A taxa de inflação anual do Bitcoin, atualmente em torno de 0,8%, cairá para aproximadamente 0,4% — inferior à inflação de praticamente qualquer moeda fiduciária estável. Para efeito de comparação, a meta de inflação do Banco Central do Brasil é de 3% ao ano, e a inflação real frequentemente supera os 10%.</p>
+
+      <p>A escassez programada do Bitcoin não é apenas uma característica técnica — é a base de sua proposta de valor como dinheiro sólido. Em um mundo onde governos imprimem dinheiro sem limites, ter um ativo cuja oferta é matematicamente limitada a 21 milhões de unidades é, em si mesmo, um ato de resistência financeira.</p>
     `,
     comments: []
   },
   {
     id: 7,
-    title: 'O que é a Escola Austríaca de Economia? Um guia para iniciantes',
-    excerpt: 'Entenda os fundamentos da Escola Austríaca, sua visão sobre ciclos econômicos, moeda e a crítica ao intervencionismo estatal.',
-    category: 'ancap',
-    categoryLabel: 'Ancap',
-    image: 'https://placehold.co/800x400/1a1a2e/d4af37?text=Escola+Austr%C3%ADaca',
+    title: 'Nações adotam Bitcoin como reserva estratégica: o novo padrão ouro do século XXI',
+    excerpt: 'Países como EUA, El Salvador e Argentina estão acumulando Bitcoin em seus balanços nacionais. A tendência de adoção soberana pode transformar o mercado global.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=BTC+Reserva+Estrat%C3%A9gica',
     author: 'Lucas Mendes',
     date: '24 mai 2026',
-    readTime: '9 min',
+    readTime: '7 min',
     featured: true,
     body: `
-      <p>A Escola Austríaca de Economia é uma das tradições intelectuais mais influentes no pensamento libertário e anarcocapitalista. Seus fundamentos remontam a Carl Menger, Eugen von Böhm-Bawerk e, posteriormente, Ludwig von Mises e Friedrich Hayek.</p>
+      <p>Uma das tendências mais significativas do mercado de Bitcoin em 2026 é a adoção do ativo como reserva estratégica por nações soberanas. O que começou como uma experiência em El Salvador em 2021 evoluiu para um movimento global, com países de diferentes continentes incluindo Bitcoin em seus balanços nacionais.</p>
 
-      <h3>Princípios fundamentais</h3>
-      <p>A Escola Austríaca se distingue por sua abordagem metodológica: o individualismo metodológico. Para os austríacos, fenômenos econômicos devem ser explicados a partir das ações dos indivíduos, não de agregados estatísticos.</p>
+      <h3>Quem está comprando e por quê</h3>
+      <p>Os Estados Unidos lideram o movimento de forma indireta, com diversos estados americanos — incluindo Texas, Ohio e Wyoming — criando reservas estratégicas de Bitcoin em nível estadual. Projetos de lei em âmbito federal propõem que o Tesouro americano adquira Bitcoin como ativo de reserva, reconhecendo seu valor como proteção contra a desvalorização do dólar e a crescente dívida pública.</p>
 
-      <p>Outro pilar é a teoria subjetiva do valor: o valor de um bem não é intrínseco, mas determinado pela avaliação subjetiva que cada indivíduo faz dele.</p>
+      <p>El Salvador continua sendo o exemplo mais avançado de adoção soberana. Com mais de 5.700 BTC em sua tesouraria nacional, o país centro-americano colhe os frutos de sua aposta: a valorização do Bitcoin permitiu ao governo financiar projetos de infraestrutura, escolas e hospitais sem recorrer a emissão monetária ou endividamento externo.</p>
+
+      <blockquote>Bitcoin é uma ferramenta de soberania financeira para nações em desenvolvimento. Permite que países pequenos se protejam da inflação global e do domínio das moedas de reserve. — Nayib Bukele, Presidente de El Salvador</blockquote>
+
+      <h3>O movimento se espalha</h3>
+      <p>A Argentina, mesmo com sua abordagem mais cautelosa, deu passos concretos ao permitir transações internacionais em Bitcoin e incluir o ativo em discussões sobre reservas cambiais. O governo de Javier Milei, abertamente libertário, vê no Bitcoin uma ferramenta para dolarizar a economia argentina sem depender exclusivamente do Federal Reserve americano.</p>
+
+      <p>Na Suíça, cidades como Lugano já aceitam Bitcoin para pagamento de impostos, e há discussões em nível nacional sobre a inclusão de BTC nas reservas do Banco Central suíço. O país, conhecido por sua tradição de neutralidade e solidez financeira, seria um marco importante na legitimação do Bitcoin como ativo de reserva.</p>
+
+      <p>Outros países — incluindo Emirados Árabes Unidos, Cingapura e Paraguai — anunciaram estudos ou pilotos para incorporar Bitcoin em suas estratégias de reservas nacionais, sugerindo que a tendência é global e acelerada.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>A adoção soberana de Bitcoin cria uma camada de demanda completamente nova para o mercado. Diferentemente de investidores individuais ou institucionais, nações soberanas operam com horizontes de tempo medidos em décadas e não são influenciadas por flutuações de curto prazo. Cada país que adota Bitcoin como reserva estratégica retira milhões de dólares em BTC do mercado circulante, contribuindo para o choque de oferta que impulsiona o preço.</p>
+
+      <p>Se a tendência continuar, o cenário de "corrida entre nações" por Bitcoin — similar à corrida do ouro do século XIX — pode se materializar, com governos competindo por um ativo cada vez mais escasso. Nesse cenário, projeções de US$ 500 mil a US$ 1 milhão por Bitcoin deixam de ser fantasiosas e se tornam possibilidades concretas.</p>
     `,
     comments: []
   },
