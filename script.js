@@ -970,15 +970,15 @@ function initLiveNews() {
 }
 
 function fetchLiveNews() {
-  const url = 'https://min-api.cryptocompare.com/data/v2/news/?lang=EN&extraParams=BTCAncapNews';
+  const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
   fetch(url)
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     })
     .then(function (data) {
-      if (!data.Data || !data.Data.length) throw new Error('No news data');
-      liveNewsData = data.Data.slice(0, 30);
+      if (!data.items || !data.items.length) throw new Error('No news data');
+      liveNewsData = data.items.slice(0, 30);
       liveNewsLoaded = true;
       renderLiveNewsOnHome();
     })
@@ -1003,11 +1003,21 @@ function createLiveNewsCard(item) {
   var card = document.createElement('div');
   card.className = 'news-card news-card--live';
   var title = item.title || 'Sem título';
-  var body = item.body || '';
-  var excerpt = body.length > 120 ? body.substring(0, 120) + '...' : body;
-  var img = item.imageurl || 'https://placehold.co/800x400/1a2231/8899aa?text=News';
-  var source = item.source || 'Crypto';
-  var timeStr = timeAgo(item.published_on);
+  // Extract text from HTML description (strip tags)
+  var desc = item.description || '';
+  var txtMatch = desc.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  var excerpt = txtMatch.length > 120 ? txtMatch.substring(0, 120) + '...' : txtMatch || title;
+  // Extract image from enclosure or description img tag
+  var img = item.enclosure && item.enclosure.link ? item.enclosure.link : '';
+  if (!img) {
+    var imgMatch = desc.match(/<img[^>]+src=["']([^"']+)["']/);
+    img = imgMatch ? imgMatch[1] : 'https://placehold.co/800x400/1a2231/8899aa?text=News';
+  }
+  var source = 'CoinTelegraph';
+  // Parse pubDate to timestamp for timeAgo
+  var pubDate = item.pubDate ? new Date(item.pubDate).getTime() / 1000 : 0;
+  var timeStr = timeAgo(pubDate);
+  var articleUrl = item.link || '#';
   card.innerHTML =
     '<img class="news-card__img" src="' + img + '" alt="' + title.replace(/"/g, '&quot;') + '" loading="lazy" onerror="this.src=\'https://placehold.co/800x400/1a2231/8899aa?text=News\'" />' +
     '<div class="news-card__body">' +
@@ -1020,7 +1030,7 @@ function createLiveNewsCard(item) {
     '</div>' +
     '</div>';
   card.addEventListener('click', function () {
-    if (item.url) window.open(item.url, '_blank', 'noopener,noreferrer');
+    if (articleUrl !== '#') window.open(articleUrl, '_blank', 'noopener,noreferrer');
   });
   return card;
 }
