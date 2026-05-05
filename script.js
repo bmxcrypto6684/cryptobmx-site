@@ -10,7 +10,7 @@ const ARTICLES = [
     categoryLabel: 'Bitcoin',
     image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+ATH',
     author: 'Lucas Mendes',
-    date: '30 abr 2026',
+    date: '30 mai 2026',
     readTime: '6 min',
     featured: true,
     body: `
@@ -32,9 +32,9 @@ const ARTICLES = [
       <p>O que permanece incontestável é a tendência de longo prazo: o Bitcoin segue se consolidando como a classe de ativo com melhor performance da última década, recompensando aqueles que entendem seu valor como dinheiro sólido e descentralizado.</p>
     `,
     comments: [
-      { author: 'Carlos S.', date: '30 abr 2026', text: 'Eu avisei! Desde 2020 que venho dizendo que Bitcoin chegaria a 6 dígitos. HODL!' },
-      { author: 'Ana L.', date: '30 abr 2026', text: 'Ainda acho que tem muito espaço para crescer. A adoção institucional está só começando.' },
-      { author: 'Pedro R.', date: '29 abr 2026', text: 'Comprei meu primeiro Bitcoin em 2019. Melhor decisão financeira da minha vida.' },
+      { author: 'Carlos S.', date: '30 mai 2026', text: 'Eu avisei! Desde 2020 que venho dizendo que Bitcoin chegaria a 6 dígitos. HODL!' },
+      { author: 'Ana L.', date: '30 mai 2026', text: 'Ainda acho que tem muito espaço para crescer. A adoção institucional está só começando.' },
+      { author: 'Pedro R.', date: '29 mai 2026', text: 'Comprei meu primeiro Bitcoin em 2019. Melhor decisão financeira da minha vida.' },
     ]
   },
   {
@@ -45,7 +45,7 @@ const ARTICLES = [
     categoryLabel: 'Economia',
     image: 'https://placehold.co/800x400/0055aa/ffffff?text=Argentina+Bitcoin',
     author: 'Rafael Torres',
-    date: '29 abr 2026',
+    date: '29 mai 2026',
     readTime: '5 min',
     featured: true,
     body: `
@@ -62,7 +62,7 @@ const ARTICLES = [
       <p>El Salvador, que adotou o Bitcoin como moeda legal em 2021, já demonstrou os benefícios potenciais, incluindo turismo, remessas e inclusão financeira. A Argentina, no entanto, é a maior economia a dar esse passo até hoje.</p>
     `,
     comments: [
-      { author: 'Julio M.', date: '29 abr 2026', text: 'Argentina mostrando o caminho para a América Latina. Brasil precisa prestar atenção.' },
+      { author: 'Julio M.', date: '29 mai 2026', text: 'Argentina mostrando o caminho para a América Latina. Brasil precisa prestar atenção.' },
     ]
   },
   {
@@ -73,7 +73,7 @@ const ARTICLES = [
     categoryLabel: 'Ancap',
     image: 'https://placehold.co/800x400/1a1a2e/d4af37?text=Cidades+Zona+Franca',
     author: 'Gabriela Costa',
-    date: '28 abr 2026',
+    date: '28 mai 2026',
     readTime: '8 min',
     featured: true,
     body: `
@@ -90,8 +90,8 @@ const ARTICLES = [
       <p>Mais recentemente, projetos como Próspera, em Honduras, e zonas de livre comércio em países como Paraguai mostram que o modelo continua sendo testado e aperfeiçoado.</p>
     `,
     comments: [
-      { author: 'Tiago N.', date: '28 abr 2026', text: 'Excelente artigo! Liberdade econômica funciona onde quer que seja testada.' },
-      { author: 'Marina F.', date: '28 abr 2026', text: 'Próspera é fascinante. Espero que mais projetos assim surjam.' },
+      { author: 'Tiago N.', date: '28 mai 2026', text: 'Excelente artigo! Liberdade econômica funciona onde quer que seja testada.' },
+      { author: 'Marina F.', date: '28 mai 2026', text: 'Próspera é fascinante. Espero que mais projetos assim surjam.' },
     ]
   },
   {
@@ -102,7 +102,7 @@ const ARTICLES = [
     categoryLabel: 'Cripto',
     image: 'https://placehold.co/800x400/8b5cf6/ffffff?text=Ethereum+3.0',
     author: 'Lucas Mendes',
-    date: '27 abr 2026',
+    date: '27 mai 2026',
     readTime: '7 min',
     featured: true,
     body: `
@@ -114,7 +114,7 @@ const ARTICLES = [
       <p>A Ethereum 3.0 propõe uma abordagem inovadora combinando sharding dinâmico e rollups de camada 2 avançados.</p>
     `,
     comments: [
-      { author: 'Vitor E.', date: '27 abr 2026', text: 'Se realmente entregarem escalabilidade infinita, o Ethereum pode superar o Bitcoin em uso.' },
+      { author: 'Vitor E.', date: '27 mai 2026', text: 'Se realmente entregarem escalabilidade infinita, o Ethereum pode superar o Bitcoin em uso.' },
     ]
   },
   {
@@ -125,7 +125,7 @@ const ARTICLES = [
     categoryLabel: 'Economia',
     image: 'https://placehold.co/800x400/2d3748/ffffff?text=Infla%C3%A7%C3%A3o+Zero',
     author: 'Rafael Torres',
-    date: '26 abr 2026',
+    date: '26 mai 2026',
     readTime: '5 min',
     featured: true,
     body: `
@@ -147,7 +147,7 @@ const ARTICLES = [
     categoryLabel: 'Bitcoin',
     image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Lightning+Network',
     author: 'Gabriela Costa',
-    date: '25 abr 2026',
+    date: '25 mai 2026',
     readTime: '4 min',
     featured: true,
     body: `
@@ -165,7 +165,7 @@ const ARTICLES = [
     categoryLabel: 'Ancap',
     image: 'https://placehold.co/800x400/1a1a2e/d4af37?text=Escola+Austr%C3%ADaca',
     author: 'Lucas Mendes',
-    date: '24 abr 2026',
+    date: '24 mai 2026',
     readTime: '9 min',
     featured: true,
     body: `
@@ -186,7 +186,7 @@ const ARTICLES = [
     categoryLabel: 'Bitcoin',
     image: 'https://placehold.co/800x400/059669/ffffff?text=Remessas+Internacionais',
     author: 'Rafael Torres',
-    date: '23 abr 2026',
+    date: '23 mai 2026',
     readTime: '5 min',
     featured: true,
     body: `
@@ -195,7 +195,7 @@ const ARTICLES = [
       <p>O Bitcoin e, especialmente, a Lightning Network estão mudando radicalmente esse cenário. Com transações quase instantâneas e taxas inferiores a 1%, trabalhadores em países desenvolvidos podem enviar dinheiro para suas famílias em países em desenvolvimento de forma mais eficiente.</p>
     `,
     comments: [
-      { author: 'Juan P.', date: '23 abr 2026', text: 'Como imigrante, posso confirmar. Economizo mais de US$ 200 por mês desde que comecei a usar Bitcoin.' },
+      { author: 'Juan P.', date: '23 mai 2026', text: 'Como imigrante, posso confirmar. Economizo mais de US$ 200 por mês desde que comecei a usar Bitcoin.' },
     ]
   },
   {
@@ -206,7 +206,7 @@ const ARTICLES = [
     categoryLabel: 'Cripto',
     image: 'https://placehold.co/800x400/7c3aed/ffffff?text=An%C3%A1lise+T%C3%A9cnica',
     author: 'Gabriela Costa',
-    date: '22 abr 2026',
+    date: '22 mai 2026',
     readTime: '4 min',
     featured: true,
     body: `
@@ -224,7 +224,7 @@ const ARTICLES = [
     categoryLabel: 'Ancap',
     image: 'https://placehold.co/800x400/1a1a2e/d4af37?text=Propriedade+Privada',
     author: 'Lucas Mendes',
-    date: '21 abr 2026',
+    date: '21 mai 2026',
     readTime: '10 min',
     featured: true,
     body: `
@@ -235,8 +235,8 @@ const ARTICLES = [
       <p>Este artigo explora os fundamentos de ambas as posições e argumenta por que a propriedade privada absoluta é essencial para uma sociedade livre.</p>
     `,
     comments: [
-      { author: 'André B.', date: '21 abr 2026', text: 'Leitura obrigatória. Rothbard explicando propriedade privada de forma cristalina como sempre.' },
-      { author: 'Clara M.', date: '21 abr 2026', text: 'Excelente artigo! A função social é usada como justificativa para todo tipo de abuso estatal.' },
+      { author: 'André B.', date: '21 mai 2026', text: 'Leitura obrigatória. Rothbard explicando propriedade privada de forma cristalina como sempre.' },
+      { author: 'Clara M.', date: '21 mai 2026', text: 'Excelente artigo! A função social é usada como justificativa para todo tipo de abuso estatal.' },
     ]
   },
   {
