@@ -404,6 +404,117 @@ const ARTICLES = [
     `,
     comments: []
   },
+  {
+    id: 16,
+    title: 'Bitcoin atinge US$ 81 mil com sequência recorde de funding rate negativo',
+    excerpt: 'BTC sobe 2,9% enquanto taxas de funding perpetuas negativas por 66 dias consecutivos sinalizam hedge institucional, não baixista — e dados históricos apontam alta.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+%2481K',
+    author: 'Redação BTC Ancap News',
+    date: '5 mai 2026',
+    readTime: '6 min',
+    featured: false,
+    body: `
+      <p>O Bitcoin atingiu US$ 81.261 nesta segunda-feira (5 de maio de 2026), registrando alta de 2,9% nas últimas 24 horas. O movimento, no entanto, vem acompanhado de um fenômeno incomum: as taxas de funding dos contratos perpétuos de Bitcoin permanecem negativas há 66 dias consecutivos — a sequência mais longa da década.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>Dados on-chain mostram que os shorts estão pagando aproximadamente 12% de custo anualizado para manter posições, mas analistas alertam que isso não reflete baixista generalizado do varejo. Segundo Derek Lim, da gestora Caladan, a taxa negativa persistente "reflete a oferta de inventário curto de mesas delta-neutral, e não direcional baixista".</p>
+
+      <p>Andri Fauzan Adziima, da exchange Bitrue, complementa que os ETFs de Bitcoin à vista nos EUA registraram cerca de US$ 2,44 bilhões em influxos em abril — o mês mais forte de 2026 — enquanto instituições acumulam BTC no mercado à vista e vendem futuros para gerenciar risco.</p>
+
+      <h3>Contexto</h3>
+      <p>Os fluxos institucionais identificados incluem: fundos de hedge vendendo BTC durante resgates, traders de basis comprando ações da Strategy enquanto vendem futuros perpétuos de Bitcoin, e mineradores fazendo hedge de seus tesouros de BTC enquanto migram para computação de IA.</p>
+
+      <p>Vetle Lund, da K33 Research, analisou seis regimes comparáveis de funding negativo desde 2018. Em todos os seis casos, o Bitcoin produziu retornos positivos em 90 dias, com taxas de acerto entre 83% e 96%, contra 55% a 75% em entradas arbitrárias. O drawdown máximo médio caiu de 16% para apenas 5% nesses cenários.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>Analistas apontam US$ 82 mil como nível crítico, coincidindo com a média exponencial de 200 dias. Matthew Pinnock, da Altura DeFi, afirma que se os shorts forem forçados a desfazer posições, "o funding se torna positivo e o Bitcoin pode se mover fortemente em direção a US$ 100 mil em um squeeze". Se a demanda à vista esfriar primeiro, ele projeta consolidação entre US$ 70 mil e US$ 75 mil.</p>
+
+      <p>Mercados de predição dão 84% de chance de o Bitcoin testar US$ 84 mil nos próximos movimentos.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>O cenário atual é incomum: funding negativo geralmente é associado a quedas prolongadas, mas os influxos em ETFs contam uma história diferente. Se a tese institucional estiver correta, a liquidação forçada de shorts pode impulsionar o Bitcoin a novos patamares no médio prazo.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>O funding rate negativo prolongado não é um sinal de fraqueza quando analisado em conjunto com os influxos institucionais. O que parece baixista na superfície é, na verdade, um reflexo da sofisticação crescente do mercado: instituições acumulam BTC no à vista enquanto fazem hedge nos futuros. Esse padrão, historicamente, precede movimentos expressivos de alta quando os shorts são forçados a cobrir. O nível dos US$ 82 mil será o termômetro para o próximo grande movimento.</p>
+    `,
+    comments: []
+  },
+  {
+    id: 17,
+    title: 'Coinbase demite 14% da equipe em meio a mercado baixista e avanço da IA',
+    excerpt: 'CEO Brian Armstrong anuncia corte de 14% dos funcionários, elimina cargos puramente gerenciais e aposta em times "nativos de IA" com estrutura organizacional enxuta.',
+    category: 'cripto',
+    categoryLabel: 'Cripto',
+    image: 'https://placehold.co/800x400/0055aa/ffffff?text=Coinbase+Demite',
+    author: 'Redação BTC Ancap News',
+    date: '5 mai 2026',
+    readTime: '5 min',
+    featured: false,
+    body: `
+      <p>A Coinbase anunciou nesta segunda-feira (5 de maio de 2026) a demissão de 14% de sua força de trabalho. O CEO Brian Armstrong comunicou a decisão em e-mail interno publicado também em sua conta no X, citando o mercado baixista de criptomoedas e a transformação impulsionada por inteligência artificial como motivos principais.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>Armstrong afirmou que "estamos em um mercado baixista e precisamos ajustar nossa estrutura de custos agora". Ele também destacou que engenheiros da empresa "usam IA para entregar em dias o que antes levava semanas com times inteiros". A exchange está se reestruturando para funcionar como "uma inteligência, com humanos em volta", nas palavras do CEO.</p>
+
+      <p>A organização será achatada para no máximo cinco camadas hierárquicas abaixo do CEO e COO. Cargos puramente gerenciais foram eliminados — todos os líderes precisam permanecer contribuidores individuais. As contratações futuras serão focadas em "pods nativos de IA", incluindo times experimentais de uma única pessoa responsável por engenharia, design e produto simultaneamente.</p>
+
+      <h3>Contexto</h3>
+      <p>O movimento da Coinbase não é isolado. O Goldman Sachs estima que a substituição por IA está eliminando cerca de 25 mil empregos americanos por mês, com perda líquida de aproximadamente 16 mil posições mensalmente. Grandes empresas de tecnologia também reduziram quadros: Meta cortou 8 mil funcionários (10% da força de trabalho), Microsoft ofereceu buyouts a 7%, e a Block eliminou mais de 4 mil vagas.</p>
+
+      <p>Semanas antes do anúncio, a Coinbase vinha testando agentes de IA modelados a partir do cofundador Fred Ehrsam e do ex-CTO Balaji Srinivasan. Armstrong já havia sinalizado que a empresa "provavelmente teria mais agentes do que funcionários humanos em breve".</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>A demissão em massa reflete a pressão contínua sobre as exchanges de criptomoedas em um ciclo de mercado desafiador. A Coinbase, que já havia feito cortes anteriores durante o mercado baixista de 2022-2023, busca preservar caixa e eficiência operacional enquanto investe em automação.</p>
+
+      <p>A severência para funcionários americanos inclui mínimo de 16 semanas de salário base mais duas semanas adicionais por ano de serviço, próximo vesting de equity, seis meses de COBRA e suporte extra para portadores de visto.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>O movimento da Coinbase pode estabelecer um precedente para outras exchanges e empresas do setor cripto. A integração agressiva de IA na operação pode reduzir custos estruturais de forma permanente, mas também levanta questões sobre o futuro do emprego no setor. Se o modelo de "times nativos de IA" provar ser eficaz, outras empresas devem seguir o mesmo caminho.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>A Coinbase está antecipando uma tendência que deve atingir todo o setor de tecnologia. A combinação de mercado baixista prolongado com produtividade exponencial da IA está forçando empresas a repensar estruturas herdadas. Para o mercado cripto, a reação será ambígua: por um lado, cortes de custos sinalizam saúde financeira; por outro, indicam que o mercado baixista pode ser mais longo do que muitos esperam. O foco deve estar na capacidade da empresa de manter operações e conformidade regulatória durante a transição.</p>
+    `,
+    comments: []
+  },
+  {
+    id: 18,
+    title: 'TON dispara 36% após Telegram assumir controle da TON Foundation',
+    excerpt: 'Pavel Durov anuncia que Telegram se torna o maior validador da rede TON, substitui a fundação e corta taxas da rede em seis vezes, gerando disparada no token.',
+    category: 'cripto',
+    categoryLabel: 'Cripto',
+    image: 'https://placehold.co/800x400/0088cc/ffffff?text=+TON+Surge+',
+    author: 'Redação BTC Ancap News',
+    date: '5 mai 2026',
+    readTime: '5 min',
+    featured: false,
+    body: `
+      <p>O Toncoin (TON) disparou 36% nas últimas 24 horas, negociando a US$ 1,86, após Pavel Durov anunciar que o Telegram assumirá o controle operacional da The Open Network (TON), substituindo a TON Foundation. A notícia gerou euforia no mercado, mas analistas alertam para possível realização de lucros no curto prazo.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>Durov anunciou que o Telegram se tornará o maior validador da blockchain TON. As taxas de transação já foram reduzidas em seis vezes, chegando a "quase zero", segundo o comunicado. A promessa inclui novo site, ferramentas para desenvolvedores e atualizações de performance nas próximas 2 a 3 semanas. O domínio ton.org agora exibe uma página indicando que é controlado pela "MTONGA", com expectativa de mudanças iminentes.</p>
+
+      <h3>Contexto</h3>
+      <p>A relação entre Telegram e TON sempre foi próxima, mas indireta — a fundação independente gerenciava o desenvolvimento enquanto o Telegram integrava a blockchain em seus produtos. A centralização agora coloca o desenvolvimento sob controle direto de Durov, o que pode acelerar decisões mas também levanta questões sobre descentralização.</p>
+
+      <p>Os problemas legais de Durov foram amenizados recentemente: a justiça francesa suspendeu sua proibição de viagem em novembro passado, após sua prisão em Paris em agosto de 2024 sob acusações de cumplicidade em tráfico de drogas e falha na moderação de conteúdo ilegal. Seu passaporte foi devolvido em março, o que por si só impulsionou o TON em 29%.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>Apesar do salto de 36%, o TON ainda está 77% abaixo de sua máxima histórica de US$ 8,25, registrada em setembro de 2024. Illia Otychenko, da CEX.IO, classifica o movimento como "um pico narrativo de estágio inicial, não uma reprecificação fundamental completa". Ele aponta US$ 2 como nível de resistência chave e alerta que o RSI diário está sobrecomprado.</p>
+
+      <p>Ben Caselin, da VALR, compara o evento ao upgrade Dencun do Ethereum, onde as taxas caíram significativamente mas os ganhos de preço não se sustentaram: "O mercado frequentemente compra no anúncio e realiza lucros na execução".</p>
+
+      <p>No ecossistema TON, as memecoins dispararam ainda mais: $DOGS subiu mais de 100% e $UTYA avançou mais de 140% em 24 horas, com o market cap combinado de memecoins da TON atingindo US$ 156 milhões.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>Se as promessas de ferramentas e performance forem cumpridas, a TON pode atrair mais desenvolvedores e usuários. No entanto, a centralização do controle no Telegram contradiz o ethos descentralizado das blockchains. Taxas mais baixas podem impulsionar adoção, mas Otychenko adverte que isso também pode "erodir a captura direta de valor no nível do token". O mercado observa se o preço conseguirá se sustentar acima de US$ 2 após a euforia inicial.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>O movimento da TON é interessante sob a ótica da adoção: ter o Telegram como validador principal e provedor de liquidez pode acelerar a integração da blockchain com os mais de 900 milhões de usuários da plataforma. No entanto, a centralização é uma faca de dois gumes para investidores de criptomoedas que valorizam a descentralização. O ganho de curto prazo é real, mas a sustentabilidade desse modelo precisa ser testada. A resistência de US$ 2 será o primeiro grande teste para o token.</p>
+    `,
+    comments: []
+  },
 ];
 
 // Categories with article counts
