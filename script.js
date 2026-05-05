@@ -241,33 +241,42 @@ const ARTICLES = [
   },
   {
     id: 11,
-    title: 'Bitcoin é acumulado por holders de longo prazo e testa US$ 81 mil',
-    excerpt: 'Dados on-chain revelam que investidores de longo prazo adicionaram 330 mil BTC às carteiras, sinalizando confiança no mercado apesar da volatilidade.',
+    title: 'Bitcoin em US$ 81 mil: "supercycle" ou rali de mercado baixista? Analistas se dividem',
+    excerpt: 'Com BTC acima de US$ 81 mil, o mercado se pergunta se estamos no início de um superciclo ou em mais um rali dentro de um mercado baixista. Projeções variam de US$ 180 mil a US$ 250 mil.',
     category: 'bitcoin',
     categoryLabel: 'Bitcoin',
-    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+Acumula%C3%A7%C3%A3o',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+Supercycle',
     author: 'Redação BTC Ancap News',
     date: '5 mai 2026',
-    readTime: '5 min',
+    readTime: '6 min',
     featured: true,
     body: `
-      <p>O Bitcoin atingiu a marca de US$ 81 mil impulsionado por um movimento expressivo de acumulação por parte de detentores de longo prazo (LTHs). Dados on-chain mostram que esses investidores adicionaram cerca de 330 mil BTC às suas posições, um dos maiores acréscimos mensais do ano.</p>
+      <p>O Bitcoin voltou a negociar acima de US$ 81 mil nesta segunda-feira, gerando um intenso debate entre analistas sobre a natureza do movimento atual. Enquanto alguns enxergam o início de um "superciclo" que levará o BTC a novos patamares históricos, outros alertam que pode tratar-se apenas de mais um rali dentro de uma tendência baixista de longo prazo.</p>
 
       <h3>O que aconteceu</h3>
-      <p>O movimento ocorre em um momento em que o mercado cripto busca direção após meses de consolidação entre US$ 70 mil e US$ 85 mil. A acumulação por LTHs é historicamente vista como um sinal otimista, pois esses investidores tendem a manter suas posições independentemente das flutuações de curto prazo.</p>
+      <p>O Bitcoin atingiu US$ 81.386, registrando alta de 1,26% nas últimas 24 horas. O movimento foi impulsionado por uma combinação de fatores: acumulação por detentores de longo prazo, que adicionaram 330 mil BTC às carteiras no último mês, e influxos robustos em ETFs de Bitcoin à vista, que totalizaram US$ 532 milhões em recuperação pós-acordo de cessar-fogo.</p>
 
-      <blockquote>Detentores de longo prazo estão comprando Bitcoin como se não houvesse amanhã. Esse comportamento precedeu todas as grandes altas do ciclo. — Análise on-chain semanal</blockquote>
+      <p>No entanto, a resistência dos US$ 82 mil — que coincide com a média exponencial de 200 dias — permanece intocada, e o mercado observa atentamente se o BTC conseguirá romper esse nível ou sofrerá um novo rechaço.</p>
 
-      <h3>Contexto e impacto no mercado</h3>
-      <p>O acúmulo reduziu a oferta circulante de Bitcoin nas exchanges, criando um choque de oferta que pode impulsionar o preço para cima. Analistas técnicos apontam que se o BTC conseguir se sustentar acima dos US$ 81 mil, o próximo alvo pode ser a região dos US$ 95 mil.</p>
+      <blockquote>A diferença entre um superciclo e um rali de mercado baixista é a sustentabilidade. Se o Bitcoin não conseguir se firmar acima de US$ 85 mil nas próximas semanas, o movimento atual pode ser apenas mais um fakeout. — Relatório de análise técnica semanal</blockquote>
 
-      <p>A taxa de financiamento futura permanece estável, sugerindo que o movimento de alta é orgânico e não alavancado em excesso — um sinal saudável para a continuidade do rali.</p>
+      <h3>Contexto</h3>
+      <p>O termo "superciclo" ganhou popularidade entre analistas que acreditam que o Bitcoin, diferentemente de ciclos anteriores, não passará por um mercado baixista profundo devido à maturidade institucional do mercado. Os argumentos a favor incluem: adoção por ETFs que criam demanda estrutural, escassez crescente pós-halving, e participação de tesourarias corporativas que seguram BTC independentemente do preço.</p>
+
+      <p>Por outro lado, analistas mais cautelosos apontam que o funding rate negativo prolongado — 66 dias consecutivos — sugere que o mercado de derivativos ainda não está convicto da alta. Além disso, o volume de negociação spot não acompanhou a recuperação de preço, um sinal técnico que historicamente precedeu correções.</p>
+
+      <p>Projeções otimistas variam de US$ 180 mil a US$ 250 mil como topo do ciclo, enquanto cenários mais conservadores apontam US$ 95 mil a US$ 100 mil como limite superior antes de uma correção significativa.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>Independentemente do cenário, a volatilidade deve aumentar nas próximas semanas. Se o Bitcoin romper US$ 82 mil, a liquidação forçada de posições vendidas (short squeeze) pode impulsionar o preço rapidamente em direção a US$ 85 mil ou mais. Se o rompimento falhar, uma correção para a região de US$ 75 mil a US$ 70 mil seria considerada saudável antes da próxima tentativa.</p>
+
+      <p>Os mercados de predição dão 84% de chance de o Bitcoin testar US$ 84 mil nos próximos movimentos, refletindo otimismo cauteloso entre traders.</p>
 
       <h3>Consequências possíveis</h3>
-      <p>Caso o movimento de acumulação continue, o mercado pode enfrentar um aperto de oferta significativo, especialmente com o efeito contínuo do halving de 2024 reduzindo a emissão diária de novos Bitcoins. Combinado com a demanda institucional crescente via ETFs, o cenário é favorável para uma valorização sustentada.</p>
+      <p>A definição entre superciclo e rali passageiro deve ocorrer nas próximas duas a quatro semanas. Se o Bitcoin conseguir se sustentar acima de US$ 85 mil e, especialmente, superar a barreira dos US$ 95 mil, a tese do superciclo ganha força. Caso contrário, o mercado pode entrar em uma nova fase de consolidação prolongada. Para investidores de longo prazo, no entanto, o cenário permanece favorável: a acumulação institucional e a escassez estrutural são tendências que transcendem ciclos de curto prazo.</p>
 
       <h3>Análise BTC Ancap News</h3>
-      <p>A acumulação por LTHs é um dos indicadores mais confiáveis do mercado. Historicamente, períodos de forte acumulação precederam as maiores altas do Bitcoin. O cenário atual combina oferta reduzida pós-halving com demanda institucional crescente — a receita clássica para uma potencial nova perna de alta. Recomenda-se atenção à região de US$ 95 mil como próximo grande teste.</p>
+      <p>O debate entre superciclo e rali baixista é, em certa medida, secundário para quem entende a proposta de valor do Bitcoin como dinheiro sólido. A volatilidade de curto prazo é o preço que se paga pela descentralização e pela escassez absoluta. O que importa observar é se os fundamentos — hashrate, endereços ativos, acumulação por LTHs e influxos institucionais — continuam se fortalecendo. Enquanto esses indicadores apontarem para cima, o Bitcoin estará construindo as bases para seu próximo grande movimento, independentemente de quanto tempo leve.</p>
     `,
     comments: []
   },
@@ -312,7 +321,7 @@ const ARTICLES = [
     categoryLabel: 'Cripto',
     image: 'https://placehold.co/800x400/1a5276/ffffff?text=ETPs+Cripto',
     author: 'Redação BTC Ancap News',
-    date: '5 mai 2026',
+    date: '2 mai 2026',
     readTime: '5 min',
     featured: true,
     body: `
@@ -343,7 +352,7 @@ const ARTICLES = [
     categoryLabel: 'Bitcoin',
     image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+80k',
     author: 'Redação BTC Ancap News',
-    date: '5 mai 2026',
+    date: '3 mai 2026',
     readTime: '6 min',
     featured: true,
     body: `
@@ -376,7 +385,7 @@ const ARTICLES = [
     categoryLabel: 'Bitcoin',
     image: 'https://placehold.co/800x400/f39c12/1a1a1a?text=Minera%C3%A7%C3%A3o+BTC',
     author: 'Redação BTC Ancap News',
-    date: '5 mai 2026',
+    date: '3 mai 2026',
     readTime: '5 min',
     featured: true,
     body: `
@@ -407,7 +416,7 @@ const ARTICLES = [
     categoryLabel: 'Bitcoin',
     image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+%2481K',
     author: 'Redação BTC Ancap News',
-    date: '5 mai 2026',
+    date: '4 mai 2026',
     readTime: '6 min',
     featured: true,
     body: `
@@ -475,75 +484,83 @@ const ARTICLES = [
   },
   {
     id: 18,
-    title: 'TON dispara 36% após Telegram assumir controle da TON Foundation',
-    excerpt: 'Pavel Durov anuncia que Telegram se torna o maior validador da rede TON, substitui a fundação e corta taxas da rede em seis vezes, gerando disparada no token.',
-    category: 'cripto',
-    categoryLabel: 'Cripto',
-    image: 'https://placehold.co/800x400/0088cc/ffffff?text=+TON+Surge+',
-    author: 'Redação BTC Ancap News',
-    date: '5 mai 2026',
-    readTime: '5 min',
-    featured: true,
-    body: `
-      <p>O Toncoin (TON) disparou 36% nas últimas 24 horas, negociando a US$ 1,86, após Pavel Durov anunciar que o Telegram assumirá o controle operacional da The Open Network (TON), substituindo a TON Foundation. A notícia gerou euforia no mercado, mas analistas alertam para possível realização de lucros no curto prazo.</p>
-
-      <h3>O que aconteceu</h3>
-      <p>Durov anunciou que o Telegram se tornará o maior validador da blockchain TON. As taxas de transação já foram reduzidas em seis vezes, chegando a "quase zero", segundo o comunicado. A promessa inclui novo site, ferramentas para desenvolvedores e atualizações de performance nas próximas 2 a 3 semanas. O domínio ton.org agora exibe uma página indicando que é controlado pela "MTONGA", com expectativa de mudanças iminentes.</p>
-
-      <h3>Contexto</h3>
-      <p>A relação entre Telegram e TON sempre foi próxima, mas indireta — a fundação independente gerenciava o desenvolvimento enquanto o Telegram integrava a blockchain em seus produtos. A centralização agora coloca o desenvolvimento sob controle direto de Durov, o que pode acelerar decisões mas também levanta questões sobre descentralização.</p>
-
-      <p>Os problemas legais de Durov foram amenizados recentemente: a justiça francesa suspendeu sua proibição de viagem em novembro passado, após sua prisão em Paris em agosto de 2024 sob acusações de cumplicidade em tráfico de drogas e falha na moderação de conteúdo ilegal. Seu passaporte foi devolvido em março, o que por si só impulsionou o TON em 29%.</p>
-
-      <h3>Impacto no mercado</h3>
-      <p>Apesar do salto de 36%, o TON ainda está 77% abaixo de sua máxima histórica de US$ 8,25, registrada em setembro de 2024. Illia Otychenko, da CEX.IO, classifica o movimento como "um pico narrativo de estágio inicial, não uma reprecificação fundamental completa". Ele aponta US$ 2 como nível de resistência chave e alerta que o RSI diário está sobrecomprado.</p>
-
-      <p>Ben Caselin, da VALR, compara o evento ao upgrade Dencun do Ethereum, onde as taxas caíram significativamente mas os ganhos de preço não se sustentaram: "O mercado frequentemente compra no anúncio e realiza lucros na execução".</p>
-
-      <p>No ecossistema TON, as memecoins dispararam ainda mais: $DOGS subiu mais de 100% e $UTYA avançou mais de 140% em 24 horas, com o market cap combinado de memecoins da TON atingindo US$ 156 milhões.</p>
-
-      <h3>Consequências possíveis</h3>
-      <p>Se as promessas de ferramentas e performance forem cumpridas, a TON pode atrair mais desenvolvedores e usuários. No entanto, a centralização do controle no Telegram contradiz o ethos descentralizado das blockchains. Taxas mais baixas podem impulsionar adoção, mas Otychenko adverte que isso também pode "erodir a captura direta de valor no nível do token". O mercado observa se o preço conseguirá se sustentar acima de US$ 2 após a euforia inicial.</p>
-
-      <h3>Análise BTC Ancap News</h3>
-      <p>O movimento da TON é interessante sob a ótica da adoção: ter o Telegram como validador principal e provedor de liquidez pode acelerar a integração da blockchain com os mais de 900 milhões de usuários da plataforma. No entanto, a centralização é uma faca de dois gumes para investidores de criptomoedas que valorizam a descentralização. O ganho de curto prazo é real, mas a sustentabilidade desse modelo precisa ser testada. A resistência de US$ 2 será o primeiro grande teste para o token.</p>
-    `,
-    comments: []
-  },
-  {
-    id: 19,
-    title: 'Western Union lança stablecoin USDPT na Solana e mira 40 países',
-    excerpt: 'Gigante de remessas de US$ 50 bilhões em receita entra no mercado cripto com stablecoin própria emitida pelo Anchorage Digital Bank, mirando consumidores em mais de 40 países.',
-    category: 'cripto',
-    categoryLabel: 'Cripto',
-    image: 'https://placehold.co/800x400/0055aa/ffffff?text=Western+Union',
+    title: 'Mineração de Bitcoin se recupera: Hut 8 refinancia e Capital B levanta US$ 1,3 milhão',
+    excerpt: 'Setor de mineração mostra sinais claros de recuperação com Hut 8 refinanciando dívida de US$ 200 milhões em BTC e Capital B levantando capital com apoio de Adam Back.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f39c12/1a1a1a?text=Minera%C3%A7%C3%A3o+Recupera',
     author: 'Redação BTC Ancap News',
     date: '4 mai 2026',
     readTime: '5 min',
     featured: true,
     body: `
-      <p>A Western Union, gigante global de remessas com mais de US$ 50 bilhões em receita anual, deu um passo histórico no mercado de criptomoedas ao lançar sua própria stablecoin, a USDPT, na blockchain Solana. A stablecoin é emitida pelo Anchorage Digital Bank N.A., banco de ativos digitais regulado nos Estados Unidos.</p>
+      <p>O setor de mineração de Bitcoin está vivendo um momento de recuperação significativa, com duas notícias importantes chegando ao mercado: a Hut 8, uma das maiores mineradoras listadas em bolsa, concluiu o refinanciamento de um empréstimo lastreado em Bitcoin no valor de US$ 200 milhões, e a gestora Capital B levantou US$ 1,3 milhão com o apoio de Adam Back, CEO da Blockstream e uma das figuras mais influentes do ecossistema Bitcoin.</p>
 
       <h3>O que aconteceu</h3>
-      <p>A USDPT é uma stablecoin atrelada ao dólar americano, lançada na rede Solana. A emissão é feita pelo Anchorage Digital Bank, que atua como banco custodial e emissor regulado. O movimento representa a primeira incursão direta da Western Union no mercado de stablecoins, sinalizando uma mudança estratégica significativa para a empresa de 170 anos de idade.</p>
+      <p>A Hut 8 firmou um acordo com a FalconX para refinanciar sua dívida lastreada em Bitcoin a uma taxa fixa de 7% ao ano. O movimento permitiu à empresa liberar aproximadamente 3.300 BTC que estavam como garantia colateral, dando-lhe mais flexibilidade financeira para operar e expandir. A taxa de 7% fixa é considerada favorável no atual ambiente de juros, especialmente para uma empresa do setor de mineração.</p>
 
-      <p>O produto de consumo associado, chamado "Stable by Western Union", deve ser lançado em mais de 40 países ainda em 2026, aproveitando a infraestrutura global existente da empresa e sua base de usuários estabelecida.</p>
+      <p>Paralelamente, a Capital B, uma gestora focada em tesouraria de Bitcoin, anunciou a captação de US$ 1,3 milhão com a participação de Adam Back, criador do Hashcash (precursor técnico do proof-of-work do Bitcoin) e CEO da Blockstream. O investimento sinaliza confiança no modelo de tesouraria corporativa em Bitcoin como estratégia de longo prazo.</p>
+
+      <blockquote>O refinanciamento da Hut 8 mostra que o mercado de crédito para mineradores está voltando. Quando os bancos e credores voltam a emprestar para o setor, é sinal de que a confiança na mineração de Bitcoin foi restaurada. — Análise do setor</blockquote>
 
       <h3>Contexto</h3>
-      <p>A Western Union atende mais de 150 milhões de pessoas em todo o mundo, processando centenas de bilhões de dólares em remessas anualmente. O mercado de remessas globais movimenta mais de US$ 800 bilhões por ano, com taxas médias ainda elevadas — especialmente para trabalhadores que enviam dinheiro de países desenvolvidos para nações em desenvolvimento.</p>
+      <p>O setor de mineração passou por um período de ajuste severo após o halving de 2024, que reduziu pela metade a emissão de novos Bitcoins. Mineradores ineficientes foram forçados a desligar equipamentos, enquanto empresas bem capitalizadas buscaram formas criativas de administrar suas dívidas e tesourarias. O preço do Bitcoin consistentemente acima de US$ 80 mil mudou esse cenário, tornando a mineração novamente lucrativa até para operadores de médio porte.</p>
 
-      <p>A escolha da Solana como blockchain base é significativa: a rede oferece transações de baixo custo e alta velocidade, características essenciais para remessas internacionais. A emissão por um banco regulado (Anchorage Digital) também confere credibilidade regulatória que falta a muitas stablecoins concorrentes.</p>
+      <p>A Hut 8, especificamente, vinha carregando uma dívida significativa contraída durante a expansão de 2021-2022. O refinanciamento permite à empresa não apenas reduzir custos financeiros, mas também recuperar controle sobre seus BTC, que podem ser usados como tesouraria estratégica ou para novos investimentos em infraestrutura.</p>
 
       <h3>Impacto no mercado</h3>
-      <p>A entrada da Western Union no mercado de stablecoins valida a tese de que as blockchains públicas podem revolucionar o setor de remessas internacionais. Diferentemente de sistemas tradicionais que podem levar dias para liquidar transferências transfronteiriças com taxas de 5% a 10%, stablecoins como a USDPT podem reduzir custos para frações de centavo e liquidar em segundos.</p>
+      <p>O movimento de refinanciamento da Hut 8 é um sinal de que o mercado de capitais está reabrindo para o setor de mineração. Com taxas de juros fixas acessíveis e a liberação de BTC como garantia, outras mineradoras devem buscar acordos semelhantes. Isso reduz a pressão vendedora sobre o Bitcoin, já que mineradores precisam vender menos BTC para cobrir custos operacionais.</p>
 
-      <p>Para a Solana, ter uma stablecoin emitida por um banco regulado e vinculada a uma marca global como a Western Union é um selo de aprovação institucional. A medida pode atrair mais empresas tradicionais a considerar a blockchain para aplicações financeiras reais.</p>
+      <p>A entrada de Adam Back como investidor na Capital B também carrega peso simbólico: uma das mentes fundacionais do Bitcoin apostando em estratégias corporativas de acumulação reforça a tese de que o BTC é um ativo de tesouraria legítimo e veio para ficar.</p>
 
       <h3>Consequências possíveis</h3>
-      <p>Se o "Stable by Western Union" for bem-sucedido, outras grandes empresas de remessas — como MoneyGram e PayPal — podem ser forçadas a acelerar seus próprios planos de stablecoins. A regulamentação será um fator determinante: a emissão bancária via Anchorage Digital pode servir de modelo para outras empresas que buscam entrar no setor com segurança jurídica. O impacto nas taxas de remessa tradicionais pode ser disruptivo, beneficiando diretamente os consumidores finais, especialmente trabalhadores imigrantes que dependem de remessas internacionais.</p>
+      <p>Com a mineração novamente lucrativa e o crédito disponível, o setor deve entrar em um ciclo virtuoso: mais investimento em infraestrutura → maior hashrate → maior segurança da rede → mais confiança institucional → mais demanda. No curto prazo, a redução da venda forçada de BTC por mineradores contribui para o choque de oferta que muitos analistas projetam para os próximos meses.</p>
 
       <h3>Análise BTC Ancap News</h3>
-      <p>A entrada da Western Union no mercado de stablecoins é um marco que não deve ser subestimado. Uma empresa centenária com alcance global adotando blockchain não como experimento, mas como produto central de crescimento, é um sinal claro de amadurecimento do setor. A escolha da Solana, combinada com emissão bancária regulada, aponta para o futuro das finanças: infraestrutura descentralizada combinada com conformidade regulatória. Para o mercado cripto, é mais uma ponte sólida entre o sistema financeiro tradicional e o mundo descentralizado — e um sinal de que a adoção institucional está se acelerando em velocidade real.</p>
+      <p>A recuperação do setor de mineração é um dos termômetros mais importantes da saúde do ecossistema Bitcoin. Ver empresas como Hut 8 conseguindo refinanciar dívidas em condições favoráveis e gestoras como Capital B atraindo investidores do calibre de Adam Back são sinais de que o mercado está amadurecendo. O círculo virtuoso entre preço do BTC, lucratividade da mineração e segurança da rede é o motor fundamental que impulsiona o Bitcoin há mais de uma década — e ele está funcionando perfeitamente.</p>
+    `,
+    comments: []
+  },
+  {
+    id: 19,
+    title: 'SEC atrasa ETFs de mercado de predição enquanto regulação global se intensifica',
+    excerpt: 'SEC solicita mais informações sobre ETFs de mercado de predição, Coreia do Sul alerta para excesso de relatórios AML, e Nova York multa Uphold em US$ 5 milhões.',
+    category: 'economia',
+    categoryLabel: 'Economia',
+    image: 'https://placehold.co/800x400/2d3748/ffffff?text=SEC+Regula%C3%A7%C3%A3o',
+    author: 'Redação BTC Ancap News',
+    date: '4 mai 2026',
+    readTime: '6 min',
+    featured: true,
+    body: `
+      <p>O cenário regulatório global para criptomoedas e ativos digitais ganhou novos capítulos importantes nesta semana, com a SEC dos EUA adiando a aprovação de ETFs de mercado de predição, a Coreia do Sul alertando sobre os custos excessivos de novas regras AML, e Nova York impondo uma multa de US$ 5 milhões à exchange Uphold.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>A Securities and Exchange Commission (SEC) dos Estados Unidos solicitou informações adicionais sobre ETFs de mercado de predição propostos por gestoras como Roundhill, GraniteShares e Bitwise. A comissão citou preocupações com a mecânica de funcionamento e riscos associados a esses produtos, adiando qualquer decisão de aprovação.</p>
+
+      <p>Na Coreia do Sul, a associação do setor de criptomoedas (DAXA) emitiu um alerta contundente sobre as propostas de combate à lavagem de dinheiro (AML) do governo, argumentando que as novas regras podem gerar mais de 5,4 milhões de relatórios anuais — um volume administrativo que sobrecarregaria o sistema e prejudicaria a inovação.</p>
+
+      <p>Em Nova York, a exchange Uphold foi forçada a pagar US$ 5 milhões em multas por seu envolvimento no esquema fraudulento de investimentos cripto CredEarn, que lesou milhares de investidores.</p>
+
+      <blockquote>Regulação não é o inimigo da inovação. Regulação mal desenhada, que trata todos os ativos digitais como iguais, é que sufoca o desenvolvimento de tecnologias verdadeiramente transformadoras. — Posição do setor sobre a proposta sul-coreana</blockquote>
+
+      <h3>Contexto</h3>
+      <p>O ambiente regulatório para criptomoedas continua fragmentado globalmente. Enquanto jurisdições como a União Europeia avanzam com estruturas abrangentes (MiCA), os EUA mantêm uma abordagem caso a caso que gera incerteza para emissores e investidores. A decisão da SEC de adiar os ETFs de predição reflete essa cautela, especialmente em um ano eleitoral americano.</p>
+
+      <p>Na Coreia do Sul, um dos mercados de criptomoedas mais ativos do mundo, a tensão entre inovação e proteção ao investidor atingiu novo patamar. A proposta AML do governo exigiria que as exchanges reportassem transações acima de determinado valor com muito mais frequência, criando uma carga burocrática que a DAXA considera desproporcional.</p>
+
+      <p>A multa da NYDFS (Departamento de Serviços Financeiros de Nova York) à Uphold, por sua vez, demonstra que reguladores estaduais americanos continuam ativos na fiscalização de exchanges, independentemente da posição federal.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>O adiamento dos ETFs de predição pela SEC tem impacto limitado no mercado cripto como um todo, já que esses produtos são nicho. No entanto, sinaliza que a comissão mantém sua postura cautelosa em relação a novos produtos cripto, o que pode afetar o cronograma de aprovação de outros ETFs temáticos no futuro.</p>
+
+      <p>Na Coreia do Sul, a incerteza regulatória pode levar exchanges a reduzir operações ou sair do mercado, diminuindo a liquidez regional. O país é responsável por uma parcela significativa do volume de negociação de altcoins, e mudanças regulatórias lá costumam ter efeito imediato nos preços.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>O cenário regulatório global para criptomoedas deve continuar evoluindo de forma desigual. Países com estruturas claras (como a UE e alguns estados americanos) devem atrair mais investimento institucional, enquanto jurisdições com regras incertas ou excessivamente onerosas podem perder competitividade. Para o investidor de criptomoedas, a diversificação geográfica de exposição e o compliance proativo são cada vez mais importantes.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>Regulação é uma faca de dois gumes para o mercado cripto. Por um lado, regras claras e sensatas trazem segurança jurídica que atrai capital institucional. Por outro, regulação excessiva ou mal planejada pode sufocar a inovação e empurrar projetos para jurisdições mais amigáveis. O movimento atual sugere que estamos em uma fase de "acerto de contas" regulatório, onde cada país define seus termos. Para o Bitcoin especificamente, sua natureza descentralizada e global torna qualquer tentativa de regulação direta ineficaz — mas o ecossistema ao redor (exchanges, custodians, DeFi) continuará sendo alvo de escrutínio crescente.</p>
     `,
     comments: []
   },
@@ -555,7 +572,7 @@ const ARTICLES = [
     categoryLabel: 'Bitcoin',
     image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Strive+15K+BTC',
     author: 'Redação BTC Ancap News',
-    date: '4 mai 2026',
+    date: '3 mai 2026',
     readTime: '5 min',
     featured: true,
     body: `
@@ -592,7 +609,7 @@ const ARTICLES = [
     categoryLabel: 'Economia',
     image: 'https://placehold.co/800x400/1a5276/ffffff?text=DTCC+Token',
     author: 'Redação BTC Ancap News',
-    date: '4 mai 2026',
+    date: '2 mai 2026',
     readTime: '5 min',
     featured: true,
     body: `
@@ -634,14 +651,14 @@ const CATEGORIES = [
 
 // Trending topics
 const TRENDING = [
-  'BTC busca suporte nos US$ 80 mil',
-  'Influxos institucionais recordes',
-  'Mineração de BTC lucrativa',
-  'Acumulação de BTC por holders',
-  'Telegram validador da TON',
-  'ETF de Bitcoin',
-  'Mercado cripto resiliente',
-  'Escola Austríaca',
+  'BTC supera US$ 81 mil e testa resistência',
+  'Superciclo vs rali baixista',
+  'SEC atrasa ETFs de predição',
+  'Mineração: Hut 8 refinancia dívida',
+  'Coinbase demite 14% da equipe',
+  'ETFs de Bitcoin batem recorde semanal',
+  'Telegram assume controle da TON',
+  'Regulação global se intensifica',
 ];
 
 // Hero banner articles indexes
