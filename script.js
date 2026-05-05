@@ -340,9 +340,7 @@ const HERO_SIDE = FEATURED_ARTICLES.slice(1, 4);
 // Articles per page (news listing)
 const ARTICLES_PER_PAGE = 5;
 
-// Live news (from CryptoCompare API)
-let liveNewsData = [];
-let liveNewsLoaded = false;
+// Live news (desativado: site usa apenas conteúdo original)
 
 // ============================================================
 // 2. NAVEGAÇÃO SPA
@@ -817,8 +815,8 @@ function init() {
   // BTC Simulator
   initSimulator();
 
-  // Live News
-  initLiveNews();
+  // Live News — usa artigos do próprio BTC Ancap News
+  // initLiveNews removido: o site exibe apenas conteúdo original
 
   // Search: desktop
   document.getElementById('searchToggle').addEventListener('click', () => {
@@ -962,90 +960,8 @@ function updateSimulatorPrices() {
 }
 
 // ============================================================
-// 11. NOTÍCIAS AO VIVO — CryptoCompare API
+// 11. NOTÍCIAS AO VIVO — (desativado: site usa apenas conteúdo original)
 // ============================================================
-function initLiveNews() {
-  fetchLiveNews();
-  setInterval(fetchLiveNews, 300000); // 5 min
-}
-
-function fetchLiveNews() {
-  const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://cointelegraph.com/rss';
-  fetch(url)
-    .then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
-    .then(function (data) {
-      if (!data.items || !data.items.length) throw new Error('No news data');
-      liveNewsData = data.items.slice(0, 30);
-      liveNewsLoaded = true;
-      renderLiveNewsOnHome();
-    })
-    .catch(function (err) {
-      console.warn('Erro ao buscar notícias:', err.message);
-    });
-}
-
-function renderLiveNewsOnHome() {
-  var grid = document.getElementById('latestGrid');
-  if (!grid || !liveNewsData.length) return;
-  grid.innerHTML = '';
-  var top6 = liveNewsData.slice(0, 6);
-  for (var i = 0; i < top6.length; i++) {
-    grid.appendChild(createLiveNewsCard(top6[i]));
-  }
-  var badge = document.getElementById('liveBadge');
-  if (badge) badge.style.display = 'inline-flex';
-}
-
-function createLiveNewsCard(item) {
-  var card = document.createElement('div');
-  card.className = 'news-card news-card--live';
-  var title = item.title || 'Sem título';
-  // Extract text from HTML description (strip tags)
-  var desc = item.description || '';
-  var txtMatch = desc.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
-  var excerpt = txtMatch.length > 120 ? txtMatch.substring(0, 120) + '...' : txtMatch || title;
-  // Extract image from enclosure or description img tag
-  var img = item.enclosure && item.enclosure.link ? item.enclosure.link : '';
-  if (!img) {
-    var imgMatch = desc.match(/<img[^>]+src=["']([^"']+)["']/);
-    img = imgMatch ? imgMatch[1] : 'https://placehold.co/800x400/1a2231/8899aa?text=News';
-  }
-  var source = 'CoinTelegraph';
-  // Parse pubDate to timestamp for timeAgo
-  var pubDate = item.pubDate ? new Date(item.pubDate).getTime() / 1000 : 0;
-  var timeStr = timeAgo(pubDate);
-  var articleUrl = item.link || '#';
-  card.innerHTML =
-    '<img class="news-card__img" src="' + img + '" alt="' + title.replace(/"/g, '&quot;') + '" loading="lazy" onerror="this.src=\'https://placehold.co/800x400/1a2231/8899aa?text=News\'" />' +
-    '<div class="news-card__body">' +
-    '<span class="news-card__cat news-card__cat--live"><i class="fas fa-globe"></i> ' + source + '</span>' +
-    '<h3 class="news-card__title">' + title + '</h3>' +
-    '<p class="news-card__excerpt">' + excerpt + '</p>' +
-    '<div class="news-card__meta">' +
-    '<span><i class="far fa-clock"></i> ' + timeStr + '</span>' +
-    '<span><i class="fas fa-external-link-alt"></i> ' + source + '</span>' +
-    '</div>' +
-    '</div>';
-  card.addEventListener('click', function () {
-    if (articleUrl !== '#') window.open(articleUrl, '_blank', 'noopener,noreferrer');
-  });
-  return card;
-}
-
-function timeAgo(timestamp) {
-  if (!timestamp) return 'recentemente';
-  var now = Math.floor(Date.now() / 1000);
-  var diff = now - timestamp;
-  if (diff < 60) return 'agora';
-  if (diff < 3600) return Math.floor(diff / 60) + 'min atrás';
-  if (diff < 86400) return Math.floor(diff / 3600) + 'h atrás';
-  var days = Math.floor(diff / 86400);
-  if (days === 1) return 'ontem';
-  return days + 'd atrás';
-}
 
 // Start
 document.addEventListener('DOMContentLoaded', init);
