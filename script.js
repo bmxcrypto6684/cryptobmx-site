@@ -515,6 +515,117 @@ const ARTICLES = [
     `,
     comments: []
   },
+  {
+    id: 19,
+    title: 'Western Union lança stablecoin USDPT na Solana e mira 40 países',
+    excerpt: 'Gigante de remessas de US$ 50 bilhões em receita entra no mercado cripto com stablecoin própria emitida pelo Anchorage Digital Bank, mirando consumidores em mais de 40 países.',
+    category: 'cripto',
+    categoryLabel: 'Cripto',
+    image: 'https://placehold.co/800x400/0055aa/ffffff?text=Western+Union',
+    author: 'Redação BTC Ancap News',
+    date: '4 mai 2026',
+    readTime: '5 min',
+    featured: false,
+    body: `
+      <p>A Western Union, gigante global de remessas com mais de US$ 50 bilhões em receita anual, deu um passo histórico no mercado de criptomoedas ao lançar sua própria stablecoin, a USDPT, na blockchain Solana. A stablecoin é emitida pelo Anchorage Digital Bank N.A., banco de ativos digitais regulado nos Estados Unidos.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>A USDPT é uma stablecoin atrelada ao dólar americano, lançada na rede Solana. A emissão é feita pelo Anchorage Digital Bank, que atua como banco custodial e emissor regulado. O movimento representa a primeira incursão direta da Western Union no mercado de stablecoins, sinalizando uma mudança estratégica significativa para a empresa de 170 anos de idade.</p>
+
+      <p>O produto de consumo associado, chamado "Stable by Western Union", deve ser lançado em mais de 40 países ainda em 2026, aproveitando a infraestrutura global existente da empresa e sua base de usuários estabelecida.</p>
+
+      <h3>Contexto</h3>
+      <p>A Western Union atende mais de 150 milhões de pessoas em todo o mundo, processando centenas de bilhões de dólares em remessas anualmente. O mercado de remessas globais movimenta mais de US$ 800 bilhões por ano, com taxas médias ainda elevadas — especialmente para trabalhadores que enviam dinheiro de países desenvolvidos para nações em desenvolvimento.</p>
+
+      <p>A escolha da Solana como blockchain base é significativa: a rede oferece transações de baixo custo e alta velocidade, características essenciais para remessas internacionais. A emissão por um banco regulado (Anchorage Digital) também confere credibilidade regulatória que falta a muitas stablecoins concorrentes.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>A entrada da Western Union no mercado de stablecoins valida a tese de que as blockchains públicas podem revolucionar o setor de remessas internacionais. Diferentemente de sistemas tradicionais que podem levar dias para liquidar transferências transfronteiriças com taxas de 5% a 10%, stablecoins como a USDPT podem reduzir custos para frações de centavo e liquidar em segundos.</p>
+
+      <p>Para a Solana, ter uma stablecoin emitida por um banco regulado e vinculada a uma marca global como a Western Union é um selo de aprovação institucional. A medida pode atrair mais empresas tradicionais a considerar a blockchain para aplicações financeiras reais.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>Se o "Stable by Western Union" for bem-sucedido, outras grandes empresas de remessas — como MoneyGram e PayPal — podem ser forçadas a acelerar seus próprios planos de stablecoins. A regulamentação será um fator determinante: a emissão bancária via Anchorage Digital pode servir de modelo para outras empresas que buscam entrar no setor com segurança jurídica. O impacto nas taxas de remessa tradicionais pode ser disruptivo, beneficiando diretamente os consumidores finais, especialmente trabalhadores imigrantes que dependem de remessas internacionais.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>A entrada da Western Union no mercado de stablecoins é um marco que não deve ser subestimado. Uma empresa centenária com alcance global adotando blockchain não como experimento, mas como produto central de crescimento, é um sinal claro de amadurecimento do setor. A escolha da Solana, combinada com emissão bancária regulada, aponta para o futuro das finanças: infraestrutura descentralizada combinada com conformidade regulatória. Para o mercado cripto, é mais uma ponte sólida entre o sistema financeiro tradicional e o mundo descentralizado — e um sinal de que a adoção institucional está se acelerando em velocidade real.</p>
+    `,
+    comments: []
+  },
+  {
+    id: 20,
+    title: 'Strive atinge 15.000 BTC em tesouraria e segue estratégia corporativa de acumulação',
+    excerpt: 'Empresa de Matt Cole ultrapassa 15 mil Bitcoins em tesouraria com compra recente de 444 BTC por US$ 33,9 milhões, seguindo modelo de Strategy focado em crescimento de BTC por ação.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Strive+15K+BTC',
+    author: 'Redação BTC Ancap News',
+    date: '4 mai 2026',
+    readTime: '5 min',
+    featured: false,
+    body: `
+      <p>A Strive, Inc., empresa liderada pelo CEO Matt Cole, anunciou que ultrapassou a marca de 15.000 Bitcoins em sua tesouraria corporativa. A empresa realizou uma compra adicional de 444 BTC por US$ 33,9 milhões, consolidando sua posição como uma das maiores detentoras corporativas de Bitcoin do mundo.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>A Strive, que segue uma estratégia de tesouraria focada em Bitcoin similar à da Strategy (antiga MicroStrategy), agora detém mais de 15.000 BTC. A abordagem da empresa prioriza o "crescimento em Bitcoin por ação", métrica que se tornou popular entre empresas que adotam o Bitcoin como ativo de reserva primário.</p>
+
+      <p>A compra mais recente de 444 BTC foi feita ao preço médio de aproximadamente US$ 76.351 por Bitcoin, totalizando US$ 33,9 milhões. A empresa não divulgou o custo médio total de suas participações, mas a marca de 15.000 BTC representa, aos preços atuais, mais de US$ 1,2 bilhão em valor.</p>
+
+      <h3>Contexto</h3>
+      <p>A Strive foi fundada por Vivek Ramaswamy, empresário e ex-candidato presidencial americano, com a missão de "promover o capitalismo de stakeholders" e desafiar o capitalismo woke de Wall Street. A empresa entrou no mercado de Bitcoin sob a liderança de Matt Cole, que assumiu como CEO e intensificou a estratégia de acumulação de BTC.</p>
+
+      <p>O movimento faz parte de uma tendência maior de empresas adotando Bitcoin como ativo de tesouraria, inspiradas pelo sucesso da Strategy de Michael Saylor. Empresas como Block (Square), Coinbase, Metaplanet e Semler Scientific também mantêm Bitcoin em seus balanços, mas a Strategy continua sendo a maior detentora corporativa com mais de 500.000 BTC.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>Cada nova compra corporativa de Bitcoin reduz a oferta circulante disponível nas exchanges, criando pressão de compra estrutural. A acumulação por empresas como a Strive — que compram e seguram — contrasta com o comportamento especulativo de curto prazo e contribui para a tese de escassez do Bitcoin.</p>
+
+      <p>A marca de 15.000 BTC coloca a Strive entre as 10 maiores detentoras corporativas públicas de Bitcoin do mundo, um feito notável para uma empresa relativamente nova no espaço. O compromisso com a métrica de "crescimento em BTC por ação" sugere que a empresa continuará comprando em correções de preço.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>A contínua acumulação corporativa de Bitcoin pode levar a um aperto de oferta significativo, especialmente se combinada com os influxos dos ETFs à vista. Mais empresas devem seguir o modelo de tesouraria em Bitcoin, especialmente se o preço continuar mostrando resiliência acima dos US$ 80 mil. No entanto, o risco de concentração em um ativo volátil permanece, e empresas excessivamente alavancadas em BTC podem enfrentar pressão em cenários de queda prolongada.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>A Strive representa um caso interessante de adoção corporativa de Bitcoin: uma empresa com missão explicitamente libertária e crítica ao establishment financeiro, usando o Bitcoin como ferramenta de tesouraria. A acumulação consistente reforça a tese de que o Bitcoin está se consolidando como ativo de reserva corporativa legítimo. Se 15.000 BTC é o marco atual, a pergunta é: quantas empresas estão silenciosamente construindo posições similares sem divulgar? O efeito cumulativo dessa demanda corporativa, somada aos ETFs, continua sendo o maior motor estrutural de alta do Bitcoin no médio prazo.</p>
+    `,
+    comments: []
+  },
+  {
+    id: 21,
+    title: 'DTCC prepara lançamento de tokenização com BlackRock e Goldman Sachs para julho',
+    excerpt: 'Câmara de compensação central dos EUA inicia pilotos de negociação de títulos tokenizados em julho com apoio dos maiores bancos de Wall Street, rumo ao lançamento completo em outubro.',
+    category: 'economia',
+    categoryLabel: 'Economia',
+    image: 'https://placehold.co/800x400/1a5276/ffffff?text=DTCC+Token',
+    author: 'Redação BTC Ancap News',
+    date: '4 mai 2026',
+    readTime: '5 min',
+    featured: false,
+    body: `
+      <p>A Depository Trust & Clearing Corporation (DTCC), a câmara de compensação central que processa trilhões de dólares em transações de valores mobiliários nos Estados Unidos, está se preparando para lançar um serviço de negociação de títulos tokenizados em blockchain. O serviço tem o apoio de gigantes como BlackRock e Goldman Sachs, com pilotos programados para julho e lançamento completo previsto para outubro de 2026.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>A DTCC revelou planos para lançar um serviço de tokenização que permitirá a negociação de versões digitais de títulos tradicionais em infraestrutura de blockchain. BlackRock (maior gestora de ativos do mundo, com mais de US$ 11 trilhões sob gestão) e Goldman Sachs estão entre as instituições financeiras que apoiam a iniciativa.</p>
+
+      <p>Pilotos começam em julho de 2026, com uma ampla gama de firmas financeiras participantes. O lançamento completo está programado para outubro, marcando a primeira vez que a infraestrutura central de liquidação de títulos dos EUA adota blockchain de forma oficial e operacional.</p>
+
+      <h3>Contexto</h3>
+      <p>A DTCC processa a vasta maioria das transações de títulos nos Estados Unidos, incluindo ações, títulos de dívida e fundos mútuos. Sua adoção de tecnologia blockchain para tokenização representa uma validação sem precedentes da tecnologia por parte do establishment financeiro tradicional.</p>
+
+      <p>O movimento segue uma tendência global de tokenização de ativos do mundo real (RWA). Grandes bancos e gestoras de ativos têm explorado a tokenização como forma de reduzir custos operacionais, aumentar a velocidade de liquidação e permitir a propriedade fracionária de ativos antes inacessíveis. Projetos como o USDC, a BlackRock BUIDL e Ondo Finance já demonstraram o potencial da tokenização de ativos do mundo real em blockchains públicas.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>A entrada da DTCC no mercado de tokenização pode acelerar dramaticamente a adoção de blockchain no setor financeiro tradicional. Diferentemente de iniciativas isoladas de bancos individuais, a participação da câmara de compensação central cria uma infraestrutura compartilhada que todo o mercado pode usar.</p>
+
+      <p>Para o mercado cripto, a tokenização de ativos tradicionais representa um dos maiores vetores de crescimento. O mercado de RWAs tokenizados pode chegar a US$ 16 trilhões até 2030, segundo projeções de consultorias como a BCG e 21.co. A validação da DTCC pode acelerar esse cronograma.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>Se bem-sucedida, a iniciativa da DTCC pode criar um padrão de mercado para títulos tokenizados, reduzindo a fragmentação entre diferentes plataformas. Os impactos incluem: liquidação mais rápida (potencialmente T+0 em vez de T+2), redução de custos com intermediários, maior transparência e abertura para mercados secundários de ativos ilíquidos. No entanto, a centralização da infraestrutura da DTCC contrasta com o ethos descentralizado das blockchains públicas, e o modelo de governança do sistema ainda precisa ser definido.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>Ver a DTCC — a espinha dorsal do mercado de títulos americano — adotando blockchain não é apenas mais uma parceria corporativa. É a infraestrutura crítica do sistema financeiro tradicional reconhecendo que a tecnologia de livro-razão distribuído oferece eficiências reais. Isso não significa necessariamente alta do Bitcoin no curto prazo, mas valida a tese mais ampla de que a tecnologia blockchain veio para ficar. O mercado de tokenização de RWAs pode ser o maior vetor de crescimento do setor cripto nos próximos anos — e a DTCC está colocando Wall Street no centro desse movimento.</p>
+    `,
+    comments: []
+  },
 ];
 
 // Categories with article counts
