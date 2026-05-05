@@ -4,37 +4,39 @@
 const ARTICLES = [
   {
     id: 1,
-    title: 'Bitcoin ultrapassa US$ 83 mil e confirma novo recorde: o rali tem fundamento?',
-    excerpt: 'Com BTC negociando acima de US$ 83 mil, analistas apontam choque de oferta pós-halving e demanda institucional como motores do movimento. Projeções chegam a US$ 200 mil.',
+    title: 'O Bitcoin como dinheiro sólido: por que 21 milhões de unidades é o número mais importante da economia',
+    excerpt: 'A escassez absoluta do Bitcoin é sua característica mais revolucionária. Entenda por que o limite de 21 milhões de moedas representa a primeira moeda verdadeiramente sólida da história.',
     category: 'bitcoin',
     categoryLabel: 'Bitcoin',
-    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+%2483K',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=21+Milh%C3%B5es',
     author: 'Lucas Mendes',
     date: '30 mai 2026',
     readTime: '6 min',
     featured: true,
     body: `
-      <p>O Bitcoin atingiu nesta semana a marca de US$ 83.270, renovando seu recorde absoluto e consolidando um rali que já acumula mais de 60% de valorização no ano. Diferentemente de movimentos anteriores, o atual ciclo de alta é sustentado por fundamentos sólidos que vão muito além do entusiasmo especulativo.</p>
+      <p>Em um mundo onde bancos centrais imprimem trilhões sem lastro, o limite de 21 milhões de Bitcoins é talvez o número mais importante da economia moderna. Pela primeira vez na história, a humanidade tem acesso a um dinheiro cuja oferta é absolutamente previsível e imutável — não por decreto estatal, mas por matemática e código.</p>
 
-      <h3>Choque de oferta pós-halving</h3>
-      <p>O halving de 2024 reduziu a emissão diária de novos Bitcoins de 900 para 450 unidades. Combinado com a demanda crescente dos ETFs à vista, que compram diariamente o equivalente a várias vezes a produção de novos BTC, o mercado enfrenta um aperto de oferta sem precedentes. Dados on-chain mostram que o saldo de Bitcoin nas exchanges atingiu a menor marca em cinco anos, com menos de 1,8 milhão de BTC disponíveis para negociação.</p>
+      <h3>O que torna o Bitcoin diferente de tudo que veio antes</h3>
+      <p>Toda moeda criada pelo Estado ao longo da história tem uma característica em comum: sua oferta pode ser expandida arbitrariamente. Os denários romanos foram desvalorizados, os marcos alemães sofreram hiperinflação, o dólar americano perdeu 99% de seu poder de compra desde a criação do Federal Reserve. Em todos os casos, o motivo foi o mesmo: governantes descobriram que podiam criar dinheiro do nada para financiar seus gastos.</p>
 
-      <blockquote>Estamos vivendo o choque de oferta mais severo da história do Bitcoin. A cada dia, os ETFs absorvem mais BTC do que os mineradores produzem. Isso é matemática básica de oferta e demanda. — Relatório Glassnode</blockquote>
+      <p>O Bitcoin quebra esse ciclo de forma definitiva. Nenhum governo, banco central ou indivíduo pode criar mais Bitcoins além dos 21 milhões programados. A emissão segue um cronograma matemático imutável, reduzindo-se pela metade a cada quatro anos até que o último satoshi seja minerado, por volta de 2140.</p>
 
-      <h3>Demanda institucional sem precedentes</h3>
-      <p>Os ETFs de Bitcoin à vista listados nos Estados Unidos acumulam mais de US$ 50 bilhões em ativos sob gestão, superando as estimativas mais otimistas do lançamento. Gestoras como BlackRock, Fidelity e Ark Invest continuam registrando influxos líquidos positivos, com destaque para semanas em que mais de US$ 2 bilhões entraram nos produtos.</p>
+      <blockquote>O que Satoshi Nakamoto criou não é apenas uma nova moeda, mas um novo conceito: dinheiro que ninguém pode inflacionar. Isso nunca existiu antes. — Relatório BTC Ancap News</blockquote>
 
-      <p>Além dos ETFs, tesourarias corporativas seguem acumulando BTC. A Strategy (antiga MicroStrategy) agora detém mais de 250 mil BTC, e novas empresas como Strive, KULR e Metaplanet continuam adicionando Bitcoin a seus balanços.</p>
+      <h3>Por que a escassez importa</h3>
+      <p>Economistas da Escola Austríaca, como Carl Menger e Ludwig von Mises, demonstraram que o valor do dinheiro emerge de sua escassez relativa e de sua aceitação no mercado. O Bitcoin satisfaz perfeitamente as características do que Mises chamava de "dinheiro sólido": durável, portátil, divisível, fungível e, acima de tudo, escasso.</p>
 
-      <h3>Perspectivas para os próximos meses</h3>
-      <p>Analistas técnicos apontam que o Bitcoin encontrou suporte sólido acima de US$ 78 mil e agora mira a resistência psicológica dos US$ 100 mil. O presidente da Fidelity, Jurrien Timmer, afirmou recentemente que o Bitcoin ainda está "subvalorizado" em relação às suas métricas de rede e adoção. Projeções para o topo do ciclo variam de US$ 180 mil a US$ 250 mil, com a maioria dos modelos sugerindo que o pico deve ocorrer entre o segundo e o terceiro trimestre de 2026.</p>
+      <p>Ao contrário do ouro, cuja oferta cresce de 1% a 2% ao ano com novas descobertas de jazidas e avanços tecnológicos de mineração, a escassez do Bitcoin é absoluta e verificável por qualquer pessoa. Cada transação, cada bloco e cada moeda emitida são registrados em um livro-razão público e imutável. Não há "nova jazida de Bitcoin" a ser descoberta — o que existe é o que sempre existirá.</p>
 
-      <p>Para o investidor de longo prazo, a mensagem permanece a mesma: tempo no mercado supera timing do mercado. Cada correção dentro deste ciclo tem sido uma oportunidade de acumulação para aqueles que entendem os fundamentos do Bitcoin.</p>
+      <h3>As implicações econômicas</h3>
+      <p>O Bitcoin inverte a lógica keynesiana que domina a política monetária mundial. Em vez de permitir que governos expandam a oferta monetária para estimular a economia (causando inflação que corrói o poder de compra dos mais pobres), o Bitcoin impõe disciplina monetária absoluta. A consequência é um incentivo à poupança e ao planejamento de longo prazo — virtudes econômicas que foram sufocadas por décadas de inflação.</p>
+
+      <p>Para o investidor, entender o significado do limite de 21 milhões é o primeiro passo para compreender por que o Bitcoin é frequentemente chamado de "ouro digital". Não se trata apenas de tecnologia, mas de uma filosofia econômica baseada na premissa de que dinheiro sólido é a base de uma sociedade livre e próspera.</p>
     `,
     comments: [
-      { author: 'Carlos S.', date: '30 mai 2026', text: 'Eu avisei! Desde 2020 que venho dizendo que Bitcoin chegaria a 6 dígitos. HODL!' },
-      { author: 'Ana L.', date: '30 mai 2026', text: 'Ainda acho que tem muito espaço para crescer. A adoção institucional está só começando.' },
-      { author: 'Pedro R.', date: '29 mai 2026', text: 'Comprei meu primeiro Bitcoin em 2019. Melhor decisão financeira da minha vida.' },
+      { author: 'Carlos S.', date: '30 mai 2026', text: '21 milhões é o número mais importante que existe. Quando você entende isso, entende Bitcoin.' },
+      { author: 'Ana L.', date: '30 mai 2026', text: 'Nenhum governo vai parar de imprimir dinheiro. Bitcoin é a única saída.' },
+      { author: 'Pedro R.', date: '29 mai 2026', text: 'Estudei a Escola Austríaca por causa do Bitcoin. Muda completamente sua visão de mundo.' },
     ]
   },
   {
