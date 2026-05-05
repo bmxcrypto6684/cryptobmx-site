@@ -309,6 +309,101 @@ const ARTICLES = [
     `,
     comments: []
   },
+  {
+    id: 13,
+    title: 'Produtos cripto registram 5ª semana consecutiva de influxos com US$ 4 bilhões',
+    excerpt: 'ETPs de criptomoedas acumulam US$ 4,02 bilhões em influxos, com recuperação forte na sexta-feira após vendas no meio da semana.',
+    category: 'cripto',
+    categoryLabel: 'Cripto',
+    image: 'https://placehold.co/800x400/1a5276/ffffff?text=ETPs+Cripto',
+    author: 'Redação BTC Ancap News',
+    date: '5 mai 2026',
+    readTime: '5 min',
+    featured: false,
+    body: `
+      <p>Os produtos de investimento em criptomoedas (ETPs) registraram a quinta semana consecutiva de influxos líquidos positivos, totalizando US$ 4,02 bilhões no período. O dado reforça a tendência de adoção institucional contínua, mesmo em meio à volatilidade de curto prazo.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>Na última semana, os ETPs cripto enfrentaram um movimento de vendas no meio da semana, com US$ 619 milhões saindo dos produtos entre terça e quinta-feira. No entanto, a sexta-feira registrou uma recuperação expressiva de US$ 737 milhões, salvando a semana e estendendo a sequência positiva para cinco semanas.</p>
+
+      <h3>Contexto</h3>
+      <p>O fluxo consistente de capital institucional para ETPs cripto reflete um amadurecimento do mercado. Diferentemente dos ciclos anteriores, impulsionados principalmente por varejo, o atual movimento de alta conta com participação significativa de gestoras de ativos, fundos de pensão e tesourarias corporativas.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>A entrada contínua de capital institucional cria uma pressão de compra estável que contrasta com a volatilidade típica do mercado cripto. Esse fluxo reduz o impacto de vendas de curto prazo e fornece uma camada de suporte para os preços, especialmente do Bitcoin.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>Caso a tendência de influxos se mantenha, o mercado pode ver uma redução significativa da oferta circulante disponível nas exchanges, amplificando o efeito de qualquer movimento de alta. A continuidade desse fluxo também valida o argumento de que o mercado cripto está se consolidando como uma classe de ativos legítima para investidores institucionais.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>Cinco semanas seguidas de influxos é um sinal claro de que o capital institucional não é mais um experimento no mercado cripto — é uma tendência estrutural. Mesmo com eventos de venda pontuais, a recuperação rápida mostra que há demanda reprimida significativa. O cenário se alinha com a tese de que o Bitcoin e o mercado cripto estão em um processo de maturação que tende a reduzir a volatilidade extrema ao longo do tempo.</p>
+    `,
+    comments: []
+  },
+  {
+    id: 14,
+    title: 'Bitcoin busca suporte nos US$ 80 mil em meio a tensões geopolíticas',
+    excerpt: 'Após volatilidade causada por eventos geopolíticos, BTC busca se firmar acima dos US$ 80 mil com indicadores técnicos mistos.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f7931a/1a1a1a?text=Bitcoin+80k',
+    author: 'Redação BTC Ancap News',
+    date: '5 mai 2026',
+    readTime: '6 min',
+    featured: false,
+    body: `
+      <p>O Bitcoin enfrentou nova onda de volatilidade nesta semana, oscilando em torno dos US$ 80 mil em meio a tensões geopolíticas envolvendo o Irã e seus efeitos sobre os mercados globais. A criptomoeda chegou a recuar, mas se recuperou rapidamente, demonstrando resiliência.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>Eventos geopolíticos inesperados abalaram os mercados globais, e o Bitcoin não ficou imune. A criptomoeda chegou a testar regiões abaixo dos US$ 80 mil antes de se recuperar, em um movimento que lembrou os padrões de volatilidade observados em períodos de incerteza geopolítica no passado.</p>
+
+      <h3>Contexto</h3>
+      <p>Historicamente, o Bitcoin tem se comportado de forma ambígua em momentos de tensão geopolítica. Em alguns eventos, atuou como proteção (hedge); em outros, como ativo de risco, caindo junto com os mercados tradicionais. Desta vez, a recuperação rápida sugere que a tese de proteção está ganhando força entre investidores.</p>
+
+      <blockquote>A volatilidade geopolítica é temporária, mas a escassez do Bitcoin é permanente. Investidores que entendem isso usam quedas para acumular. — Análise BTC Ancap News</blockquote>
+
+      <h3>Impacto no mercado</h3>
+      <p>Apesar da turbulência, o Bitcoin conseguiu se manter acima dos US$ 80 mil, um nível psicologicamente importante. O fato de a criptomoeda ter se recuperado rapidamente das quedas indica que há demanda sólida atuando como suporte nessa região de preços.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>Se o Bitcoin conseguir transformar os US$ 80 mil em suporte sólido, o caminho para testar US$ 85 mil e, posteriormente, US$ 95 mil fica mais claro. Por outro lado, novos eventos geopolíticos podem trazer volatilidade adicional de curto prazo, mas a tendência estrutural de acumulação institucional permanece intacta.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>A recuperação rápida do Bitcoin após o susto geopolítico reforça a narrativa de que ele está se consolidando como um ativo de reserva digital. Quedas pontuais por eventos externos têm sido compradas agressivamente, o que é um sinal otimista de médio prazo. O nível dos US$ 80 mil agora funciona como referência crucial: consolidado acima dele, o mercado pode mirar patamares mais altos com confiança.</p>
+    `,
+    comments: []
+  },
+  {
+    id: 15,
+    title: 'Mineração de Bitcoin atrai investimentos com alta da lucratividade',
+    excerpt: 'Com Bitcoin acima dos US$ 80 mil, mineradores aumentam receita e expandem operações, sinalizando confiança no pós-halving.',
+    category: 'bitcoin',
+    categoryLabel: 'Bitcoin',
+    image: 'https://placehold.co/800x400/f39c12/1a1a1a?text=Minera%C3%A7%C3%A3o+BTC',
+    author: 'Redação BTC Ancap News',
+    date: '5 mai 2026',
+    readTime: '5 min',
+    featured: false,
+    body: `
+      <p>A lucratividade da mineração de Bitcoin voltou a patamares atrativos com o preço do BTC acima dos US$ 80 mil, estimulando novos investimentos em infraestrutura e equipamentos. O movimento marca uma recuperação significativa após o período de ajuste pós-halving.</p>
+
+      <h3>O que aconteceu</h3>
+      <p>Com o Bitcoin operando consistentemente acima dos US$ 80 mil, os mineradores viram suas margens de lucro se expandirem significativamente. Dados de rede mostram que o hashprice (receita estimada por unidade de poder computacional) se recuperou, incentivando a expansão da capacidade instalada e a compra de novos equipamentos ASIC.</p>
+
+      <h3>Contexto</h3>
+      <p>O halving de 2024 reduziu pela metade a emissão de novos Bitcoins, comprimindo as margens dos mineradores menos eficientes. Muitos foram forçados a desligar equipamentos antigos e buscar operações com custo de energia mais baixo. A alta do preço do BTC agora compensa essa redução na emissão, tornando a mineração novamente lucrativa mesmo para operadores de médio porte.</p>
+
+      <h3>Impacto no mercado</h3>
+      <p>Mineradores mais lucrativos tendem a vender menos BTC no mercado aberto para cobrir custos operacionais, reduzindo a pressão vendedora. Além disso, o aumento da taxa de hash fortalece a segurança da rede Bitcoin, um sinal positivo para investidores institucionais que monitoram esses indicadores.</p>
+
+      <h3>Consequências possíveis</h3>
+      <p>Se o preço do Bitcoin se mantiver nessa faixa, espera-se um ciclo virtuoso: mais investimento em mineração → maior segurança da rede → mais confiança institucional → maior demanda → preço sustentado. Esse círculo virtuoso é um dos mecanismos mais poderosos da economia do Bitcoin.</p>
+
+      <h3>Análise BTC Ancap News</h3>
+      <p>A recuperação da lucratividade da mineração é um sinal de que o mercado está absorvendo com sucesso os efeitos do halving. O ajuste pós-halving foi doloroso para mineradores ineficientes, mas a alta do preço do Bitcoin está validando a tese de que a redução da emissão, combinada com demanda crescente, cria um ambiente econômico sustentável para a mineração. Este é um termômetro importante para a saúde de longo prazo da rede.</p>
+    `,
+    comments: []
+  },
 ];
 
 // Categories with article counts
@@ -322,13 +417,13 @@ const CATEGORIES = [
 
 // Trending topics
 const TRENDING = [
-  'BTC em novo recorde histórico',
+  'BTC busca suporte nos US$ 80 mil',
+  'Influxos institucionais recordes',
+  'Mineração de BTC lucrativa',
   'Acumulação de BTC por holders',
   'Telegram validador da TON',
   'ETF de Bitcoin',
-  'Halving 2024',
-  'Lightning Network',
-  'Inflação na Argentina',
+  'Mercado cripto resiliente',
   'Escola Austríaca',
 ];
 
